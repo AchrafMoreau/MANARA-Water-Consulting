@@ -35,7 +35,7 @@ export default function Section() {
                         srcLang="en"
                         label="English"
                     />
-                    {t('videoUnssuported')}
+                    {t('videoUnsspported')}
                 </video>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-6 bg-black/50">
                     <div className="flex flex-col justify-center items-start">

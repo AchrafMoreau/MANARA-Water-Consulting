@@ -28,8 +28,6 @@ export default async function Home() {
   const categories = await getCategories();
   const projects = await getProject();
 
-  console.log(categories)
-
   return (
     <>
       <ThreeSections />

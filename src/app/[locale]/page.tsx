@@ -33,7 +33,6 @@ const getLastProject = async () => {
 
 export default async function Home() {
   const projects = await getLastProject();
-  console.log(projects)
 
   return (
     <>

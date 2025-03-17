@@ -77,7 +77,6 @@ const ContactCard = () => {
 
   const handelSubmit = async (e : FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(info)
     setLoading(true)
     try{
       const response = await fetch('/api/mail', {

@@ -14,8 +14,6 @@ const POSITION = {
 export default function MapComponent() {
   const zoom = 16;
 
-  console.log(POSITION);
-
   return (
         <MapContainer 
           center={POSITION} 

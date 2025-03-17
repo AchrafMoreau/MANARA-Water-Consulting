@@ -27,7 +27,6 @@ export default function ProjectsFilter({ projects, categories }: {projects : Pro
 
   // Filter projects based on selected category
   const filterProjects = (category: string | null) => {
-    console.log(projects)
     const filtered = category ? projects.filter((project) => project.category.id === category) : projects
 
     setFilteredProjects(filtered)

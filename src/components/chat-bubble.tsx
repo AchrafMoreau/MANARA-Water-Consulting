@@ -94,7 +94,6 @@ export default function MagicChatBubble() {
         )
       }
     } catch (error: any) {
-      console.log(error)
       setMessages((prev) => [
         ...prev,
         {
