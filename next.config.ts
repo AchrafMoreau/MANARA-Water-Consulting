@@ -5,6 +5,10 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  i18n:{
+    locales: ['fr', 'en', 'ar'],
+    defaultLocale: 'fr',
+  },
   images: {
     domains: ['jg7oqc4zb0.ufs.sh'],
   },
