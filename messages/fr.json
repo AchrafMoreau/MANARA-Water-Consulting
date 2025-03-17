@@ -1,0 +1,582 @@
+{
+    "manara" : "Manara",
+    "water_consulting" : "Water Consulting",
+    "brand": "Manara Water Consulting",
+    "footer-rights": "Manara Water Consulting. Tous droits réservés.",
+    "arabic": "Arabe",
+    "french": "Français",
+    "english": "Anglais",
+    "services": "Services",
+    "overview": "Aperçu",
+    "Features": "Caractéristiques",
+    "projects": "Projets",
+    "aboutUs": "À Propos",
+    "contactUs": "Contact",
+    "ourSolutions": "Nos Solutions",
+    "trainings": "Formations SIG & Renforcement des Capacités",
+    "aquifersStudy": "Étude des Nappes & Cours d'Eau",
+    "waterReuse": "Réutilisation des Eaux Usées",
+    "sanitation": "Services d'Assainissement",
+    "floodProtection": "Protection contre les Inondations",
+    "companyName": "Manara Water Consulting",
+    "tagline": "Expertise & Innovation Pour Relever Les Défis Liés Au Développement Durable 💧🌍",
+    "trainingsDesc": "Nous offrons des formations professionnelles en SIG et sur les pratiques durables et la gestion des ressources en eau pour les cadres et personnels techniques. Nos formations sont personnalisées pour répondre aux besoins de chaque volet.",
+    "aquifersStudyDesc": "Nos capacités de coordination des services hydriques sont essentielles pour des projets allant des développements urbains et des infrastructures de transport aux grandes industries et aux projets commerciaux. En proposant des solutions hydriques innovantes et durables, nous contribuons à des communautés plus intelligentes, plus vertes et mieux connectées.",
+    "waterReuseDesc": "Nous proposons des stratégies de gestion des déchets pour réduire l'empreinte carbone et promouvoir le recyclage des eaux usées.",
+    "floodProtectionDesc": "Concevons des infrastructures innovantes pour atténuer les effets des inondations, telles que les systèmes de drainage et les digues.",
+    "sanitationDesc": "Études approfondies des besoins locaux en matière d'assainissement et y répondre de manière ciblée. Concevoir des systèmes d'assainissement adaptés aux contextes locaux, visant à améliorer l'hygiène et la santé publique & Offres de smart solutions pour l’optimisation du traitement des eaux usées en conformité aux normes environnementales.",
+    "hero":{
+        "discoverSolution": "Découvrez Notre Solution",
+        "needExpertise": "Besoin d’une Expertise ?",
+        "expertSupport": "Nos experts vous accompagnent dans vos projets de gestion de l’eau et d’assainissement. Contactez-nous pour une étude personnalisée.",
+        "seeMore": "Voir Plus"
+    },
+    "ourpartners" : "NOS PARTENAIRES",
+    "seeMoreProjects" : "Voir Plus de Projets",
+    "lastProjects" : "Derniers Projets",
+    "mission":{
+        "title" : "Nous Mission",
+        "intro": "Nous nous engageons à fournir des solutions durables et innovantes pour relever les défis de la gestion de l'eau. Notre mission est d'assurer une utilisation responsable et efficace des ressources en eau en offrant des services spécialisés dans,",
+        "waterManagement": "gestion de l'eau",
+        "conservation": "conservation",
+        "sanitation": "assainissement",
+        "and": "et",
+        "urbanResilience": "résilience urbaine.",
+        "expertise": "Grâce à notre expertise en hydraulique, en géophysique et en modélisation avancée, nous accompagnons les communautés, les entreprises et les organisations dans la mise en œuvre de stratégies adaptées aux défis environnementaux actuels. Nous croyons en une approche collaborative et efficace pour garantir un avenir durable, où l'eau reste une ressource accessible, préservée et sécurisée pour tous."
+    },
+    "footer":{
+        "description": "Expert en gestion des ressources en eau et solutions environnementales durables."
+    },
+    "intro":{
+        "workingWithManara": "Travailler avec Manara Water Consulting",
+        "collaboratingWithManara": "Collaborer avec Manara Water Consulting signifie s'associer à une équipe d'experts dévoués qui privilégient la durabilité, l'innovation et l'efficacité dans la gestion de l'eau.",
+        "team": "Équipe",
+        "clients": "Clients",
+        "ourGoal": "Notre Objectif",
+        "oneLocation": "Un Emplacement",
+        "address": "Centre Affaires Nour 1, Bloc B, Imm. 5, Appt N°3 - Tamesna, Maroc",
+        "oneTeam": "Une Équipe.",
+        "teamDescription": "Notre équipe est composée de professionnels expérimentés qui apportent des solutions innovantes à chaque projet lié à l’eau.",
+        "founderDirector": "Directrice Fondatrice",
+        "asmaDescription": "Fondatrice de Manara Water Consulting, Dr. Asma Ben Moussa est experte en gestion de l'eau. Elle développe des solutions durables pour préserver les ressources. Son leadership guide la mission environnementale de l’entreprise.",
+        "preserveWater": "Préserver l’Eau",
+        "preserveWaterDesc": "Promouvoir une gestion responsable et durable des ressources en eau.",
+        "innovateOptimize": "Innover & Optimiser",
+        "innovateOptimizeDesc": "Développer des solutions technologiques pour une meilleure efficacité hydrique.",
+        "raiseAwareness": "Sensibiliser & Former",
+        "raiseAwarenessDesc": "Éduquer et accompagner les acteurs vers des pratiques durables.",
+        "publicInstitutions": "Institutions Publiques",
+        "publicInstitutionsDesc": "Institutions publiques accompagnées pour une gestion durable de l’eau.",
+        "smartCities": "Villes et Collectivités",
+        "smartCitiesDesc": "Villes et collectivités équipées de solutions intelligentes de gestion de l’eau.",
+        "optimizedIndustries": "Entreprises et Industries",
+        "optimizedIndustriesDesc": "Entreprises et industries optimisant leur consommation hydrique."
+    },
+    "contactPage":{
+        "title": "N’hésitez Pas à Nous Contacter",
+        "description": "Une question ? Un projet en tête ? Contactez-nous dès aujourd’hui et discutons ensemble de solutions adaptées à vos besoins en gestion de l’eau et en environnement."
+    },
+    "contact":{
+        "title": "Contactez-nous",
+        "description": "Nous sommes là pour vous aider à rendre la durabilité possible. Contactez-nous pour une discussion collaborative sur ce que cela pourrait signifier pour votre organisation.",
+        "form": {
+            "header": "Envoyez votre message",
+            "subheader": "Remplissez le formulaire ci-dessous et nous vous dirigerons vers la bonne personne.",
+            "name": "Nom",
+            "namePlaceholder": "Joe",
+            "email": "Email",
+            "emailPlaceholder": "nom@example.com",
+            "company": "Entreprise",
+            "companyPlaceholder": "ASM Inc.",
+            "region": "Région",
+            "regionPlaceholder": "Casablanca",
+            "messagePlaceholder": "Écrivez votre message ici.",
+            "submit": "Envoyer",
+            "toastrMessage": "Merci de nous avoir contactés. Nous vous répondrons bientôt.",
+            "toastr": "Message envoyé avec succès !",
+            "toastrError": "Une erreur s'est produite. Veuillez réessayer."
+        }
+    },
+    "about":{
+        "title": "Qui Nous Sommes",
+        "description": "Manara Water Consulting est un bureau d’expertise spécialisé dans la gestion durable de l’eau. Avec plus de 15 ans d’expérience, nous accompagnons nos partenaires dans l’optimisation des ressources hydriques et la protection environnementale.",
+        "team": {
+            "title": "Notre Équipe",
+            "description": "Notre équipe est composée d'experts chevronnés issus de divers domaines des ressources en eau, géophysique, hydraulique urbaine, assainissement et du développement durable."
+        }
+    },
+    "mission_vision": {
+        "title": "Notre Mission & Vision",
+        "mission": {
+            "title": "🌍 Notre Mission",
+            "description": "Construire un avenir où l’eau est préservée, optimisée et accessible à tous. Nous aspirons à un monde où les ressources en eau sont gérées de manière durable, en intégrant des solutions innovantes, écologiques et efficaces pour répondre aux défis climatiques et environnementaux."
+        },
+        "vision": {
+            "title": "💡 Notre Vision",
+            "description": "Construire un avenir où l’eau est préservée, optimisée et accessible à tous. Nous aspirons à un monde où les ressources en eau sont gérées de manière durable, en intégrant des solutions innovantes, écologiques et efficaces pour répondre aux défis climatiques et environnementaux."
+        }
+    },
+    "core_values": {
+        "title": "Nos Valeurs Fondamentales",
+        "integrity": {
+            "title": "Intégrité",
+            "description": "Nous agissons avec honnêteté, respect et responsabilité dans toutes nos initiatives."
+        },
+        "innovation": {
+            "title": "Innovation",
+            "description": "Nous encourageons et adoptons des approches créatives et innovatrices. Le développement de l'intelligence collective est favorisé et les attitudes orientées « solutions » encouragées."
+        },
+        "collaboration_performance": {
+            "title": "Collaboration & Performance",
+            "description": "Nous croyons au pouvoir de la collaboration pour réaliser des progrès significatifs vers un avenir durable. Nous favorisons un climat propice à l'efficacité, à la performance et au bien-être avec bienveillance."
+        }
+    },
+    "Projects": {
+        "title": "Projects",
+        "all_projects": "Tous les Projets",
+        "see_project" : "Voir le Projet",
+        "description": "Découvrez nos projets innovants en gestion de l'eau et en assainissement. À travers des solutions durables et technologiques, nous accompagnons collectivités, entreprises et organisations pour un avenir plus responsable.",
+        "expertise_title": "Nos Domaines d'Expertise",
+        "expertise_description": "Manara Water Consulting offre une gamme complète de services spécialisés dans la gestion et la préservation des ressources en eau.",
+        "no_projects_in_category": "Aucun projet ne correspond à cette catégorie.",
+        "load_more_projects": "Voir plus de projets"
+    },
+    "Categories": {
+        "water_management": {
+            "title": "Gestion des Ressources en Eau",
+            "description": "Études des nappes phréatiques et préservation des ressources en eau"
+        },
+        "sustainable_development": {
+            "title": "Développement Durable & Environnement",
+            "description": "Solutions de réutilisation des eaux usées et protection contre la pollution"
+        },
+        "hydraulic_infrastructure": {
+            "title": "Infrastructures Hydrauliques & Assainissement",
+            "description": "Conception de systèmes d'assainissement et optimisation des réseaux"
+        },
+        "flood_protection": {
+            "title": "Protection Contre les Inondations",
+            "description": "Modélisation hydraulique et conception d'infrastructures de drainage"
+        },
+        "innovation": {
+            "title": "Innovation & Technologies de l'Eau",
+            "description": "Cartographie SIG et gestion intelligente de l'eau"
+        },
+        "studies_training": {
+            "title": "Études et Formations Spécialisées",
+            "description": "Formations en SIG et études de faisabilité des projets hydrauliques"
+        }
+    },
+    "LastProjects": {
+        "title": "Nos Projets Récents",
+        "description": "Découvrez quelques-unes de nos réalisations récentes dans le domaine de la gestion de l'eau."
+    },
+    "solutions": {
+        "solutions_title": "Nos Solutions pour une Gestion Durable de l'Eau",
+        "solutions_description": "Notre expertise couvre un large éventail de services liés à l'eau, conçus pour répondre aux défis environnementaux actuels et futurs.",
+        "see_more" : "En savoir plus",
+        "services": {
+            "sig_training": {
+                "title": "Formations SIG & Renforcement des Capacités",
+                "description": "Formations professionnelles en SIG et sur les pratiques durables pour la gestion des ressources en eau."
+            },
+            "water_study": {
+                "title": "Étude des Nappes & Cours d'Eau",
+                "description": "Coordination des services d'eau pour des projets d'infrastructure et solutions innovantes pour les communautés."
+            },
+            "wastewater_reuse": {
+                "title": "Réutilisation des eaux usées",
+                "description": "Stratégies de gestion des déchets pour réduire l'empreinte carbone et promouvoir le recyclage des eaux usées."
+            },
+            "sanitation": {
+                "title": "Services d'Assainissement",
+                "description": "Solutions intelligentes pour l'optimisation du traitement des eaux usées conformes aux normes environnementales."
+            },
+            "flood_protection": {
+                "title": "Protection contre les inondations",
+                "description": "Infrastructures innovantes pour atténuer les effets des inondations, systèmes de drainage et digues."
+            }
+        },
+        "methodology": "Notre Méthodologie",
+        "integrated_approach": {
+            "title": "Notre Approche Intégrée",
+            "description": "Nous combinons expertise technique, compréhension locale et solutions innovantes pour créer des systèmes de gestion d'eau durables et efficaces. Notre approche intégrée prend en compte tous les aspects du cycle de l'eau pour garantir des solutions optimales."
+        },
+        "tags": ["Expertise", "Innovation", "Durabilité", "Efficacité"]
+    },
+    "servicesLayout": {
+        "title": "Nos Services",
+        "description": "Expertise & Innovation Pour Relever Les Defis Lies Au Developpement Durable. 💧🌍",
+        "FormationsSIG": {
+            "title": "Formations SIG & Renforcement des Capacités",
+            "description": "Formations professionnelles en SIG et pratiques durables pour la gestion des ressources en eau."
+        },
+        "EtudedesNappes": {
+            "title": "Étude des Nappes & Cours d'Eau",
+            "description": "Solutions innovantes pour l'étude et la gestion des nappes phréatiques et cours d'eau."
+        },
+        "Reetulisation": {
+            "title": "Réutilisation des eaux usées",
+            "description": "Stratégies avancées pour le recyclage et la réutilisation des eaux usées."
+        },
+        "Protection": {
+            "title": "Protection contre les inondations",
+            "description": "Infrastructure innovante pour la protection contre les inondations et la gestion des risques."
+        },
+        "Assainissement": {
+            "title": "Services d'Assainissement",
+            "description": "Services d'assainissement adaptés aux contextes locaux pour améliorer l'hygiène et la santé publique."
+        }
+    },
+    "FormationsSIG":{
+        "title": "Formations SIG & Renforcement des Capacités",
+        "description": "Nos formations professionnelles sont conçues pour renforcer les compétences des cadres et personnels techniques dans les domaines des Systèmes d'Information Géographique (SIG) et de la gestion durable des ressources en eau.",
+        "programs_title": "Nos Programmes de Formation",
+        "programs": [
+            {
+                "title": "SIG pour la Gestion des Ressources en Eau",
+                "description": "Maîtrisez les outils SIG pour cartographier et analyser les ressources hydriques."
+            },
+            {
+                "title": "Collecte et Analyse de Données",
+                "description": "Techniques de collecte et méthodes d'analyse pour une gestion efficace de l'eau."
+            },
+            {
+                "title": "Formation des Formateurs",
+                "description": "Développez des compétences pédagogiques pour transmettre votre expertise."
+            }
+        ],
+        "benefits_title": "Avantages de Nos Formations",
+        "benefits": [
+            "Programmes personnalisés selon vos besoins spécifiques",
+            "Formateurs experts avec expérience de terrain",
+            "Approche pratique avec études de cas réels",
+            "Certification reconnue dans le secteur",
+            "Suivi post-formation et assistance continue",
+            "Accès à notre réseau de professionnels"
+        ],
+        "cta_title": "Prêt à Renforcer les Compétences de Votre Équipe?",
+        "cta_description": "Nos formations sont adaptées aux besoins spécifiques de votre organisation. Contactez-nous pour discuter de vos objectifs et créer un programme sur mesure.",
+        "cta_button": "Demander un Programme Personnalisé",
+        "cta_message":"Bonjour, je suis intéressé par votre programme de formation et de renforcement des capacités SIG. Pourriez-vous me fournir plus de détails sur le programme, le calendrier et les tarifs ? Merci !"
+    },
+    "EtudeDesNappes": {
+        "title": "Étude des Nappes Phréatiques, Cours d'Eau et Surveillance des Ressources en Eau",
+        "description": "Nos techniques de modélisations hydraulique et hydro-géophysique avancées permettent d'analyser et de prédire le comportement des nappes et des cours d'eau dans divers scénarios.",
+        "methodology": {
+            "title": "Notre Méthodologie",
+            "steps": {
+                "evaluation": {
+                    "title": "Évaluation",
+                    "description": "Étude préliminaire et collecte de données existantes"
+                },
+                "investigation": {
+                    "title": "Investigation",
+                    "description": "Mesures sur le terrain et analyses en laboratoire"
+                },
+                "analysis": {
+                    "title": "Analyse",
+                    "description": "Modélisation et interprétation des résultats"
+                },
+                "recommendations": {
+                    "title": "Recommandations",
+                    "description": "Solutions personnalisées et plans d'action"
+                }
+            }
+        },
+        "services": {
+            "aquifers": {
+                "label": "Étude des Nappes Phréatiques",
+                "title": "Étude et Gestion des Nappes Phréatiques",
+                "description": "Nos experts évaluent la qualité et la quantité des ressources en eau souterraine, permettant une gestion durable des aquifères et la mise en place de stratégies de protection.",
+                "points": [
+                    "Cartographie hydrogéologique",
+                    "Modélisation des aquifères",
+                    "Études de vulnérabilité",
+                    "Plans de gestion des nappes",
+                    "Détermination des périmètres de protection"
+                ]
+            },
+            "rivers": {
+                "label": "Cours d'Eau",
+                "title": "Gestion des Cours d'Eau",
+                "description": "Nous réalisons des études hydrologiques complètes des cours d'eau pour optimiser leur gestion et développer des solutions de protection contre les inondations.",
+                "points": [
+                    "Études hydromorphologiques",
+                    "Analyse des débits et des crues",
+                    "Restauration des cours d'eau",
+                    "Évaluation de la qualité écologique",
+                    "Aménagement des berges"
+                ]
+            },
+            "monitoring": {
+                "label": "Surveillance et Analyse",
+                "title": "Surveillance et Analyse des Ressources en Eau",
+                "description": "Nos systèmes de surveillance permettent le suivi en temps réel de la qualité et de la quantité des ressources en eau, facilitant une gestion proactive et durable.",
+                "points": [
+                    "Réseaux de surveillance piézométrique",
+                    "Analyse physico-chimique des eaux",
+                    "Suivi des niveaux et des débits",
+                    "Interprétation des données et modélisation",
+                    "Solutions d'alerte précoce"
+                ]
+            }
+        },
+        "cta": {
+            "title": "Besoin d'Une Étude Pour Votre Projet ?",
+            "description": "Contactez nos experts pour discuter de vos besoins spécifiques et obtenir une proposition adaptée à votre contexte.",
+            "button": "Demander une Consultation",
+            "message": "Bonjour, je suis intéressé par vos services d'étude des nappes phréatiques et des cours d'eau. Pourriez-vous me fournir Plus de détails sur vos méthodes et tarifs ? Merci."
+        }
+    },
+    "Reetulisation":{
+        "benefits_section": {
+            "title": "Avantages de la Réutilisation des Eaux Usées",
+            "categories": {
+                "environmental": {
+                    "title": "Environnementaux",
+                    "benefits": [
+                        "Réduction de la pression sur les ressources en eau",
+                        "Diminution des rejets polluants dans les milieux naturels",
+                        "Préservation des écosystèmes aquatiques",
+                        "Réduction de l'empreinte carbone"
+                    ]
+                },
+                "economic": {
+                    "title": "Économiques",
+                    "benefits": [
+                        "Économies significatives sur la consommation d'eau",
+                        "Réduction des coûts de traitement des rejets",
+                        "Valorisation d'une ressource inexploitée",
+                        "Conformité aux normes environnementales"
+                    ]
+                },
+                "social": {
+                    "title": "Sociaux",
+                    "benefits": [
+                        "Renforcement de l'indépendance hydrique",
+                        "Amélioration de l'image de marque",
+                        "Engagement concret pour le développement durable",
+                        "Adaptation aux changements climatiques"
+                    ]
+                }
+            }
+        },
+        "process_section": {
+            "title": "Notre Processus de Traitement",
+            "steps": {
+                "collection": {
+                    "title": "Collecte",
+                    "description": "Récupération et stockage des eaux usées"
+                },
+                "pre_treatment": {
+                    "title": "Pré-traitement",
+                    "description": "Élimination des solides et impuretés grossières"
+                },
+                "treatment": {
+                    "title": "Traitement",
+                    "description": "Processus biologiques et chimiques adaptés"
+                },
+                "control": {
+                    "title": "Contrôle",
+                    "description": "Vérification de la qualité selon l'usage prévu"
+                },
+                "distribution": {
+                    "title": "Distribution",
+                    "description": "Acheminement vers les points d'utilisation"
+                }
+            }
+        },
+        "applications_section": {
+            "title": "Applications de la Réutilisation des Eaux Usées",
+            "agriculture": {
+                "title": "Irrigation Agricole et Espaces Verts",
+                "description": "L'eau traitée peut être utilisée pour l'irrigation des cultures non alimentaires, des espaces verts, des terrains de golf et des parcs, réduisant considérablement la consommation d'eau potable pour ces usages.",
+                "extra_info": "Nos systèmes de traitement garantissent une qualité d'eau adaptée aux besoins spécifiques des végétaux tout en assurant la sécurité sanitaire."
+            },
+            "industrialApplications": {
+                "title": "Applications Industrielles",
+                "description": "L'eau recyclée peut être utilisée pour divers procédés industriels : refroidissement, nettoyage, et processus ne nécessitant pas d'eau potable, permettant de réduire significativement les coûts opérationnels.",
+                "extra_info": "Nos solutions sur mesure s'adaptent aux exigences spécifiques de chaque industrie et type de procédé, optimisant l'utilisation de cette ressource précieuse."
+            }
+        },
+        "cta": {
+            "title": "Réduisez Votre Consommation d'Eau",
+            "description": "Contactez-nous pour étudier les possibilités de réutilisation des eaux usées dans votre organisation et contribuer à un avenir plus durable.",
+            "button": "Étudier une Solution Sur-Mesure",
+            "message": "Bonjour, je suis intéressé par vos services de réutilisation des eaux usées. Pourriez-vous me fournir plus de détails sur vos méthodes et tarifs ? Merci."
+        }
+    },
+    "Assainissement":{
+        "services": {
+            "needs_assessment": {
+                "title": "Évaluation des Besoins",
+                "description": "Nous répondons précisément aux besoins locaux de gestion de l'eau grâce à une analyse complète et des solutions adaptées.",
+                "features": [
+                    "Analyse approfondie des systèmes d'eau locaux",
+                    "Identification des opportunités d'amélioration",
+                    "Rapports d'évaluation personnalisés"
+                ]
+            },
+            "network_design": {
+                "title": "Conception du Réseau",
+                "description": "Conception de systèmes d'assainissement pour la santé publique et l'hygiène locales, garantissant une gestion de l'eau efficace et durable.",
+                "features": [
+                    "Planification complète du système",
+                    "Intégration aux infrastructures existantes",
+                    "Solutions pérennes"
+                ]
+            },
+            "treatment_optimization": {
+                "title": "Optimisation du Traitement",
+                "description": "Optimisation avancée du traitement des eaux usées, conforme aux normes environnementales et axée sur la durabilité.",
+                "features": [
+                    "Solutions de traitement intelligentes",
+                    "Conformité environnementale",
+                    "Amélioration de l'efficacité"
+                ]
+            }
+        },
+        "cta": {
+            "title": "Prêt à transformer votre gestion de l'eau?",
+            "description": "Notre équipe d'experts est prête à vous aider à mettre en œuvre des solutions durables et efficaces.",
+            "button": "Travaillons ensemble",
+            "message": "Bonjour ! Je suis intéressé par vos services de gestion de l'eau. Pouvons-nous en discuter ?"
+        }
+    },
+    "Protection":{
+        "our_approach": "Notre Approche",
+        "approach": {
+            "prevention": {
+                "title": "Prévention",
+                "description": "Identification des zones à risque et mise en place de mesures préventives pour réduire l'exposition aux inondations."
+            },
+            "protection": {
+                "title": "Protection",
+                "description": "Conception et mise en œuvre d'infrastructures de protection efficaces et respectueuses de l'environnement."
+            },
+            "preparation": {
+                "title": "Préparation",
+                "description": "Développement de systèmes d'alerte précoce et de plans d'intervention pour minimiser les impacts des inondations."
+            }
+        },
+        "solutions": "Nos Solutions de Protection",
+        "Features": "Caractéristiques",
+        "solutions_list": {
+            "drainage": {
+                "title": "Systèmes de Drainage Urbain Durable",
+                "description": "Nos systèmes de drainage urbain durable (SUDS) intègrent des solutions basées sur la nature pour gérer efficacement les eaux pluviales tout en améliorant la biodiversité et la qualité de vie urbaine.",
+                "features": [
+                    "Jardins de pluie et noues paysagères",
+                    "Pavés perméables et surfaces poreuses",
+                    "Bassins de rétention et zones humides artificielles",
+                    "Toitures végétalisées"
+                ]
+            },
+            "protection_works": {
+                "title": "Ouvrages de Protection",
+                "description": "Nous concevons et réalisons des infrastructures de protection contre les inondations adaptées aux contextes locaux, en intégrant des considérations environnementales et paysagères.",
+                "features": [
+                    "Digues et barrières anti-inondation",
+                    "Bassins d'écrêtement des crues",
+                    "Canaux de dérivation",
+                    "Murs de protection intégrés au paysage"
+                ]
+            },
+            "risk_mapping": {
+                "title": "Cartographie des Risques et Planification",
+                "description": "Nos services d'analyse et de cartographie permettent d'identifier les zones à risque et de développer des stratégies d'aménagement du territoire intégrant la gestion des inondations.",
+                "features": [
+                    "Modélisation hydraulique avancée",
+                    "Cartographie des zones inondables",
+                    "Plans de prévention des risques",
+                    "Stratégies d'adaptation au changement climatique"
+                ]
+            },
+            "early_warning": {
+                "title": "Systèmes d'Alerte Précoce",
+                "description": "Nous développons des systèmes de surveillance et d'alerte intégrant les technologies les plus récentes pour anticiper les risques d'inondation et permettre une réaction rapide.",
+                "features": [
+                    "Réseaux de capteurs intelligents",
+                    "Prévision hydrométéorologique",
+                    "Plateformes d'alerte multi-canaux",
+                    "Applications mobiles de notification"
+                ]
+            }
+        },
+        "case_studies":{
+            "case_studies_title": "Études de Cas",
+            "protection_system_title": "Système de Protection Intégré - Ville Côtière",
+            "protection_system_description": "Mise en place d'un système complet de protection contre les inondations côtières, combinant infrastructures de défense, restauration d'écosystèmes naturels et système d'alerte précoce.",
+            "protection_system_challenges": "Défis:",
+            "protection_system_results": "Résultats:",
+            "challenges": [
+                "• Augmentation du niveau de la mer",
+                "• Érosion côtière accélérée",
+                "• Zone urbaine dense"
+            ],
+            "results": [
+                "• Réduction de 85% des dommages",
+                "• Restauration écologique réussie",
+                "• Temps d'alerte triplé"
+            ],
+            "urban_renewal_title": "Renouvellement Urbain Résilient - Métropole",
+            "urban_renewal_description": "Réaménagement d'un quartier urbain avec intégration de solutions de drainage durable, transformation d'espaces imperméables en zones perméables et création d'espaces multifonctionnels de gestion des eaux pluviales.",
+            "urban_renewal_challenges": "Défis:",
+            "urban_renewal_results": "Résultats:",
+            "urban_renewal_challenges_list": [
+                "• Réseau d'assainissement saturé",
+                "• Inondations pluviales fréquentes",
+                "• Forte densité urbaine"
+            ],
+            "urban_renewal_results_list": [
+                "• 60% de réduction du ruissellement",
+                "• Création d'espaces verts valorisés",
+                "• Amélioration de la qualité de l'eau"
+            ]
+        },
+        "cta": {
+            "title": "Protégez Votre Communauté Contre les Inondations",
+            "description": "Contactez nos experts pour évaluer les risques d'inondation dans votre région et développer des solutions adaptées à vos besoins spécifiques.",
+            "button": "Demander une Évaluation des Risques",
+            "message": "Bonjour, j'aimerais demander une évaluation des risques d'inondation pour ma communauté. Pouvez-vous m'aider ?"
+        }
+    },
+    "chat": {
+        "title": "Assistant Manara",
+        "closeChat": "Fermer le chat",
+        "emptyState": {
+            "title": "Demandez-moi n'importe quoi et je ferai de mon mieux pour vous aider !"
+        },
+        "typeMessage": "Tapez ici...",
+        "sendMessage": "Envoyer un message"
+    },
+    "global_vision": {
+        "title": "Une Vision Globale de l'Eau",
+        "content": "L’eau est une ressource universelle, essentielle à la vie et au développement durable. Manara Water Consulting conçoit des solutions intelligentes et durables pour préserver et optimiser les ressources hydriques à l’échelle mondiale.",
+        "videoUnsspported": "Votre navigateur ne prend pas en charge la vidéo HTML5."
+    },
+    "not_found":{
+        "error": "Erreur 404",
+        "title": "Nous n'avons pas trouvé cette page",
+        "description": "La page que vous avez demandée est introuvable. Elle a peut-être été déplacée, supprimée ou n'a jamais existé.",
+        "back_home": "Retour à l'accueil",
+        "contact_support": "Contacter le support"
+    },
+    "project_page":{
+        "project": "Projet",
+        "description": "Description",
+        "solution": "Solution",
+        "impact": "Impact",
+        "project_details": "Détails du projet",
+        "client": "Client",
+        "location": "Emplacement",
+        "key_dates": "Dates clés",
+        "started": "Commencé",
+        "completed": "Terminé",
+        "expertise": "Expertise"
+    }
+
+}
+
+

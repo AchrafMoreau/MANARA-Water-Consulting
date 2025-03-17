@@ -1,0 +1,583 @@
+{
+    "manara" : "Manara",
+    "water_consulting" : "Water Consulting",
+    "brand": "Manara Water Consulting",
+    "footer-rights": "Manara Water Consulting. All Rights Reserved.",
+    "arabic": "Arabic",
+    "english": "English",
+    "french": "French",
+    "services": "Services",
+    "overview": "Overview",
+    "Features": "Features",
+    "projects": "Projects",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "ourSolutions": "Our Solutions",
+    "trainings": "GIS Trainings & Capacity Building",
+    "aquifersStudy": "Aquifers & Watercourses Study",
+    "waterReuse": "Wastewater Reuse",
+    "sanitation": "Sanitation Services",
+    "floodProtection": "Flood Protection",
+    "companyName": "Manara Water Consulting",
+    "tagline": "Expertise & Innovation to Address Sustainable Development Challenges 💧🌍",
+    "trainingsDesc": "We offer professional training in GIS, sustainable practices, and water resource management for executives and technical staff. Our training programs are customized to meet the needs of each sector.",
+    "aquifersStudyDesc": "Our Water Services Coordination capabilities are integral to projects ranging from urban developments and transport infrastructure to large-scale industrial and commercial ventures. By delivering innovative and future-ready water solutions, we contribute to smarter, greener, and more connected communities.",
+    "waterReuseDesc": "We offer waste management strategies to reduce the carbon footprint and promote wastewater recycling.",
+    "floodProtectionDesc": "We design innovative infrastructure to mitigate the effects of flooding, such as drainage systems and levees.",
+    "sanitationDesc": "In-depth studies of local sanitation needs and targeted responses. Designing sanitation systems adapted to local contexts, aiming to improve hygiene and public health & offering smart solutions for optimizing wastewater treatment in compliance with environmental standards.",
+    "hero":{
+        "discoverSolution": "Discover Our Solution",
+        "needExpertise": "Need Expertise?",
+        "expertSupport": "Our experts support you in your water management and sanitation projects. Contact us for a personalized study.",
+        "seeMore": "See More"
+    },
+    "ourpartners" : "OUR PARTNERS",
+    "seeMoreProjects" : "See More Projects",
+    "lastProjects" : "Last Projects",
+    "mission":{
+        "title" : "Our Mission",
+        "intro": "we are committed to providing sustainable and innovative solutions to address water management challenges. Our mission is to ensure responsible and efficient use of water resources by offering specialized services in,",
+        "waterManagement": "water management",
+        "conservation": "conservation",
+        "sanitation": "sanitation",
+        "and": "and",
+        "urbanResilience": "urban resilience.",
+        "expertise": "Through our expertise in hydraulics, geophysics, and advanced modeling, we support communities, businesses, and organizations in implementing strategies adapted to current environmental challenges. We believe in a collaborative and effective approach to ensure a sustainable future, where water remains an accessible, preserved, and secure resource for all."
+    },
+    "footer":{
+        "description": "Expert in water resource management and sustainable environmental solutions."
+    },
+    "intro": {
+        "workingWithManara": "Working with Manara Water Consulting",
+        "collaboratingWithManara": "Collaborating with Manara Water Consulting means partnering with a team of dedicated experts who prioritize sustainability, innovation, and efficiency in water management.",
+        "team": "Team",
+        "clients": "Clients",
+        "ourGoal": "Our Goal",
+        "oneLocation": "One Location",
+        "address": "Centre Affaires Nour 1, Bloc B, Imm. 5, Appt N°3 - Tamesna, Morocco",
+        "oneTeam": "One Team.",
+        "teamDescription": "Our team consists of experienced professionals who bring innovative solutions to every water project.",
+        "founderDirector": "Founder & Director",
+        "asmaDescription": "Founder of Manara Water Consulting, Dr. Asma Ben Moussa is an expert in water management. She develops sustainable solutions to preserve resources. Her leadership guides the company’s environmental mission.",
+        "preserveWater": "Preserve Water",
+        "preserveWaterDesc": "Promote responsible and sustainable water resource management.",
+        "innovateOptimize": "Innovate & Optimize",
+        "innovateOptimizeDesc": "Develop technological solutions for better water efficiency.",
+        "raiseAwareness": "Raise Awareness & Train",
+        "raiseAwarenessDesc": "Educate and support stakeholders towards sustainable practices.",
+        "publicInstitutions": "Public Institutions",
+        "publicInstitutionsDesc": "Public institutions supported for sustainable water management.",
+        "smartCities": "Smart Cities",
+        "smartCitiesDesc": "Cities and municipalities equipped with intelligent water management solutions.",
+        "optimizedIndustries": "Optimized Industries",
+        "optimizedIndustriesDesc": "Companies and industries optimizing their water consumption."
+    },
+    "contactPage":{
+        "title": "Feel Free To Contact Us",
+        "description": "Have a question? A project in mind? Contact us today and let's discuss tailored solutions for your water management and environmental needs."
+    },
+    "contact":{
+        "title": "Get In Touch",
+        "description": "We're here to support you in Making Sustainability Happen. Get in touch for a collaborative discussion about what that could look like for your organisation.",
+        "form": {
+            "header": "Send Your Message",
+            "subheader": "Fill in the below form and we'll get you to the right place.",
+            "name": "Name",
+            "namePlaceholder": "Joe",
+            "email": "Email",
+            "emailPlaceholder": "name@example.com",
+            "company": "Company",
+            "companyPlaceholder": "ASM Inc.",
+            "region": "Region",
+            "regionPlaceholder": "Casablanca",
+            "messagePlaceholder": "Type your message here.",
+            "submit": "Submit",
+            "toastrMessage": "Thank you for reaching out. We'll get back to you soon.",
+            "toastr": "Message Sent Successfully!",
+            "toastrError": "Something went Wrong Please Try again."
+        }
+    },
+    "about":{
+        "title": "Who We Are",
+        "description": "Manara Water Consulting is a specialized consultancy firm in sustainable water management. With over 15 years of experience, we support our partners in optimizing water resources and environmental protection.",
+        "team": {
+            "title": "Our Team",
+            "description": "Our team consists of experienced experts from various fields, including water resources, geophysics, urban hydraulics, sanitation, and sustainable development."
+        }
+    },
+    "mission_vision": {
+        "title": "Our Mission & Vision",
+        "mission": {
+            "title": "🌍 Our Mission",
+            "description": "Building a future where water is preserved, optimized, and accessible to all. We aspire to a world where water resources are managed sustainably, integrating innovative, ecological, and efficient solutions to address climate and environmental challenges."
+        },
+        "vision": {
+            "title": "💡 Our Vision",
+            "description": "Building a future where water is preserved, optimized, and accessible to all. We aspire to a world where water resources are managed sustainably, integrating innovative, ecological, and efficient solutions to address climate and environmental challenges."
+        }
+    },
+    "core_values": {
+        "title": "Our Core Values",
+        "integrity": {
+            "title": "Integrity",
+            "description": "We act with honesty, respect, and responsibility in all our initiatives."
+        },
+        "innovation": {
+            "title": "Innovation",
+            "description": "We encourage and adopt creative and innovative approaches. We promote the development of collective intelligence and encourage solution-oriented attitudes."
+        },
+        "collaboration_performance": {
+            "title": "Collaboration & Performance",
+            "description": "We believe in the power of collaboration to make significant progress toward a sustainable future. We foster a climate that supports efficiency, performance, and well-being with kindness."
+        }
+    },
+    "Projects": {
+        "title": "Projects",
+        "all_projects": "All Projects",
+        "see_project" : "See Project",
+        "description": "Discover our innovative projects in water management and sanitation. Through sustainable and technological solutions, we support communities, businesses, and organizations for a more responsible future.",
+        "expertise_title": "Our Areas of Expertise",
+        "expertise_description": "Manara Water Consulting offers a complete range of specialized services in water resource management and conservation.",
+        "no_projects_in_category": "No projects match this category.",
+        "load_more_projects": "See more projects"
+    },
+    "Categories": {
+        "water_management": {
+            "title": "Water Resource Management",
+            "description": "Studies on groundwater and preservation of water resources"
+        },
+        "sustainable_development": {
+            "title": "Sustainable Development & Environment",
+            "description": "Solutions for wastewater reuse and pollution control"
+        },
+        "hydraulic_infrastructure": {
+            "title": "Hydraulic Infrastructure & Sanitation",
+            "description": "Design of sanitation systems and optimization of networks"
+        },
+        "flood_protection": {
+            "title": "Flood Protection",
+            "description": "Hydraulic modeling and design of drainage infrastructure"
+        },
+        "innovation": {
+            "title": "Innovation & Water Technologies",
+            "description": "GIS mapping and smart water management"
+        },
+        "studies_training": {
+            "title": "Specialized Studies & Training",
+            "description": "Training in GIS and feasibility studies of hydraulic projects"
+        }
+    },
+    "LastProjects": {
+        "title": "Our Recent Projects",
+        "description": "Discover some of our recent achievements in water management."
+    },
+    "solutions":{
+        "solutions_title": "Our Solutions for Sustainable Water Management",
+        "solutions_description": "Our expertise covers a wide range of water-related services designed to address current and future environmental challenges.",
+        "see_more" : "See More",
+        "services": {
+            "sig_training": {
+                "title": "GIS Training & Capacity Building",
+                "description": "Professional GIS training and sustainable practices for water resource management."
+            },
+            "water_study": {
+                "title": "Study of Groundwater & Watercourses",
+                "description": "Water service coordination for infrastructure projects and innovative solutions for communities."
+            },
+            "wastewater_reuse": {
+                "title": "Reuse of Wastewater",
+                "description": "Waste management strategies to reduce the carbon footprint and promote wastewater recycling."
+            },
+            "sanitation": {
+                "title": "Sanitation Services",
+                "description": "Smart solutions for optimizing wastewater treatment in compliance with environmental standards."
+            },
+            "flood_protection": {
+                "title": "Flood Protection",
+                "description": "Innovative infrastructures to mitigate the effects of floods, drainage systems, and levees."
+            }
+        },
+        "methodology": "Our Methodology",
+        "integrated_approach": {
+            "title": "Our Integrated Approach",
+            "description": "We combine technical expertise, local understanding, and innovative solutions to create sustainable and efficient water management systems. Our integrated approach considers all aspects of the water cycle to ensure optimal solutions."
+        },
+        "tags": ["Expertise", "Innovation", "Sustainability", "Efficiency"]
+    },
+    "servicesLayout": {
+        "title": "Our Services",
+        "description": "Expertise & Innovation to Tackle Sustainable Development Challenges. 💧🌍",
+        "FormationsSIG": {
+            "title": "GIS Training & Capacity Building",
+            "description": "Professional training in GIS and sustainable practices for water resource management."
+        },
+        "EtudedesNappes": {
+            "title": "Study of Aquifers & Watercourses",
+            "description": "Innovative solutions for studying and managing aquifers and watercourses."
+        },
+        "Reetulisation": {
+            "title": "Wastewater Reuse",
+            "description": "Advanced strategies for recycling and reusing wastewater."
+        },
+        "Protection": {
+            "title": "Flood Protection",
+            "description": "Innovative infrastructure for flood protection and risk management."
+        },
+        "Assainissement": {
+            "title": "Sanitation Services",
+            "description": "Sanitation services tailored to local contexts to improve hygiene and public health."
+        }
+    },
+    "FormationsSIG":{
+        "title": "GIS Training & Capacity Building",
+        "description": "Our professional training programs are designed to strengthen the skills of executives and technical staff in the fields of Geographic Information Systems (GIS) and sustainable water resource management.",
+        "programs_title": "Our Training Programs",
+        "programs": [
+            {
+                "title": "GIS for Water Resource Management",
+                "description": "Master GIS tools to map and analyze water resources."
+            },
+            {
+                "title": "Data Collection and Analysis",
+                "description": "Collection techniques and analysis methods for effective water management."
+            },
+            {
+                "title": "Train the Trainers",
+                "description": "Develop pedagogical skills to pass on your expertise."
+            }
+        ],
+        "benefits_title": "Benefits of Our Training",
+        "benefits": [
+            "Customized programs tailored to your specific needs",
+            "Expert trainers with field experience",
+            "Practical approach with real case studies",
+            "Recognized certification in the sector",
+            "Post-training follow-up and continuous support",
+            "Access to our network of professionals"
+        ],
+        "cta_title": "Ready to Strengthen Your Team’s Skills?",
+        "cta_description": "Our training programs are tailored to your organization's specific needs. Contact us to discuss your goals and create a customized program.",
+        "cta_button": "Request a Custom Program",
+        "cta_message":"Hello, I am interested in your GIS Training & Capacity Building program. Could you please provide me with more details regarding the curriculum, schedule, and pricing? Thank you!"
+    },
+    "EtudeDesNappes": {
+        "title": "Aquifer and River Study & Water Resource Monitoring",
+        "description": "Our advanced hydraulic and hydrogeophysical modeling techniques allow for the analysis and prediction of aquifer and river behavior in various scenarios.",
+        "methodology": {
+            "title": "Our Methodology",
+            "steps": {
+                "evaluation": {
+                    "title": "Evaluation",
+                    "description": "Preliminary study and collection of existing data"
+                },
+                "investigation": {
+                    "title": "Investigation",
+                    "description": "Field measurements and laboratory analyses"
+                },
+                "analysis": {
+                    "title": "Analysis",
+                    "description": "Modeling and interpretation of results"
+                },
+                "recommendations": {
+                    "title": "Recommendations",
+                    "description": "Customized solutions and action plans"
+                }
+            }
+        },
+        "services": {
+            "aquifers": {
+                "label": "Study of Groundwater",
+                "title": "Aquifer Study & Management",
+                "description": "Our experts assess the quality and quantity of groundwater resources, enabling sustainable management of aquifers and implementing protection strategies.",
+                "points": [
+                    "Hydrogeological mapping",
+                    "Aquifer modeling",
+                    "Vulnerability studies",
+                    "Aquifer management plans",
+                    "Protection zone determination"
+                ]
+            },
+            "rivers": {
+                "label": "Watercourses",
+                "title": "River Study & Management",
+                "description": "We carry out comprehensive hydrological studies of rivers to optimize their management and develop flood protection solutions.",
+                "points": [
+                    "Hydromorphological studies",
+                    "Flow and flood analysis",
+                    "River restoration",
+                    "Ecological quality assessment",
+                    "Bank management"
+                ]
+            },
+            "monitoring": {
+                "label": "Monitoring & Analysis",
+                "title": "Water Resource Monitoring & Analysis",
+                "description": "Our monitoring systems allow real-time tracking of water resource quality and quantity, enabling proactive and sustainable management.",
+                "points": [
+                    "Piezometric monitoring networks",
+                    "Physicochemical water analysis",
+                    "Level and flow monitoring",
+                    "Data interpretation and modeling",
+                    "Early warning solutions"
+                ]
+            }
+        },
+        "cta": {
+            "title": "Need a Study for Your Project?",
+            "description": "Contact our experts to discuss your specific needs and get a tailored proposal based on your context.",
+            "button": "Request a Consultation",
+            "message": "Hello, I'm interested in your groundwater and watercourse survey services. Could you provide me with more details on your methods and pricing? Thank you."
+        }
+    },
+    "Reetulisation": {
+        "benefits_section": {
+            "title": "Benefits of Wastewater Reuse",
+            "categories": {
+                "environmental": {
+                    "title": "Environmental",
+                    "benefits": [
+                        "Reduces pressure on water resources",
+                        "Decreases pollutant discharges into natural environments",
+                        "Preserves aquatic ecosystems",
+                        "Reduces carbon footprint"
+                    ]
+                },
+                "economic": {
+                    "title": "Economic",
+                    "benefits": [
+                        "Significant savings on water consumption",
+                        "Reduces wastewater treatment costs",
+                        "Utilization of an untapped resource",
+                        "Compliance with environmental standards"
+                    ]
+                },
+                "social": {
+                "title": "Social",
+                "benefits": [
+                        "Strengthens water independence",
+                        "Improves brand image",
+                        "Concrete commitment to sustainable development",
+                        "Adaptation to climate change"
+                    ]
+                }
+            }
+        },
+        "process_section": {
+            "title": "Our Treatment Process",
+            "steps": {
+                "collection": {
+                    "title": "Collection",
+                    "description": "Recovery and storage of wastewater"
+                },
+                "pre_treatment": {
+                    "title": "Pre-treatment",
+                    "description": "Removal of solids and coarse impurities"
+                },
+                "treatment": {
+                    "title": "Treatment",
+                    "description": "Biological and chemical processes adapted"
+                },
+                "control": {
+                    "title": "Control",
+                    "description": "Quality verification according to intended use"
+                },
+                "distribution": {
+                    "title": "Distribution",
+                    "description": "Delivery to points of use"
+                }
+            }
+        },
+        "applications_section": {
+            "title": "Applications of Wastewater Reuse",
+            "agriculture": {
+                "title": "Agricultural Irrigation and Green Spaces",
+                "description": "Treated water can be used for irrigating non-food crops, green spaces, golf courses, and parks, significantly reducing potable water consumption for these uses.",
+                "extra_info": "Our treatment systems ensure water quality adapted to the specific needs of plants while ensuring sanitary safety."
+            },
+            "industrialApplications": {
+                "title": "Industrial Applications",
+                "description": "Recycled water can be used for various industrial processes: cooling, cleaning, and processes that do not require drinking water, significantly reducing operational costs.",
+                "extra_info": "Our customized solutions adapt to the specific requirements of each industry and process type, optimizing the use of this valuable resource."
+            }
+        },
+        "cta": {
+            "title": "Reduce Your Water Consumption",
+            "description": "Contact us to explore wastewater reuse possibilities in your organization and contribute to a more sustainable future.",
+            "button": "Explore a Custom Solution",
+            "message": "Hello, I'm interested in your wastewater reuse services. Could you provide me with more details on your methods and pricing? Thank you."
+        }
+    },
+    "Assainissement":{
+        "services": {
+            "needs_assessment": {
+                "title": "Needs Assessment",
+                "description": "We precisely respond to local water management needs with comprehensive analysis and tailored solutions.",
+                "features": [
+                    "In-depth analysis of local water systems",
+                    "Identification of improvement opportunities",
+                    "Customized assessment reports"
+                ]
+            },
+            "network_design": {
+                "title": "Network Design",
+                "description": "Design of sanitation systems for local public health and hygiene, ensuring efficient and sustainable water management.",
+                "features": [
+                    "Comprehensive system planning",
+                    "Integration with existing infrastructure",
+                    "Future-proof solutions"
+                ]
+            },
+            "treatment_optimization": {
+                "title": "Treatment Optimization",
+                "description": "Advanced optimization of wastewater treatment, compliant with environmental standards and focused on sustainability.",
+                "features": [
+                    "Smart treatment solutions",
+                    "Environmental compliance",
+                    "Efficiency improvements"
+                ]
+            }
+        },
+        "cta": {
+            "title": "Ready to transform your water management?",
+            "description": "Our team of experts is ready to help you implement sustainable and efficient water solutions.",
+            "button": "Let's collaborate",
+            "message": "Hello! I’m interested in your water management services. Can we discuss more?"
+        }
+    },
+    "Protection":{
+        "our_approach": "Our Approach",
+        "approach": {
+            "prevention": {
+                "title": "Prevention",
+                "description": "Identification of risk areas and implementation of preventive measures to reduce flood exposure."
+            },
+            "protection": {
+                "title": "Protection",
+                "description": "Design and implementation of effective and environmentally friendly protective infrastructures."
+            },
+            "preparation": {
+                "title": "Preparation",
+                "description": "Development of early warning systems and intervention plans to minimize flood impacts."
+            }
+        },
+        "solutions": "Our Protection Solutions",
+        "Features": "Features",
+        "solutions_list": {
+            "drainage": {
+                "title": "Sustainable Urban Drainage Systems",
+                "description": "Our sustainable urban drainage systems (SUDS) integrate nature-based solutions to efficiently manage stormwater while enhancing biodiversity and urban quality of life.",
+                "features": [
+                    "Rain gardens and landscaped swales",
+                    "Permeable pavements and porous surfaces",
+                    "Retention basins and artificial wetlands",
+                    "Green roofs"
+                ]
+            },
+            "protection_works": {
+                "title": "Protection Works",
+                "description": "We design and build flood protection infrastructures adapted to local contexts, integrating environmental and landscape considerations.",
+                "features": [
+                    "Dikes and flood barriers",
+                    "Flood storage basins",
+                    "Diversion channels",
+                    "Integrated landscape protection walls"
+                ]
+            },
+            "risk_mapping": {
+                "title": "Risk Mapping and Planning",
+                "description": "Our analysis and mapping services help identify risk areas and develop land-use planning strategies that integrate flood management.",
+                "features": [
+                    "Advanced hydraulic modeling",
+                    "Flood-prone area mapping",
+                    "Risk prevention plans",
+                    "Climate change adaptation strategies"
+                ]
+            },
+            "early_warning": {
+                "title": "Early Warning Systems",
+                "description": "We develop monitoring and alert systems that incorporate the latest technologies to anticipate flood risks and enable a rapid response.",
+                "features": [
+                    "Smart sensor networks",
+                    "Hydrometeorological forecasting",
+                    "Multi-channel alert platforms",
+                    "Mobile notification applications"
+                ]
+            }
+        },
+        "case_studies":{
+            "title": "Case Studies",
+            "protection_system_title": "Integrated Protection System - Coastal City",
+            "protection_system_description": "Implementation of a comprehensive coastal flood protection system, combining defense infrastructure, restoration of natural ecosystems, and an early warning system.",
+            "protection_system_challenges": "Challenges:",
+            "protection_system_results": "Results:",
+            "challenges": [
+                "• Rising sea levels",
+                "• Accelerated coastal erosion",
+                "• Dense urban area"
+            ],
+            "results": [
+                "• 85% reduction in damage",
+                "• Successful ecological restoration",
+                "• Tripled alert time"
+            ],
+            "urban_renewal_title": "Resilient Urban Renewal - Metropolis",
+            "urban_renewal_description": "Urban neighborhood redevelopment with integration of sustainable drainage solutions, transformation of impervious surfaces into permeable zones, and creation of multifunctional stormwater management spaces.",
+            "urban_renewal_challenges": "Challenges:",
+            "urban_renewal_results": "Results:",
+            "urban_renewal_challenges_list": [
+                "• Overloaded sanitation network",
+                "• Frequent stormwater flooding",
+                "• High urban density"
+            ],
+            "urban_renewal_results_list": [
+                "• 60% reduction in runoff",
+                "• Creation of valued green spaces",
+                "• Improved water quality"
+            ]
+        },
+        "cta": {
+            "title": "Protect Your Community Against Floods",
+            "description": "Contact our experts to assess flood risks in your area and develop solutions tailored to your specific needs.",
+            "button": "Request a Risk Assessment",
+            "message": "Hello, I would like to request a flood risk assessment for my community. Can you help?"
+        }
+    },
+    "chat": {
+        "title": "Manara Assistant",
+        "closeChat": "Close chat",
+        "emptyState": {
+            "title": "Ask me anything and I'll do my best to help you!"
+        },
+        "typeMessage": "Type your message...",
+        "sendMessage": "Send message"
+    },
+    "global_vision": {
+        "title": "A Global Vision for Water",
+        "content": "Water is a universal resource, vital for life and sustainability. At Manara Water Consulting, we develop smart and sustainable solutions to preserve and optimize water resources worldwide.",
+        "videoUnsspported": "Your browser does not support the video tag."
+    },
+    "not_found": {
+        "error": "Error 404",
+        "title": "We couldn't find this page",
+        "description": "The page you requested could not be found. It might have been moved, deleted, or perhaps never existed.",
+        "back_home": "Back to Home",
+        "contact_support": "Contact Support"
+    },
+    "project_page":{
+        "project": "Project",
+        "description": "Description",
+        "solution": "Solution",
+        "impact": "Impact",
+        "project_details": "Project Details",
+        "client": "Client",
+        "location": "Location",
+        "key_dates": "Key Dates",
+        "started": "Started",
+        "completed": "Completed",
+        "expertise": "Expertise"
+    }
+
+}
+
+
+

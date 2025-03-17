@@ -1,0 +1,25 @@
+[33m9523196[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m ignore zip file
+[33m6efe2b3[m clean some stuff
+[33m3c5d1f9[m add translation
+[33m228f1c4[m[33m ([m[1;31morigin/main[m[33m)[m change chat ui
+[33m5d6ccd7[m fix vercel
+[33mdaf54e6[m fix vercel
+[33m0788162[m increase timeout on vercel.json file
+[33m6ba026e[m increase timeout on vercel.json file
+[33mc970eae[m fix streaming message
+[33mdce4029[m make chat stream the text
+[33m7e1ebc2[m fix the chat-bot and contact form
+[33m87485ae[m fix about and contact page
+[33m077f067[m filter colors
+[33m9226878[m fix project filter colors
+[33mb506fda[m change name of the files
+[33mf178d1e[m remove system mode
+[33m2955939[m small change
+[33mcb89568[m some change
+[33m4372cc9[m add prisma generating on scripts for vercel build
+[33m466961b[m connact to a database and ad project table
+[33m9fc9bc9[m add about us page
+[33mb2eed5a[m ignore ts errors
+[33m7e7cdc4[m make the hero section responsive
+[33m5189f93[m change the hero section
+[33m6ac57d5[m init
