@@ -1,5 +1,6 @@
 import { routing } from '@/i18n/routing';
-import formidable from 'formidable';
+import { Readable } from 'stream';
+import formidable, { IncomingForm } from 'formidable';
 
 
 export const getBaseUrl = () => {
@@ -28,6 +29,7 @@ export const getI18nPath = (url: string, locale: string) => {
 
   return `/${locale}${url}`;
 };
+
 
 
 export const parserHelper = async (req: any) => {

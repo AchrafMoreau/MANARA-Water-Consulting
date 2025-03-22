@@ -1,17 +1,19 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { put } from "@vercel/blob"
 import { v4 as uuidv4 } from "uuid"
+import { parserHelper } from "@/lib/helper";
+import { NextApiRequest } from "next";
 
 export const config = {
     api: {
-        bodyParser: false,
+      bodyParser: false,
     },
 };
 
-export async function POST(request: NextRequest) {
+export async function POST(request: NextApiRequest) {
   try {
-    const formData = await request.formData();
-    const file = formData.get("file") as File
+    const { files } = await parserHelper(request);
+    const file = files['file'];
 
     if (!file) {
       return NextResponse.json({ success: false, error: "No file provided" }, { status: 400 })
