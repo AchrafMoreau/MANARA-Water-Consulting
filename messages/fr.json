@@ -6,6 +6,7 @@
     "arabic": "Arabe",
     "french": "Français",
     "english": "Anglais",
+    "join-us": "Rejoignez-nous",
     "services": "Services",
     "overview": "Aperçu",
     "Features": "Caractéristiques",
@@ -575,8 +576,60 @@
         "started": "Commencé",
         "completed": "Terminé",
         "expertise": "Expertise"
+    },
+    "joinUs":{
+        "title": "Rejoignez notre équipe",
+        "description": "Faites partie d'une équipe qui révolutionne la gestion de l'eau avec des idées innovantes et un engagement commun pour la durabilité.",
+        "possition":{
+            "title": "Postes Ouverts",
+            "description": "Découvrez nos offres d'emploi actuelles et trouvez l'opportunité qui correspond à vos compétences et à votre passion."
+        },
+        "features": {
+            "title": "Pourquoi nous rejoindre ?",
+            "description": "Découvrez pourquoi travailler avec nous est une expérience unique et enrichissante.",
+            "projects": {
+                "title": "Projets Innovants",
+                "description": "Travaillez sur des solutions de gestion de l'eau à la pointe de la technologie qui ont un réel impact sur les communautés et l'environnement."
+            },
+            "team": {
+                "title": "Équipe Diversifiée",
+                "description": "Rejoignez des professionnels de divers horizons et cultures, apportant des perspectives uniques à des défis complexes."
+            },
+            "growth": {
+                "title": "Opportunités d'Évolution",
+                "description": "Développez votre carrière grâce à un apprentissage continu, du mentorat et des opportunités d'évolution."
+            }
+        }
+    },
+    "offers": {
+        "type": {
+            "full_time": "Temps plein",
+            "part_time": "Temps partiel",
+            "contract": "Contrat",
+            "internship": "Stage",
+            "temporary": "Temporaire",
+            "volunteer": "Bénévolat",
+            "other": "Autre"
+        },
+        "urgent": "Urgent",
+        "type_label": "Type",
+        "posted_label": "Publié",
+        "job_description": "Description du poste",
+        "apply_now": "Postuler maintenant"
+    },
+    "dashboard":{
+        "dashboard": "Tableau de bord",
+        "sidebar": {
+            "logo_alt": "Logo de Manara Water",
+            "company_name": "Manara Water",
+            "company_tagline": "Consulting",
+            "main_navigation": "NAVIGATION PRINCIPALE",
+            "items": {
+                "home": "Home",
+                "projects": "Projets"
+            }
+        }
     }
-
 }
 
 

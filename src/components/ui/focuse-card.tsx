@@ -57,7 +57,7 @@ export const Card = React.memo(
         >
           <div className="relative h-[200px] overflow-hidden">
             <Image
-              src={`/${card.thumbnail}`}
+              src={card.thumbnail}
               alt={card.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"

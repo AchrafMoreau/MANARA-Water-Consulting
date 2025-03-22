@@ -45,3 +45,29 @@ model Category{
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }
+
+model Offer{
+  id      String      @id @default(uuid())
+  title    String
+  description String
+  department String
+  location  String
+  urgent    Boolean   @default(false)
+  employmentType  EmploymentType
+  IndeedUrl String
+  translations    Json  @default("{}")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+enum EmploymentType {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+  INTERNSHIP
+  TEMPORARY
+  VOLUNTEER
+  PER_DIEM
+  OTHER
+}
+

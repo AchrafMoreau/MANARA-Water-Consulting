@@ -3,31 +3,64 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-  const fetchCategory = await prisma.category.findMany();
+  // const fetchCategory = await prisma.category.findMany();
 
-  if (fetchCategory.length === 0) {
-    throw new Error("No categories found. Please seed categories first.");
-  }
-  const projects = Array.from({ length: 20 }).map((_, index) => {
-    const randomCategory = fetchCategory[Math.floor(Math.random() * fetchCategory.length)];
+  // if (fetchCategory.length === 0) {
+  //   throw new Error("No categories found. Please seed categories first.");
+  // }
+  // const projects = Array.from({ length: 20 }).map((_, index) => {
+  //   const randomCategory = fetchCategory[Math.floor(Math.random() * fetchCategory.length)];
 
-    return {
-      title: "Water Infrastructure Upgrade",
-      thumbnail: "water_consulting.jpg",
-      image: ["infra1.jpg", "infra2.jpg"],
-      client: "City of Agadir",
-      location: "Agadir, Morocco",
-      commenced: "2022-05-10",
-      completion: "2023-09-15",
-      categoryId: randomCategory.id,
-      description: "The Water Infrastructure Upgrade project focused on modernizing the city's aging pipeline system to improve water quality, reduce waste, and enhance supply efficiency. By implementing advanced leak detection systems, upgrading outdated piping materials, and integrating smart monitoring technology, we ensured that water loss due to infrastructure failures was significantly minimized. The project also included comprehensive assessments of pressure points, identifying weak areas prone to bursts and corrosion, followed by targeted replacements and reinforcements.",
-      solution: "Our solution involved deploying high-density polyethylene (HDPE) pipes, known for their durability and resistance to corrosion. Additionally, we introduced AI-driven predictive maintenance tools that analyze flow rates and pressure variations in real time, allowing for proactive issue resolution before critical failures occur. We also worked closely with the municipality to create an ongoing maintenance plan, ensuring sustainable infrastructure performance for years to come.",
-      impact: "This upgrade drastically improved water accessibility and reduced wastage by 30%, benefiting over 500,000 residents. The city's response to seasonal droughts has significantly improved, with a notable decrease in emergency maintenance costs. Furthermore, the modernization efforts have led to a reduction in service disruptions, ensuring households and businesses have a reliable water supply throughout the year.",
-    }
-  })
+  //   return {
+  //     title: "Water Infrastructure Upgrade",
+  //     thumbnail: "water_consulting.jpg",
+  //     image: ["infra1.jpg", "infra2.jpg"],
+  //     client: "City of Agadir",
+  //     location: "Agadir, Morocco",
+  //     commenced: "2022-05-10",
+  //     completion: "2023-09-15",
+  //     categoryId: randomCategory.id,
+  //     description: "The Water Infrastructure Upgrade project focused on modernizing the city's aging pipeline system to improve water quality, reduce waste, and enhance supply efficiency. By implementing advanced leak detection systems, upgrading outdated piping materials, and integrating smart monitoring technology, we ensured that water loss due to infrastructure failures was significantly minimized. The project also included comprehensive assessments of pressure points, identifying weak areas prone to bursts and corrosion, followed by targeted replacements and reinforcements.",
+  //     solution: "Our solution involved deploying high-density polyethylene (HDPE) pipes, known for their durability and resistance to corrosion. Additionally, we introduced AI-driven predictive maintenance tools that analyze flow rates and pressure variations in real time, allowing for proactive issue resolution before critical failures occur. We also worked closely with the municipality to create an ongoing maintenance plan, ensuring sustainable infrastructure performance for years to come.",
+  //     impact: "This upgrade drastically improved water accessibility and reduced wastage by 30%, benefiting over 500,000 residents. The city's response to seasonal droughts has significantly improved, with a notable decrease in emergency maintenance costs. Furthermore, the modernization efforts have led to a reduction in service disruptions, ensuring households and businesses have a reliable water supply throughout the year.",
+  //   }
+  // })
 
-  await prisma.project.createMany({
-    data: projects
+  const jobs = [
+    {
+      title: "Water Resource Engineer",
+      department: "Engineering",
+      location: "Riyadh, Saudi Arabia",
+      urgent: true,
+      IndeedUrl: "https://ma.indeed.com/viewjob?jk=843ecb495d6c416a&from=shareddesktop_copy",
+      description:
+        "We're looking for a Water Resource Engineer to join our team in Riyadh. You'll be responsible for designing and implementing sustainable water management solutions for urban and rural areas. The ideal candidate has experience with hydrological modeling and a passion for conservation.",
+      employmentType: "FULL_TIME",
+    },
+    {
+      title: "Environmental Consultant",
+      department: "Environmental",
+      location: "Jeddah, Saudi Arabia",
+      urgent: false,
+      IndeedUrl: "https://ma.indeed.com/viewjob?jk=6bd0bbe6dc570da2&from=shareddesktop_copy",
+      description:
+        "Join our environmental team to conduct impact assessments, develop mitigation strategies, and ensure compliance with local and international regulations. You'll work closely with government agencies and private sector clients on diverse projects throughout the region.",
+      employmentType: "CONTRACT",
+    },
+    {
+      title: "Project Manager",
+      department: "Management",
+      location: "Riyadh, Saudi Arabia",
+      urgent: false,
+      IndeedUrl: "https://ma.indeed.com/viewjob?jk=1e8a550db06e3445&from=shareddesktop_copy",
+      description:
+        "Lead cross-functional teams in the planning and execution of water infrastructure projects. You'll be responsible for budget management, timeline adherence, and stakeholder communication. We're looking for someone with a proven track record of delivering complex projects on time and within budget.",
+      employmentType: "PART_TIME",
+    },
+  ]
+
+  await prisma.offer.createMany({
+    data: jobs
   })
 
   console.log("✅ Database seeded successfully with long-form data!");

@@ -7,7 +7,16 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ['jg7oqc4zb0.ufs.sh'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'jg7oqc4zb0.ufs.sh',
+      },
+      {
+        protocol: 'https',
+        hostname: 'hytvt9ozg5rmhdu3.public.blob.vercel-storage.com',
+      }
+    ],
   },
   typescript: {
     ignoreBuildErrors: true,

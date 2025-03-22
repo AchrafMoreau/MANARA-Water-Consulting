@@ -1,6 +1,7 @@
 "use client"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Check, Globe } from "lucide-react"
+import { SignedIn, UserButton } from "@clerk/nextjs"
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useTransition } from 'react';
 import type React from "react"
@@ -26,6 +27,7 @@ import { useTranslations, useLocale } from "next-intl"
 import { usePathname } from "@/i18n/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LoadingOverlay from "./loading";
+import { RainbowButton } from "./ui/rainbow-button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -133,11 +135,25 @@ const Navbar = () => {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/join-us" legacyBehavior passHref>
+                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent `}>
+                  {t("join-us")}
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
 
       <div className="flex items-center gap-2">
+        <SignedIn>
+          <Link href="/dashboard">
+            <RainbowButton className="m-0 py-0 px-5 bg-primary dark:text-primary text-secondary">
+              {t("dashboard.dashboard")}
+            </RainbowButton>
+          </Link>
+        </SignedIn>
         <LanguageSelector />
         <ModeToggle />
 
@@ -245,6 +261,15 @@ const Navbar = () => {
                 >
                   {t("contactUs")}
                 </Link>
+                <Link
+                  href="/join-us"
+                  className={`text-2xl font-medium text-primary hover:text-primary/80 transition-colors"
+                    ${pathname === "/contact-us" ? "text-secondary font-bold" : ""}
+                  `}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t("join-us")}
+                </Link>
               </div>
             </div>
           </SheetContent>
@@ -280,7 +305,7 @@ const ListItem = forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRe
 ListItem.displayName = "ListItem"
 
 
-function LanguageSelector() {
+export function LanguageSelector() {
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const [loadingProgress, setLoadingProgress] = useState(0)

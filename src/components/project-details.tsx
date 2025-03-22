@@ -32,7 +32,7 @@ export function ProjectDetails({ project }: { project: ProjetType }) {
         <div className="lg:col-span-3">
             <div className="space-y-10">
               <div className="relative w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden">
-                <Image src={`/${project.thumbnail}`} alt={project.client} fill className="object-cover" priority />
+                <Image src={project.thumbnail} alt={project.client} fill className="object-cover" priority />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                   <div className="p-6">
                     <Badge className="bg-gradient-to-r from-secondary to-primary border-none mb-2 text-white text-sm">
@@ -53,6 +53,11 @@ export function ProjectDetails({ project }: { project: ProjetType }) {
                 </CardHeader>
                 <CardContent>
                   <div className="prose prose-sm dark:prose-invert max-w-none">{project.description}</div>
+                  {project.image[0] && (
+                    <div className="relative w-full h-[300px] rounded-lg overflow-hidden mt-6">
+                      <Image src={project.image[0]} alt="Solution visualization" fill className="object-cover" />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
 
@@ -67,9 +72,9 @@ export function ProjectDetails({ project }: { project: ProjetType }) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="prose prose-sm dark:prose-invert max-w-none">{project.solution}</div>
-                  {project.thumbnail && (
+                  {project.image[1] && (
                     <div className="relative w-full h-[300px] rounded-lg overflow-hidden mt-6">
-                      <Image src={`/${project.thumbnail}`} alt="Solution visualization" fill className="object-cover" />
+                      <Image src={project.image[1]} alt="Solution visualization" fill className="object-cover" />
                     </div>
                   )}
                 </CardContent>
@@ -86,6 +91,11 @@ export function ProjectDetails({ project }: { project: ProjetType }) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="prose prose-sm dark:prose-invert max-w-none">{project.impact}</div>
+                  {project.image[2] && (
+                    <div className="relative w-full h-[300px] rounded-lg overflow-hidden mt-6">
+                      <Image src={project.image[2]} alt="Solution visualization" fill className="object-cover" />
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </div>
