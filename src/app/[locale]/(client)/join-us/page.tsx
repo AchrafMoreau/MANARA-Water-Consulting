@@ -129,6 +129,7 @@ export default function Page(){
             </p>
           </FadeIn>
 
+
           <div className="max-w-4xl mx-auto space-y-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
