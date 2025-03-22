@@ -23,7 +23,8 @@ const nextConfig: NextConfig = {
   },
   eslint:{
     ignoreDuringBuilds: true
-  }
+  },
+  reactStrictMode: false
 };
 
 const withNextIntl = createNextIntlPlugin();

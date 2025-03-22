@@ -33,7 +33,6 @@ export async function uploadFileFromClient(file: File) {
     const formData = new FormData()
     formData.append("file", file)
 
-
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
     const response = await fetch(`${baseUrl}/api/upload`, {

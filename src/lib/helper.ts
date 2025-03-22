@@ -1,4 +1,6 @@
 import { routing } from '@/i18n/routing';
+import formidable from 'formidable';
+
 
 export const getBaseUrl = () => {
   if (process.env.NEXT_PUBLIC_APP_URL) {
@@ -25,4 +27,19 @@ export const getI18nPath = (url: string, locale: string) => {
   }
 
   return `/${locale}${url}`;
+};
+
+
+export const parserHelper = async (req: any) => {
+  const form = formidable();
+
+  return new Promise((resolve, reject) => {
+    form.parse(req, (err, fields, files) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve({ fields, files });
+      }
+    });
+  });
 };

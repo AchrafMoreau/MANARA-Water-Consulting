@@ -2,11 +2,15 @@ import { type NextRequest, NextResponse } from "next/server"
 import { put } from "@vercel/blob"
 import { v4 as uuidv4 } from "uuid"
 
+export const config = {
+    api: {
+        bodyParser: false,
+    },
+};
+
 export async function POST(request: NextRequest) {
   try {
-    console.log("this is the file ------", request)
     const formData = await request.formData();
-
     const file = formData.get("file") as File
 
     if (!file) {
@@ -40,4 +44,3 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: false, error: "Failed to upload file" }, { status: 500 })
   }
 }
-
