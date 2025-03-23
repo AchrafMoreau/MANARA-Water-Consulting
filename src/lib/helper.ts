@@ -34,7 +34,6 @@ export const getI18nPath = (url: string, locale: string) => {
 
 export const parserHelper = async (req: any) => {
   const form = formidable();
-
   return new Promise((resolve, reject) => {
     form.parse(req, (err, fields, files) => {
       if (err) {
