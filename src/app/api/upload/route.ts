@@ -8,6 +8,8 @@ export const config = {
 };
 
 export async function POST(request: NextRequest) {
+  const nodeReq = (request as any).raw; 
+
   try {
     const formData = await request.formData();
     const file = formData.get("file") as File;
