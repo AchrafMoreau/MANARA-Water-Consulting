@@ -1,11 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import { put } from "@vercel/blob";
 import { v4 as uuidv4 } from "uuid";
+export const config = {
+    api: {
+        bodyParser: false  
+    }
+};
 
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
     const file = formData.get("file") as File;
+    console.log(file)
 
     if (!file) {
       return NextResponse.json(

@@ -1,31 +1,4 @@
 "use server"
-import { put } from "@vercel/blob"
-import { v4 as uuidv4 } from "uuid"
-
-// Upload a single file to Vercel Blob Storage
-export async function uploadFile(formData: FormData) {
-  try {
-    const file = formData.get("file") as File
-
-    if (!file) {
-      throw new Error("No file provided")
-    }
-
-    // Generate a unique filename
-    const filename = `${uuidv4()}-${file.name.replace(/[^a-zA-Z0-9.-]/g, "_")}`
-
-    // Upload to Vercel Blob
-    const blob = await put(filename, file, {
-      access: "public",
-      addRandomSuffix: false,
-    })
-
-    return { success: true, url: blob.url }
-  } catch (error) {
-    console.error("Error uploading file:", error)
-    return { success: false, error: "Failed to upload file" }
-  }
-}
 
 // Upload a file from the client side
 export async function uploadFileFromClient(file: File) {
