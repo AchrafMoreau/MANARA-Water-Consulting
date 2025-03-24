@@ -1,7 +1,6 @@
 "use client"
-import * as LucideIcons from "lucide-react";
 import { useRouter } from "next/navigation"
-import { ArrowUpDown, Edit, Eye, MoreHorizontal, Plus, Search, SortAsc, SortDesc, Trash2, X } from "lucide-react"
+import { AlertTriangle, ArrowUpDown, Edit, Eye, Loader2, MoreHorizontal, Plus, Search, SortAsc, SortDesc, Trash2, X, Zap } from "lucide-react"
 import { format, set } from "date-fns"
 import { toast } from "sonner";
 import { Toaster } from "@/components/ui/sonner"
@@ -27,25 +26,24 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Link } from "@/i18n/navigation"
 import { useLocale, useTranslations } from "next-intl"
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
-import { bulkDeleteProjects, deleteProject } from "@/lib/actions/project-action";
+import { bulkDeleteOffers, deleteOffer } from "@/lib/actions/offer-action";
 import { useEffect, useMemo, useState } from "react";
+import { offersType } from "@/lib/types";
 
 type SortDirection = "asc" | "desc" | null
 type SortField = "title" | "createdAt" | null
 
-export default function ProjectsTable({ projects, categories }: { projects: any[]; categories: any[] }) {
-  const t = useTranslations('dashboard.projects')
+export default function OffersTable({ offers }: { offers: offersType[] }) {
+  const t = useTranslations('dashboard.offers')
   const locale = useLocale()
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
-  const [selectedProjects, setSelectedProjects] = useState<string[]>([])
+  const [selectedOffers, setSelectedOffers] = useState<string[]>([])
   const [searchQuery, setSearchQuery] = useState("")
-  const [categoryFilter, setCategoryFilter] = useState<string>("all")
 
   const [currentPage, setCurrentPage] = useState(1)
   const rowsPerPage = 10
@@ -53,24 +51,21 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
   const [sortField, setSortField] = useState<SortField>(null)
   const [sortDirection, setSortDirection] = useState<SortDirection>(null)
 
-  const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
+  const filteredoffers = useMemo(() => {
+    return offers.filter((offer) => {
       const matchesSearch =
-        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.location.toLowerCase().includes(searchQuery.toLowerCase())
-
-      const matchesCategory = categoryFilter === "all" || project.categoryId === categoryFilter
-
-      return matchesSearch && matchesCategory
+        offer.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        offer.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        offer.location.toLowerCase().includes(searchQuery.toLowerCase())
+      return matchesSearch
     })
-  }, [searchQuery, categoryFilter, projects])
+  }, [searchQuery, offers])
 
-  // Sort filtered projects
-  const sortedProjects = useMemo(() => {
-    if (!sortField || !sortDirection) return filteredProjects
+  // Sort filtered offers
+  const sortedoffers = useMemo(() => {
+    if (!sortField || !sortDirection) return filteredoffers
 
-    return [...filteredProjects].sort((a, b) => {
+    return [...filteredoffers].sort((a, b) => {
       if (sortField === "title") {
         return sortDirection === "asc" ? a.title.localeCompare(b.title) : b.title.localeCompare(a.title)
       }
@@ -83,19 +78,19 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
 
       return 0
     })
-  }, [filteredProjects, sortField, sortDirection])
+  }, [filteredoffers, sortField, sortDirection])
 
   // Calculate pagination
-  const totalPages = Math.ceil(sortedProjects.length / rowsPerPage)
-  const paginatedProjects = useMemo(() => {
+  const totalPages = Math.ceil(sortedoffers.length / rowsPerPage)
+  const paginatedOffers = useMemo(() => {
     const startIndex = (currentPage - 1) * rowsPerPage
-    return sortedProjects.slice(startIndex, startIndex + rowsPerPage)
-  }, [sortedProjects, currentPage])
+    return sortedoffers.slice(startIndex, startIndex + rowsPerPage)
+  }, [sortedoffers, currentPage])
 
   // Reset to first page when filters change
   useEffect(() => {
     setCurrentPage(1)
-  }, [searchQuery, categoryFilter, sortField, sortDirection])
+  }, [searchQuery, sortField, sortDirection])
 
   // Handle sorting
   const handleSort = (field: SortField) => {
@@ -122,17 +117,17 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
   }
 
   const toggleRowSelection = (id: string) => {
-    setSelectedProjects((prev) => (prev.includes(id) ? prev.filter((projectId) => projectId !== id) : [...prev, id]))
+    setSelectedOffers((prev) => (prev.includes(id) ? prev.filter((offerId) => offerId !== id) : [...prev, id]))
   }
 
   const toggleSelectAll = () => {
-    const currentPageIds = paginatedProjects.map((project) => project.id)
-    const allSelected = currentPageIds.every((id) => selectedProjects.includes(id))
+    const currentPageIds = paginatedOffers.map((project) => project.id)
+    const allSelected = currentPageIds.every((id) => selectedOffers.includes(id))
 
     if (allSelected) {
-      setSelectedProjects((prev) => prev.filter((id) => !currentPageIds.includes(id)))
+      setSelectedOffers((prev) => prev.filter((id) => !currentPageIds.includes(id)))
     } else {
-      setSelectedProjects((prev) => {
+      setSelectedOffers((prev) => {
         const newSelection = [...prev]
         currentPageIds.forEach((id) => {
           if (!newSelection.includes(id)) {
@@ -146,21 +141,21 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
 
   // Handle bulk delete
   const handleBulkDelete = async() => {
-    if (selectedProjects.length === 0) return
+    if (selectedOffers.length === 0) return
     setIsLoading(true)
     try{
-      await bulkDeleteProjects(selectedProjects)
-      toast.success(t('toast.success.projects_removed.title'), {
-          description: t('toast.success.projects_removed.description'),
+      await bulkDeleteOffers(selectedOffers)
+      toast.success(t('toast.success.offers_removed.title'), {
+          description: t('toast.success.offers_removed.description'),
           className: "bg-earth text-white",
           classNames:{toast: "bg-primary"},
           position: "top-center",
       })
-      setSelectedProjects([])
+      setSelectedOffers([])
       router.refresh();
     }catch (err){
-      toast.error(t('toast.error.failed_delete_projects.title'), {
-        description: t('toast.error.failed_delete_projects.description'),
+      toast.error(t('toast.error.failed_delete_offers.title'), {
+        description: t('toast.error.failed_delete_offers.description'),
         className: "bg-earth text-white",
         classNames: { toast: "bg-primary" },
         position: "top-center",
@@ -170,9 +165,9 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
     }
   }
 
-  const handleDeleteProject = async(id: string) => {
+  const handleDeleteOffers = async(id: string) => {
     try{
-      await deleteProject(id)
+      await deleteOffer(id)
       router.refresh();
       toast.success(t('toast.success.project_deleted.title'), {
         description: t('toast.success.project_deleted.description'),
@@ -196,54 +191,54 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
   }
 
   const renderPaginationItems = () => {
-    const items = []
-    items.push(
-      <PaginationItem key="first">
-        <PaginationLink 
-          className="cursor-pointer"
-          isActive={currentPage === 1} onClick={() => setCurrentPage(1)}>
-          1
-        </PaginationLink>
-      </PaginationItem>,
-    )
-    if (currentPage > 3) {
-      items.push(
-        <PaginationItem key="ellipsis-1">
-          <PaginationEllipsis />
+        const items = []
+        items.push(
+        <PaginationItem key="first">
+            <PaginationLink 
+            className="cursor-pointer"
+            isActive={currentPage === 1} onClick={() => setCurrentPage(1)}>
+            1
+            </PaginationLink>
         </PaginationItem>,
-      )
-    }
+        )
+        if (currentPage > 3) {
+        items.push(
+            <PaginationItem key="ellipsis-1">
+            <PaginationEllipsis />
+            </PaginationItem>,
+        )
+        }
 
-    for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
-      if (i === 1 || i === totalPages) continue // Skip first and last as they're always shown
-      items.push(
-        <PaginationItem key={i}>
-          <PaginationLink 
-            className="cursor-pointer"
-            isActive={currentPage === i} onClick={() => setCurrentPage(i)}>
-            {i}
-          </PaginationLink>
-        </PaginationItem>,
-      )
-    }
-    if (currentPage < totalPages - 2) {
-      items.push(
-        <PaginationItem key="ellipsis-2">
-          <PaginationEllipsis />
-        </PaginationItem>,
-      )
-    }
-    if (totalPages > 1) {
-      items.push(
-        <PaginationItem key="last">
-          <PaginationLink 
-            className="cursor-pointer"
-            isActive={currentPage === totalPages} onClick={() => setCurrentPage(totalPages)}>
-            {totalPages}
-          </PaginationLink>
-        </PaginationItem>,
-      )
-    }
+        for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+        if (i === 1 || i === totalPages) continue // Skip first and last as they're always shown
+        items.push(
+            <PaginationItem key={i}>
+            <PaginationLink 
+                className="cursor-pointer"
+                isActive={currentPage === i} onClick={() => setCurrentPage(i)}>
+                {i}
+            </PaginationLink>
+            </PaginationItem>,
+        )
+        }
+        if (currentPage < totalPages - 2) {
+        items.push(
+            <PaginationItem key="ellipsis-2">
+            <PaginationEllipsis />
+            </PaginationItem>,
+        )
+        }
+        if (totalPages > 1) {
+        items.push(
+            <PaginationItem key="last">
+            <PaginationLink 
+                className="cursor-pointer"
+                isActive={currentPage === totalPages} onClick={() => setCurrentPage(totalPages)}>
+                {totalPages}
+            </PaginationLink>
+            </PaginationItem>,
+        )
+        }
 
     return items
   }
@@ -259,11 +254,11 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
           </p>
         </div>
         <Link
-            href={`/dashboard/projects/new`}
+            href={`/dashboard/offers/new`}
         >
             <InteractiveHoverButton className="rounded-lg">
                 <div className="flex justify-center items-center gap-2">
-                  {t('add_project')}
+                  {t('add_offer')}
                 </div>
             </InteractiveHoverButton>
         </Link>
@@ -292,28 +287,13 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
                   </Button>
                 )}
               </div>
-              <Select value={categoryFilter} onValueChange={setCategoryFilter}>
-                <SelectTrigger className="w-[180px]">
-                  <SelectValue placeholder="All Categories" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">
-                    {t('filters.categories.all')}
-                  </SelectItem>
-                  {categories.map((category) => (
-                    <SelectItem key={category.id} value={category.id}>
-                      {category.translations[locale] ? category?.translations[locale] : category.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
             </div>
 
-            {selectedProjects.length > 0 && (
+            {selectedOffers.length > 0 && (
               <div className="flex items-center gap-2">
-                <span className="text-sm text-muted-foreground">{t('bulk_actions.selected', { count : selectedProjects.length })}</span>
+                <span className="text-sm text-muted-foreground">{t('bulk_actions.selected', { count : selectedOffers.length })}</span>
                 <Button variant="destructive" size="sm" onClick={handleBulkDelete} className="h-8" disabled={isLoading}>
-                  {isLoading ? <LucideIcons.Loader2 className="mr-2 h-4 w-4 animate-spin" /> : (
+                  {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : (
                       <>
                       <Trash2 className="mr-2 h-4 w-4" />
                       {t('bulk_actions.delete')}
@@ -333,14 +313,13 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
                   <TableHead className="w-12">
                     <Checkbox
                       checked={
-                        paginatedProjects.length > 0 &&
-                        paginatedProjects.every((project) => selectedProjects.includes(project.id))
+                        paginatedOffers.length > 0 &&
+                        paginatedOffers.every((offer) => selectedOffers.includes(offer.id))
                       }
                       onCheckedChange={toggleSelectAll}
                       aria-label={t('table.select_all')}
                     />
                   </TableHead>
-                  <TableHead className="w-[80px]">{t('table.preview')}</TableHead>
                   <TableHead>
                     <Button
                       variant="ghost"
@@ -351,9 +330,9 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
                       {getSortIcon("title")}
                     </Button>
                   </TableHead>
-                  <TableHead>{t('table.client')}</TableHead>
-                  <TableHead>{t('table.location')}</TableHead>
-                  <TableHead>{t('table.category')}</TableHead>
+                  <TableHead>{t('table.department')}</TableHead>
+                  <TableHead>{t('table.type')}</TableHead>
+                  <TableHead>{t('table.status')}</TableHead>
                   <TableHead>
                     <Button
                       variant="ghost"
@@ -368,47 +347,42 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {paginatedProjects.length === 0 ? (
+                {paginatedOffers.length === 0 ? (
                   <TableRow>
                     <TableCell colSpan={8} className="h-24 text-center">
-                      {t('table.no_projects')}
+                      {t('table.no_offers')}
                     </TableCell>
                   </TableRow>
                 ) : (
-                  paginatedProjects.map((project) => {
-                    const Icon = LucideIcons[project.category.icon as keyof typeof LucideIcons] || LucideIcons.HelpCircle;
-                    
+                  paginatedOffers.map((offer) => {
                     return (
-                    <TableRow key={project.id} className="group">
+                    <TableRow key={offer.id} className="group">
                       <TableCell>
                         <Checkbox
                           className="text-white"
-                          checked={selectedProjects.includes(project.id)}
-                          onCheckedChange={() => toggleRowSelection(project.id)}
-                          aria-label={`Select ${project.title}`}
+                          checked={selectedOffers.includes(offer.id)}
+                          onCheckedChange={() => toggleRowSelection(offer.id)}
+                          aria-label={`Select ${offer.title}`}
                         />
                       </TableCell>
                       <TableCell>
-                        <div className="h-12 w-16 overflow-hidden rounded-md border">
-                          <img
-                            src={project.thumbnail || "/placeholder.svg"}
-                            alt={project.title}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
+                        {offer.title}
                       </TableCell>
-                      <TableCell className="font-medium">{project.title}</TableCell>
-                      <TableCell>{project.client}</TableCell>
-                      <TableCell>{project.location}</TableCell>
+                      <TableCell className="font-medium">{offer.department}</TableCell>
+                      <TableCell>{t(`type.${typeOfEmployment(offer.employmentType)}`)}</TableCell>
                       <TableCell>
-                        <button
-                            className={`rounded-full font-medium border transition-colors flex items-center gap-2 w-full justify-center ${project.category.color} py-2`}
-                        >
-                            <Icon className="h-4 w-4" />
-                            {project.category.translations[locale] ? project.category?.translations[locale] : project.category.name}
-                        </button>
+                        {offer.urgent ? (
+                            <Badge className="hover:bg-destructive px-4 rounded-full font-medium border transition-colors flex items-center gap-2 bg-destructive">
+                                <AlertTriangle className="h-4 w-4" />
+                                {t('table.urgent')}
+                            </Badge>
+                        ) : (
+                            <Badge className="hover:bg-transparent px-4 rounded-full font-medium border transition-colors flex items-center gap-2 bg-transparent">
+                                {t('table.normal')}
+                            </Badge>
+                        )}
                       </TableCell>
-                      <TableCell>{format(project.createdAt, "MMM d, yyyy")}</TableCell>
+                      <TableCell>{format(offer.createdAt, "MMM d, yyyy")}</TableCell>
                       <TableCell className="text-right">
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
@@ -422,20 +396,20 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
                               {t('actions_menu.label')}
                             </DropdownMenuLabel>
                             <DropdownMenuItem>
-                              <Link href={`/dashboard/projects/${project.id}`} className="flex items-center">
+                              <Link href={`/dashboard/offers/${offer.id}`} className="flex items-center">
                                 <Eye className="mr-2 h-4 w-4" />
                                 {t('actions_menu.view')}
                               </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem >
-                              <Link href={`/dashboard/projects/${project.id}/edit`} className="flex items-center">
+                              <Link href={`/dashboard/offers/${offer.id}/edit`} className="flex items-center">
                                 <Edit className="mr-2 h-4 w-4" />
                                 {t('actions_menu.edit')}
                               </Link>
                             </DropdownMenuItem>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem
-                              onClick={() => handleDeleteProject(project.id)}
+                              onClick={() => handleDeleteOffers(offer.id)}
                               className="text-destructive focus:text-destructive"
                             >
                               <Trash2 className="mr-2 h-4 w-4" />
@@ -455,14 +429,11 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
           <CardFooter className="flex items-center justify-between border-t p-4">
             <div className="text-sm text-muted-foreground">
               {t('pagination.showing', 
-                { start: Math.min((currentPage - 1) * rowsPerPage + 1, sortedProjects.length),
-                  end: Math.min(currentPage * rowsPerPage, sortedProjects.length),
-                  total: sortedProjects.length
+                { start: Math.min((currentPage - 1) * rowsPerPage + 1, sortedoffers.length),
+                  end: Math.min(currentPage * rowsPerPage, sortedoffers.length),
+                  total: sortedoffers.length
                 }
               )}
-              {/* <strong>{Math.min((currentPage - 1) * rowsPerPage + 1, sortedProjects.length)}</strong> to{" "}
-              <strong>{Math.min(currentPage * rowsPerPage, sortedProjects.length)}</strong> of{" "}
-              <strong>{sortedProjects.length}</strong> projects */}
             </div>
             <Pagination>
               <PaginationContent>
@@ -492,3 +463,22 @@ export default function ProjectsTable({ projects, categories }: { projects: any[
   )
 }
 
+
+const typeOfEmployment = (type : string) => {
+    switch(type){
+        case "FULL_TIME":
+            return 'full_time';
+        case "PART_TIME":
+            return 'part_time';
+        case "CONTRACT":
+            return 'contract';
+        case "INTERNSHIP":
+            return "internship";
+        case "TEMPORARY":
+            return 'temporary';
+        case "VOLUNTEER":
+            return 'volunteer';
+        default:
+            return 'other'
+    }
+}

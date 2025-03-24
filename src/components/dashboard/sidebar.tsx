@@ -32,6 +32,11 @@ const items = [
     url: "/dashboard/projects",
     icon: Inbox,
   },
+  {
+    title: "offers",
+    url: "/dashboard/offers",
+    icon: Inbox,
+  },
 ]
 
 export function AppSidebar() {
@@ -58,7 +63,7 @@ export function AppSidebar() {
           />
           <div className="flex flex-col">
             <h6 className="font-semibold text-primary">
-              {t('company_name')} {" "}
+              {t('company_name')} <br />
               <span className="text-secondary">{t('company_tagline')}</span>
             </h6>
           </div>

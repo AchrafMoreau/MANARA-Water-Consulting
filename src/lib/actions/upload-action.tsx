@@ -6,10 +6,7 @@ import { NextResponse } from "next/server";
 // Upload a file from the client side
 export async function uploadFileFromClient(file: File) {
   try {
-
     try {
-      console.log(file)
-
       if (!file) {
         return NextResponse.json(
           { success: false, error: "No file provided" },

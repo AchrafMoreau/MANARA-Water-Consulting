@@ -621,14 +621,260 @@
     "dashboard": {
         "dashboard": "لوحة التحكم",
         "sidebar": {
-        "logo_alt": "شعار منارة ووتر",
-        "company_name": "منارة ووتر",
-        "company_tagline": "استشارات",
-        "main_navigation": "التنقل الرئيسي",
-        "items": {
-            "home": "الرئيسية",
-            "projects": "المشاريع"
-        }
+            "logo_alt": "شعار منارة ووتر",
+            "company_name": "منارة",
+            "company_tagline": "للاستشارات المائية",
+            "main_navigation": "التنقل الرئيسي",
+            "items": {
+                "home": "الرئيسية",
+                "projects": "المشاريع",
+                "offers": "العروض"
+            }
+        },
+        "projects": {
+            "title": "المشاريع",
+            "description": "إدارة مشاريع البناء الخاصة بك",
+            "add_project": "إضافة مشروع",
+            "search": {
+                "placeholder": "ابحث في المشاريع...",
+                "clear": "مسح البحث"
+            },
+            "filters": {
+                "categories": {
+                    "all": "جميع الفئات"
+                }
+            },
+            "table": {
+                "select_all": "تحديد الكل",
+                "preview": "معاينة",
+                "title": "العنوان",
+                "client": "العميل",
+                "location": "الموقع",
+                "category": "الفئة",
+                "created": "تم الإنشاء",
+                "actions": "الإجراءات",
+                "no_projects": "لم يتم العثور على مشاريع."
+            },
+            "bulk_actions": {
+                "selected": "{count} محددة",
+                "delete": "حذف"
+            },
+            "pagination": {
+                "showing": "عرض {start} إلى {end} من {total} مشاريع",
+                "next": "التالي",
+                "previous": "السابق",
+                "more_page": "المزيد من الصفحات"
+            },
+            "actions_menu": {
+                "label": "الإجراءات",
+                "view": "عرض",
+                "edit": "تعديل",
+                "delete": "حذف"
+            },
+            "toast": {
+                "success": {
+                    "projects_removed": {
+                        "title": "تم حذف المشاريع",
+                        "description": "تم حذف جميع المشاريع المحددة بنجاح."
+                    },
+                    "project_deleted": {
+                        "title": "تم حذف المشروع",
+                        "description": "تم حذف المشروع بنجاح."
+                    }
+                },
+                "error": {
+                    "failed_delete_projects": {
+                        "title": "فشل في حذف المشاريع",
+                        "description": "حدث خطأ أثناء محاولة حذف المشاريع المحددة."
+                    },
+                    "failed_delete_project": {
+                        "title": "فشل في حذف المشروع",
+                        "description": "حدث خطأ أثناء حذف المشروع. يرجى المحاولة مرة أخرى."
+                    }
+                }
+            },
+            "detail": {
+                "back_button": "رجوع",
+                "client": "العميل",
+                "location": "الموقع",
+                "duration": "{start} - {end}",
+                "images": "الصور",
+                "tabs": {
+                    "description": "الوصف",
+                    "solution": "الحل",
+                    "impact": "التأثير"
+                },
+                "sections": {
+                    "description": "وصف المشروع",
+                    "solution": "حلنا",
+                    "impact": "تأثير المشروع"
+                },
+                "details": {
+                    "client": "العميل",
+                    "location": "الموقع",
+                    "started": "تاريخ البدء",
+                    "completed": "تاريخ الانتهاء"
+                },
+                "footer": {
+                    "last_updated": "آخر تحديث: {date}",
+                    "view_all": "عرض جميع المشاريع"
+                }
+            },
+            "form": {
+                "title": {
+                "edit": "تعديل المشروع",
+                "create": "إضافة مشروع جديد"
+                },
+                "description": {
+                "edit": "قم بتحديث تفاصيل مشروعك الحالي.",
+                "create": "املأ التفاصيل لإنشاء مشروع جديد."
+                },
+                "fields": {
+                "title": {
+                    "label": "العنوان",
+                    "placeholder": "عنوان المشروع",
+                    "error": "يجب أن يكون العنوان مكون من حرفين على الأقل."
+                },
+                "client": {
+                    "label": "العميل",
+                    "placeholder": "اسم العميل",
+                    "error": "يجب أن يكون اسم العميل مكون من حرفين على الأقل."
+                },
+                "location": {
+                    "label": "الموقع",
+                    "placeholder": "موقع المشروع",
+                    "error": "يجب أن يكون الموقع مكون من حرفين على الأقل."
+                },
+                "category": {
+                    "label": "الفئة",
+                    "placeholder": "اختر فئة",
+                    "error": "الرجاء اختيار فئة."
+                },
+                "commencement_date": {
+                    "label": "تاريخ البدء",
+                    "placeholder": "اختر تاريخًا",
+                    "error": "تاريخ البدء مطلوب."
+                },
+                "completion_date": {
+                    "label": "تاريخ الانتهاء",
+                    "placeholder": "اختر تاريخًا",
+                    "error": "تاريخ الانتهاء مطلوب."
+                },
+                "thumbnail": {
+                    "label": "الصورة المصغرة",
+                    "description": "قم بتحميل صورة مصغرة للمشروع.",
+                    "error": "الصورة المصغرة مطلوبة."
+                },
+                "images": {
+                    "label": "صور المشروع",
+                    "description": "قم بتحميل صور تعرض المشروع. يمكنك إضافة حتى 10 صور.",
+                    "error": "مطلوب صورة واحدة على الأقل."
+                },
+                "description": {
+                    "label": "الوصف",
+                    "placeholder": "قدم وصفًا تفصيليًا للمشروع",
+                    "error": "يجب أن يكون الوصف مكون من 10 أحرف على الأقل."
+                },
+                "solution": {
+                    "label": "الحل",
+                    "placeholder": "صف الحل المطبق",
+                    "error": "يجب أن يكون الحل مكون من 10 أحرف على الأقل."
+                },
+                "impact": {
+                    "label": "التأثير",
+                    "placeholder": "صف تأثير المشروع",
+                    "error": "يجب أن يكون التأثير مكون من 10 أحرف على الأقل."
+                }
+                },
+                "buttons": {
+                "cancel": "إلغاء",
+                "submit": {
+                    "edit": "تحديث المشروع",
+                    "create": "إنشاء المشروع"
+                }
+                },
+                "toast": {
+                "success": {
+                    "edit": {
+                    "title": "تم تحديث المشروع بنجاح",
+                    "description": "تم تحديث المشروع بنجاح"
+                    },
+                    "create": {
+                    "title": "تم إنشاء المشروع بنجاح",
+                    "description": "تم إنشاء المشروع بنجاح"
+                    }
+                },
+                "error": {
+                    "title": "فشل تحميل الملف",
+                    "description": "حدث خطأ غير متوقع"
+                }
+                }
+            }
+        },
+        "offers": {
+            "title": "العروض",
+            "description": "إدارة عروض العمل والتطبيقات",
+            "add_offer": "إضافة عرض",
+            "type": {
+                "full_time": "دوام كامل",
+                "part_time": "دوام جزئي",
+                "contract": "عقد",
+                "internship": "تدريب",
+                "temporary": "مؤقت",
+                "volunteer": "تطوع",
+                "other": "أخرى"
+            },
+            "search": {
+                "placeholder": "ابحث في العروض...",
+                "clear": "مسح البحث"
+            },
+            "bulk_actions": {
+                "selected": "تم تحديد {count} عرض",
+                "delete": "حذف"
+            },
+            "table": {
+                "select_all": "تحديد الكل",
+                "title": "العنوان",
+                "department": "القسم",
+                "type": "النوع",
+                "status": "الحالة",
+                "urgent": "عاجل",
+                "normal": "عادي",
+                "created": "تاريخ الإنشاء",
+                "actions": "الإجراءات",
+                "no_offers": "لا توجد عروض."
+            },
+            "actions_menu": {
+                "label": "الإجراءات",
+                "view": "عرض",
+                "edit": "تعديل",
+                "delete": "حذف"
+            },
+            "pagination": {
+                "showing": "عرض {start} إلى {end} من أصل {total} عرض"
+            },
+            "toast": {
+                "success": {
+                    "offers_removed": {
+                        "title": "تم حذف العروض",
+                        "description": "تم حذف العروض المحددة بنجاح."
+                    },
+                    "project_deleted": {
+                        "title": "تم حذف العرض",
+                        "description": "تم حذف العرض بنجاح."
+                    }
+                },
+                "error": {
+                    "failed_delete_offers": {
+                        "title": "فشل في حذف العروض",
+                        "description": "حدث خطأ أثناء حذف العروض. يرجى المحاولة مرة أخرى."
+                    },
+                    "project_deleted": {
+                        "title": "فشل في حذف العرض",
+                        "description": "حدث خطأ أثناء حذف العرض. يرجى المحاولة مرة أخرى."
+                    }
+                }
+            }
         }
     }
 }

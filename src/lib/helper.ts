@@ -1,7 +1,4 @@
 import { routing } from '@/i18n/routing';
-import { Readable } from 'stream';
-import formidable, { IncomingForm } from 'formidable';
-import { IncomingMessage } from 'http';
 
 
 export const getBaseUrl = () => {
@@ -29,16 +26,4 @@ export const getI18nPath = (url: string, locale: string) => {
   }
 
   return `/${locale}${url}`;
-};
-
-
-
-export const parserHelper = (req: IncomingMessage): Promise<{ fields: any; files: any }> => {
-  return new Promise((resolve, reject) => {
-    const form = formidable({});
-    form.parse(req, (err, fields, files) => {
-      if (err) reject(err);
-      else resolve({ fields, files });
-    });
-  });
 };

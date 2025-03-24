@@ -21,43 +21,43 @@ import { Textarea } from "@/components/ui/textarea"
 import { cn } from "@/lib/utils"
 import { format } from "date-fns"
 import { CategoryType } from "@/lib/types"
-import { redirect } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
 
 
 // Form schema
 const projectFormSchema = z.object({
   title: z.string().min(2, {
-    message: "Title must be at least 2 characters.",
+    message: "fields.title.error",
   }),
   thumbnail: z.string().min(1, {
-    message: "Thumbnail is required.",
+    message: "fields.thumbnail.error",
   }),
   image: z.array(z.string()).min(1, {
-    message: "At least one image is required.",
+    message: "fields.image.error",
   }),
   client: z.string().min(2, {
-    message: "Client name must be at least 2 characters.",
+    message: "fields.client.error",
   }),
   location: z.string().min(2, {
-    message: "Location must be at least 2 characters.",
+    message: "fields.location.error",
   }),
   commenced: z.preprocess((val) => (typeof val === "string" ? new Date(val) : val), z.date({
-    required_error: "Commencement date is required.",
+    required_error: "fields.commencement_date.error",
   })),
   completion: z.preprocess((val) => (typeof val === "string" ? new Date(val) : val), z.date({
-    required_error: "Completion date is required.",
+    required_error: "fields.completion_date.error",
   })),
   categoryId: z.string({
-    required_error: "Please select a category.",
+    required_error: "fields.category.error",
   }),
   description: z.string().min(10, {
-    message: "Description must be at least 10 characters.",
+    message: "fields.description.error",
   }),
   solution: z.string().min(10, {
-    message: "Solution must be at least 10 characters.",
+    message: "fields.solution.error",
   }),
   impact: z.string().min(10, {
-    message: "Impact must be at least 10 characters.",
+    message: "fields.impact.error",
   }),
 })
 
@@ -84,6 +84,7 @@ interface ProjectFormProps {
 
 export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: ProjectFormProps) {
   const router = useRouter()
+  const t = useTranslations('dashboard.projects');
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [error, setError] = React.useState<string | null>(null)
 
@@ -111,8 +112,9 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
         if(project){
             await onSubmit(project.id, data)
             router.push(onCancelUrl)
-            toast.success("Project Updated Successfully", {
-                description: "Project Updated Successfully",
+            toast.success(
+              t('form.toast.success.edit.title'), {
+                description: t('form.toast.success.edit.description'),
                 className: "bg-earth text-white",
                 classNames:{toast: "bg-primary"},
                 position: "top-center",
@@ -120,15 +122,20 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
         }else{
           await onSubmit(data)
           router.push(onCancelUrl)
-          toast.success("Project created Successfully", {
-              description: "Project created Successfully",
+          toast.success(t('from.toast.success.create.title'), {
+              description: t('form.toast.success.create.description'),
               className: "bg-earth text-white",
               classNames:{toast: "bg-primary"},
               position: "top-center",
           })
         }
     } catch (error) {
-      console.error("Error submitting form:", error)
+      toast.success(t('form.toast.error.title'), {
+        description: t('form.toast.error.description'),
+        className: "bg-earth text-white",
+        classNames:{toast: "bg-primary"},
+        position: "top-center",
+      })
       setError(error instanceof Error ? error.message : "An unexpected error occurred")
       setIsSubmitting(false)
     }
@@ -143,9 +150,15 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
     <Card className="w-full">
     <Toaster richColors={true} />
       <CardHeader>
-        <CardTitle>{project ? "Edit Project" : "Add New Project"}</CardTitle>
+        <CardTitle>{project ? 
+          t('form.title.edit') :
+          t('form.title.create')
+        }</CardTitle>
         <CardDescription>
-          {project ? "Update the details of your existing project." : "Fill in the details to create a new project."}
+          {project ? 
+            t('form.description.edit') :
+            t('form.description.create')
+           }
         </CardDescription>
       </CardHeader>
       <Form {...form}>
@@ -159,9 +172,11 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                 name="title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Title</FormLabel>
+                    <FormLabel>
+                      {t('form.fields.title.label')}
+                    </FormLabel>
                     <FormControl>
-                      <Input placeholder="Project title" {...field} />
+                      <Input placeholder={t('form.fields.title.placeholder')} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -173,9 +188,11 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                 name="client"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Client</FormLabel>
+                    <FormLabel>
+                      {t('form.fields.client.label')}
+                    </FormLabel>
                     <FormControl>
-                      <Input placeholder="Client name" {...field} />
+                      <Input placeholder={t('form.fields.client.placeholder')} {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -189,9 +206,13 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                 name="location"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Location</FormLabel>
+                    <FormLabel>
+                      {t('form.fields.location.label')}
+                    </FormLabel>
                     <FormControl>
-                      <Input placeholder="Project location" {...field} />
+                      <Input 
+                        placeholder={t('form.fields.location.placeholder')}
+                         {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -203,11 +224,15 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                 name="categoryId"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Category</FormLabel>
+                    <FormLabel>
+                      {t('form.fields.category.label')}
+                    </FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a category" />
+                          <SelectValue 
+                            placeholder={t('form.fields.category.placeholder')} 
+                          />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -230,7 +255,9 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                 name="commenced"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel>Commencement Date</FormLabel>
+                    <FormLabel>
+                      {t('form.fields.commencement_date.label')}
+                    </FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -238,7 +265,7 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                             variant={"outline"}
                             className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}
                           >
-                            {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}
+                            {field.value ? format(field.value, "PPP") : <span> {t('form.fields.commencement_date.placeholder')}  </span>}
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                           </Button>
                         </FormControl>
@@ -257,7 +284,9 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                 name="completion"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel>Completion Date</FormLabel>
+                    <FormLabel>
+                      {t('form.fields.completion_date.label')}
+                    </FormLabel>
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -265,7 +294,7 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                             variant={"outline"}
                             className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}
                           >
-                            {field.value ? format(field.value, "PPP") : <span>Pick a date</span>}  
+                            {field.value ? format(field.value, "PPP") : <span>{t('form.fields.completion_date.placeholder')}  </span>}  
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                           </Button>
                         </FormControl>
@@ -286,11 +315,15 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
               name="thumbnail"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Thumbnail</FormLabel>
+                  <FormLabel>
+                    {t('form.fields.thumbnail.label')}
+                  </FormLabel>
                   <FormControl>
                     <FileUpload value={field.value} onChange={field.onChange} onUpload={handleFileUpload} />
                   </FormControl>
-                  <FormDescription>Upload a thumbnail image for the project.</FormDescription>
+                  <FormDescription>
+                    {t('form.fields.thumbnail.description')}
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -301,7 +334,9 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
               name="image"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Project Images</FormLabel>
+                  <FormLabel>
+                    {t('form.fields.images.label')}
+                  </FormLabel>
                   <FormControl>
                     <MultiFileUpload
                       values={field.value}
@@ -310,7 +345,9 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
                       maxFiles={10}
                     />
                   </FormControl>
-                  <FormDescription>Upload images showcasing the project. You can add up to 10 images.</FormDescription>
+                  <FormDescription>
+                    {t('form.fields.images.description')}
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -321,10 +358,12 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Description</FormLabel>
+                  <FormLabel>
+                    {t('form.fields.description.label')}
+                  </FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Provide a detailed description of the project"
+                      placeholder={t('form.fields.description.placeholder')}
                       className="min-h-[100px]"
                       {...field}
                     />
@@ -339,9 +378,12 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
               name="solution"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Solution</FormLabel>
+                  <FormLabel>
+                    {t('form.fields.solution.label')}
+                  </FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Describe the solution implemented" className="min-h-[100px]" {...field} />
+                    <Textarea placeholder={t('form.fields.solution.placeholder')}
+                      className="min-h-[100px]" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -353,9 +395,12 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
               name="impact"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Impact</FormLabel>
+                  <FormLabel>
+                    {t('form.fields.impact.label')}
+                  </FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Describe the impact of the project" className="min-h-[100px]" {...field} />
+                    <Textarea placeholder={t('form.fields.impact.placeholder')}
+                      className="min-h-[100px]" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -365,13 +410,16 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
 
           <CardFooter className="flex justify-between border-t p-6">
             <Button type="button" variant="outline" onClick={handleCancel} disabled={isSubmitting}>
-              Cancel
+              {t('form.buttons.cancel')}
             </Button>
 
             <Button type="submit" className="text-white" disabled={isSubmitting}>
 
               {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              {project ? "Update Project" : "Create Project"}
+              {project ? 
+                t('form.buttons.submit.edit') :
+                t('form.buttons.submit.create')
+              }
             </Button>
           </CardFooter>
         </form>

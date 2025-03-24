@@ -94,6 +94,21 @@ export async function deleteProject(id: string){
   }
 }
 
+export async function bulkDeleteProjects(ids: string[]){
+  try{
+    console.log(`Deleting projects:`, ids)
+    await prisma.project.deleteMany({
+      where: {
+        id: {
+          in: ids
+        }
+      }
+    })
+  }catch(error){
+    console.error(`Error Deleting project ${ids.join(',')}:`, error)
+    throw new Error("Failed to Deleting project. Please try again.")
+  }
+}
 export async function getProjectById(id : string){
     return await prisma.project.findUnique({
         where:{

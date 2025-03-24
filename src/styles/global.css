@@ -343,3 +343,6 @@
   position: relative;
   overflow: hidden;
 }
+.cl-userButtonPopoverFooter{
+  display: none !important;
+}

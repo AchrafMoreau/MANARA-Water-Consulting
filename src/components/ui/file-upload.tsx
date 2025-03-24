@@ -80,7 +80,7 @@ export function FileUpload({
                 onError={() => setError("Failed to load image")}
               />
             </div>
-            <div className="flex-1 truncate text-sm">{value.split("/").pop()}</div>
+            <div className="flex-1 truncate text-sm w-[140px]">{value.split("/").pop()}</div>
             <Button
               type="button"
               variant="ghost"

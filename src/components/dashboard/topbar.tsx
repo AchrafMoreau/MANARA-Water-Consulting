@@ -36,7 +36,13 @@ export default function Topbar() {
                 <LanguageSelector />
                 <ModeToggle />
                 <SignedIn>
-                    <UserButton />
+                  <UserButton 
+                    appearance={{
+                      elements: {
+                        footer: "hidden",
+                      },
+                    }}
+                  />
                 </SignedIn>
               </div>
             </div>

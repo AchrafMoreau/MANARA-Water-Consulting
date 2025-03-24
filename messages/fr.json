@@ -626,7 +626,253 @@
             "main_navigation": "NAVIGATION PRINCIPALE",
             "items": {
                 "home": "Home",
-                "projects": "Projets"
+                "projects": "Projets",
+                "offers": "Offres"
+            }
+        },
+        "projects": {
+            "title": "Projets",
+            "description": "Gérez vos projets de construction",
+            "add_project": "Ajouter un projet",
+            "search": {
+                "placeholder": "Rechercher des projets...",
+                "clear": "Effacer la recherche"
+            },
+            "filters": {
+                "categories": {
+                    "all": "Toutes les catégories"
+                }
+            },
+            "table": {
+                "select_all": "Tout sélectionner",
+                "preview": "Aperçu",
+                "title": "Titre",
+                "client": "Client",
+                "location": "Localisation",
+                "category": "Catégorie",
+                "created": "Créé le",
+                "actions": "Actions",
+                "no_projects": "Aucun projet trouvé."
+            },
+            "bulk_actions": {
+                "selected": "{count} sélectionné(s)",
+                "delete": "Supprimer"
+            },
+            "pagination": {
+                "showing": "Affichage de {start} à {end} sur {total} projets",
+                "next": "Suivant",
+                "previous": "Précédent",
+                "more_page": "Plus de pages"
+            },
+            "actions_menu": {
+                "label": "Actions",
+                "view": "Voir",
+                "edit": "Modifier",
+                "delete": "Supprimer"
+            },
+            "toast": {
+                "success": {
+                    "projects_removed": {
+                        "title": "Projets supprimés",
+                        "description": "Tous les projets sélectionnés ont été supprimés avec succès."
+                    },
+                    "project_deleted": {
+                        "title": "Projet supprimé",
+                        "description": "Le projet a été supprimé avec succès."
+                    }
+                },
+                "error": {
+                    "failed_delete_projects": {
+                        "title": "Échec de la suppression des projets",
+                        "description": "Une erreur s'est produite lors de la tentative de suppression des projets sélectionnés."
+                    },
+                    "failed_delete_project": {
+                        "title": "Échec de la suppression du projet",
+                        "description": "Une erreur s'est produite lors de la suppression du projet. Veuillez réessayer."
+                    }
+                }
+            },
+            "detail": {
+                "back_button": "Retour",
+                "client": "Client",
+                "location": "Localisation",
+                "duration": "{start} - {end}",
+                "images": "Images",
+                "tabs": {
+                    "description": "Description",
+                    "solution": "Solution",
+                    "impact": "Impact"
+                },
+                "sections": {
+                    "description": "Description du projet",
+                    "solution": "Notre solution",
+                    "impact": "Impact du projet"
+                },
+                "details": {
+                    "client": "Client",
+                    "location": "Localisation",
+                    "started": "Commencé le",
+                    "completed": "Terminé le"
+                },
+                "footer": {
+                    "last_updated": "Dernière mise à jour: {date}",
+                    "view_all": "Voir tous les projets"
+                }
+            },
+            "form": {
+                "title": {
+                "edit": "Modifier le projet",
+                "create": "Ajouter un nouveau projet"
+                },
+                "description": {
+                "edit": "Mettez à jour les détails de votre projet existant.",
+                "create": "Remplissez les détails pour créer un nouveau projet."
+                },
+                "fields": {
+                "title": {
+                    "label": "Titre",
+                    "placeholder": "Titre du projet",
+                    "error": "Le titre doit contenir au moins 2 caractères."
+                },
+                "client": {
+                    "label": "Client",
+                    "placeholder": "Nom du client",
+                    "error": "Le nom du client doit contenir au moins 2 caractères."
+                },
+                "location": {
+                    "label": "Localisation",
+                    "placeholder": "Localisation du projet",
+                    "error": "La localisation doit contenir au moins 2 caractères."
+                },
+                "category": {
+                    "label": "Catégorie",
+                    "placeholder": "Sélectionnez une catégorie",
+                    "error": "Veuillez sélectionner une catégorie."
+                },
+                "commencement_date": {
+                    "label": "Date de commencement",
+                    "placeholder": "Choisir une date",
+                    "error": "La date de commencement est requise."
+                },
+                "completion_date": {
+                    "label": "Date d'achèvement",
+                    "placeholder": "Choisir une date",
+                    "error": "La date d'achèvement est requise."
+                },
+                "thumbnail": {
+                    "label": "Miniature",
+                    "description": "Téléchargez une image miniature pour le projet.",
+                    "error": "Une miniature est requise."
+                },
+                "images": {
+                    "label": "Images du projet",
+                    "description": "Téléchargez des images présentant le projet. Vous pouvez ajouter jusqu'à 10 images.",
+                    "error": "Au moins une image est requise."
+                },
+                "description": {
+                    "label": "Description",
+                    "placeholder": "Fournissez une description détaillée du projet",
+                    "error": "La description doit contenir au moins 10 caractères."
+                },
+                "solution": {
+                    "label": "Solution",
+                    "placeholder": "Décrivez la solution mise en œuvre",
+                    "error": "La solution doit contenir au moins 10 caractères."
+                },
+                "impact": {
+                    "label": "Impact",
+                    "placeholder": "Décrivez l'impact du projet",
+                    "error": "L'impact doit contenir au moins 10 caractères."
+                }
+                },
+                "buttons": {
+                "cancel": "Annuler",
+                "submit": {
+                    "edit": "Mettre à jour le projet",
+                    "create": "Créer le projet"
+                }
+                },
+                "toast": {
+                "success": {
+                    "edit": {
+                    "title": "Projet mis à jour avec succès",
+                    "description": "Projet mis à jour avec succès"
+                    },
+                    "create": {
+                    "title": "Projet créé avec succès",
+                    "description": "Projet créé avec succès"
+                    }
+                },
+                "error": {
+                    "title": "Échec du téléchargement du fichier",
+                    "description": "Une erreur inattendue s'est produite"
+                }
+                }
+            }
+        },
+        "offers": {
+            "title": "Offres",
+            "description": "Gérez vos offres d'emploi et candidatures",
+            "add_offer": "Ajouter une offre",
+            "type": {
+                "full_time": "Temps plein",
+                "part_time": "Temps partiel",
+                "contract": "Contrat",
+                "internship": "Stage",
+                "temporary": "Temporaire",
+                "volunteer": "Bénévolat",
+                "other": "Autre"
+            },
+            "search": {
+                "placeholder": "Rechercher des offres...",
+                "clear": "Effacer la recherche"
+            },
+            "bulk_actions": {
+                "selected": "{count} offres sélectionnées",
+                "delete": "Supprimer"
+            },
+            "table": {
+                "select_all": "Tout sélectionner",
+                "title": "Titre",
+                "department": "Département",
+                "type": "Type",
+                "status": "Statut",
+                "urgent": "Urgent",
+                "normal": "Normal",
+                "created": "Créé le",
+                "actions": "Actions",
+                "no_offers": "Aucune offre trouvée."
+            },
+            "actions_menu": {
+                "label": "Actions",
+                "view": "Voir",
+                "edit": "Modifier",
+                "delete": "Supprimer"
+            },
+            "pagination": {
+                "showing": "Affichage de {start} à {end} sur {total} offres"
+            },
+            "toast": {
+                "success": {
+                    "offers_removed": {
+                        "title": "Offres supprimées",
+                        "description": "Les offres sélectionnées ont été supprimées avec succès."
+                    },
+                    "project_deleted": {
+                        "title": "Offre supprimée",
+                        "description": "L'offre a été supprimée avec succès."
+                    }
+                },
+                "error": {
+                    "failed_delete_offers": {
+                        "title": "Échec de la suppression",
+                        "description": "Une erreur s'est produite lors de la suppression des offres. Veuillez réessayer."
+                    },
+                    "project_deleted": {
+                        "title": "Échec de la suppression",
+                        "description": "Une erreur s'est produite lors de la suppression de l'offre. Veuillez réessayer."
+                    }
+                }
             }
         }
     }

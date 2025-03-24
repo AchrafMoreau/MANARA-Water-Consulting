@@ -35,4 +35,27 @@ type translationsType = {
   fr: string,
   ar: string,
 }
-export type { ProjetType, CategoryType } 
+enum EmploymentType {
+    FULL_TIME = "FULL_TIME",
+    PART_TIME = "PART_TIME",
+    CONTRACT = "CONTRACT",
+    TEMPORARY = "TEMPORARY",
+    INTERNSHIP = "INTERNSHIP",
+    VOLUNTEER = "VOLUNTEER",
+    PER_DIEM = "PER_DIEM",
+    OTHER = "OTHER",
+}
+type offersType = {
+  id: string
+  title: string
+  location: string
+  description: string
+  translations: {} | null
+  createdAt: Date
+  updatedAt: Date
+  department: string
+  urgent: boolean
+  employmentType: EmploymentType
+  IndeedUrl: string
+}
+export type { ProjetType, CategoryType, offersType } 

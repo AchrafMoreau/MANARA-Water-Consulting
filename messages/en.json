@@ -626,11 +626,256 @@
             "main_navigation": "MAIN NAVIGATION",
             "items": {
                 "home": "Home",
-                "projects": "Projects"
+                "projects": "Projects",
+                "offers": "Offers"
+            }
+        },
+        "projects": {
+            "title": "Projects",
+            "description": "Manage your construction projects",
+            "add_project": "Add Project",
+            "search": {
+                "placeholder": "Search projects...",
+                "clear": "Clear search"
+            },
+            "filters": {
+                "categories": {
+                    "all": "All Categories"
+                }
+            },
+            "table": {
+                "select_all": "Select all",
+                "preview": "Preview",
+                "title": "Title",
+                "client": "Client",
+                "location": "Location",
+                "category": "Category",
+                "created": "Created",
+                "actions": "Actions",
+                "no_projects": "No projects found."
+            },
+            "bulk_actions": {
+                "selected": "{count} selected",
+                "delete": "Delete"
+            },
+            "pagination": {
+                "showing": "Showing {start} to {end} of {total} projects",
+                "next": "Next",
+                "previous": "Previous",
+                "more_page": "More pages"
+            },
+            "actions_menu": {
+                "label": "Actions",
+                "view": "View",
+                "edit": "Edit",
+                "delete": "Delete"
+            },
+            "toast": {
+                "success": {
+                    "projects_removed": {
+                        "title": "Projects Removed",
+                        "description": "All selected projects have been deleted successfully."
+                    },
+                    "project_deleted": {
+                        "title": "Project Deleted",
+                        "description": "The project was successfully deleted."
+                    }
+                },
+                "error": {
+                    "failed_delete_projects": {
+                        "title": "Failed to Delete Projects",
+                        "description": "An error occurred while attempting to delete the selected projects."
+                    },
+                    "failed_delete_project": {
+                        "title": "Failed to Delete Project",
+                        "description": "An error occurred while deleting the project. Please try again."
+                    }
+                }
+            },
+            "detail": {
+                "back_button": "Back",
+                "client": "Client",
+                "location": "Location",
+                "duration": "{start} - {end}",
+                "images": "Images",
+                "tabs": {
+                    "description": "Description",
+                    "solution": "Solution",
+                    "impact": "Impact"
+                },
+                "sections": {
+                    "description": "Project Description",
+                    "solution": "Our Solution",
+                    "impact": "Project Impact"
+                },
+                "details": {
+                    "client": "Client",
+                    "location": "Location",
+                    "started": "Started",
+                    "completed": "Completed"
+                },
+                "footer": {
+                    "last_updated": "Last updated: {date}",
+                    "view_all": "View All Projects"
+                }
+            },        
+            "form": {
+                "title": {
+                    "edit": "Edit Project",
+                    "create": "Add New Project"
+                },
+                "description": {
+                    "edit": "Update the details of your existing project.",
+                    "create": "Fill in the details to create a new project."
+                },
+                "fields": {
+                    "title": {
+                        "label": "Title",
+                        "placeholder": "Project title",
+                        "error": "Title must be at least 2 characters."
+                    },
+                    "client": {
+                        "label": "Client",
+                        "placeholder": "Client name",
+                        "error": "Client name must be at least 2 characters."
+                    },
+                    "location": {
+                        "label": "Location",
+                        "placeholder": "Project location",
+                        "error": "Location must be at least 2 characters."
+                    },
+                    "category": {
+                        "label": "Category",
+                        "placeholder": "Select a category",
+                        "error": "Please select a category."
+                    },
+                    "commencement_date": {
+                        "label": "Commencement Date",
+                        "placeholder": "Pick a date",
+                        "error": "Commencement date is required."
+                    },
+                    "completion_date": {
+                        "label": "Completion Date",
+                        "placeholder": "Pick a date",
+                        "error": "Completion date is required."
+                    },
+                    "thumbnail": {
+                        "label": "Thumbnail",
+                        "description": "Upload a thumbnail image for the project.",
+                        "error": "Thumbnail is required."
+                    },
+                    "images": {
+                        "label": "Project Images",
+                        "description": "Upload images showcasing the project. You can add up to 10 images.",
+                        "error": "At least one image is required."
+                    },
+                    "description": {
+                        "label": "Description",
+                        "placeholder": "Provide a detailed description of the project",
+                        "error": "Description must be at least 10 characters."
+                    },
+                    "solution": {
+                        "label": "Solution",
+                        "placeholder": "Describe the solution implemented",
+                        "error": "Solution must be at least 10 characters."
+                    },
+                    "impact": {
+                        "label": "Impact",
+                        "placeholder": "Describe the impact of the project",
+                        "error": "Impact must be at least 10 characters."
+                    }
+                },
+                "buttons": {
+                    "cancel": "Cancel",
+                    "submit": {
+                        "edit": "Update Project",
+                        "create": "Create Project"
+                    }
+                },
+                "toast": {
+                    "success": {
+                        "edit": {
+                            "title": "Project Updated Successfully",
+                            "description": "Project Updated Successfully"
+                        },
+                        "create": {
+                            "title": "Project Created Successfully",
+                            "description": "Project Created Successfully"
+                        }
+                    },
+                    "error": {
+                        "title": "Failed to upload file",
+                        "description": "An unexpected error occurred"
+                    }
+                }
+            }
+        },
+        "offers": {
+            "title": "Offers",
+            "description": "Manage your job offers and applications",
+            "add_offer": "Add Offer",
+            "type": {
+                "full_time": "Full Time",
+                "part_time": "Part Time",
+                "contract": "Contract",
+                "internship": "Internship",
+                "temporary": "Temporary",
+                "volunteer": "Volunteer",
+                "other": "Other"
+            },
+            "search": {
+                "placeholder": "Search offers...",
+                "clear": "Clear search"
+            },
+            "bulk_actions": {
+                "selected": "Selected {count} offers",
+                "delete": "Delete"
+            },
+            "table": {
+                "select_all": "Select all",
+                "title": "Title",
+                "department": "Department",
+                "type": "Type",
+                "status": "Status",
+                "urgent": "Urgent",
+                "normal": "Normal",
+                "created": "Created",
+                "actions": "Actions",
+                "no_offers": "No offers found."
+            },
+            "actions_menu": {
+                "label": "Actions",
+                "view": "View",
+                "edit": "Edit",
+                "delete": "Delete"
+            },
+            "pagination": {
+                "showing": "Showing {start} to {end} of {total} offers"
+            },
+            "toast": {
+                "success": {
+                    "offers_removed": {
+                        "title": "Offers removed",
+                        "description": "The selected offers have been successfully removed."
+                    },
+                    "project_deleted": {
+                        "title": "Offer deleted",
+                        "description": "The offer has been successfully deleted."
+                    }
+                },
+                "error": {
+                    "failed_delete_offers": {
+                        "title": "Failed to delete offers",
+                        "description": "An error occurred while deleting the offers. Please try again."
+                    },
+                    "project_deleted": {
+                        "title": "Failed to delete offer",
+                        "description": "An error occurred while deleting the offer. Please try again."
+                    }
+                }
             }
         }
     }
-
 }
 
 
