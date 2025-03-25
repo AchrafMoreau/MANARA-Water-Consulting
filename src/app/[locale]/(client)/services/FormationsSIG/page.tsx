@@ -21,46 +21,21 @@ export default function FormationsSIG() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Title title={t('title')} axAuto={true} />
+          <Title title={t('title')} axAuto={true} titleClass="mx-auto text-center"/>
           <p className="text-lg text-gray-600 dark:text-gray-400">
             {t('description')}
           </p>
         </motion.div>
 
         {/* Interactive GIS Map Animation */}
-        <div className="mb-20 relative h-[500px]  rounded-xl overflow-hidden shadow-lg">
-          <motion.div 
-            className="absolute inset-0 bg-blue-900 bg-opacity-80 z-10 flex items-center justify-center"
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-          >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              <MapIcon size={100} className="text-white" />
-              <motion.div 
-                className="h-1 bg-white mt-4"
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1 }}
-              />
-            </motion.div>
-          </motion.div>
-          
-          <div className="absolute inset-0 bg-gray-200">
+        <div className="mb-20 relative h-[500px]  rounded-xl overflow-hidden shadow-lg mx-10 md:mx-20">
             <Image
-              src="/gis-map.jpg"
+              src="/formation-gis1.png"
               alt="GIS Map Visualization"
               fill
               className="object-cover"
             />
-            
             {/* Animated map pins */}
-            <MapPinAnimations />
-          </div>
         </div>
 
         {/* Our Training Programs */}
@@ -154,43 +129,3 @@ export default function FormationsSIG() {
   )
 }
 
-function MapPinAnimations() {
-  // Create several animated map pins at different positions
-  const pins = [
-    { x: "20%", y: "30%", delay: 1.2 },
-    { x: "50%", y: "60%", delay: 1.5 },
-    { x: "80%", y: "40%", delay: 1.8 },
-    { x: "70%", y: "20%", delay: 2.1 },
-    { x: "30%", y: "70%", delay: 2.4 },
-  ]
-  
-  return (
-    <>
-      {pins.map((pin, index) => (
-        <motion.div
-          key={index}
-          className="absolute"
-          style={{ left: pin.x, top: pin.y }}
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ 
-            scale: 1, 
-            opacity: 1,
-            y: [0, -10, 0]
-          }}
-          transition={{ 
-            delay: pin.delay, 
-            duration: 0.5,
-            y: {
-              delay: pin.delay + 0.5,
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }
-          }}
-        >
-          <MapPin className="h-8 w-8 text-blue-600" />
-        </motion.div>
-      ))}
-    </>
-  )
-}

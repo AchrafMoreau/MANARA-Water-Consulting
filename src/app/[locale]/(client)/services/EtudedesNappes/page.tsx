@@ -157,7 +157,7 @@ export default function EtudeDesNappes() {
                   className="rounded-lg overflow-hidden shadow-lg"
                 >
                   <Image
-                    src="/team.jpg"
+                    src="/StudyOfGroundwater.png"
                     alt="Nappes phréatiques"
                     width={600}
                     height={400}
@@ -206,7 +206,7 @@ export default function EtudeDesNappes() {
                   className="rounded-lg overflow-hidden shadow-lg"
                 >
                   <Image
-                    src="/team.jpg"
+                    src="/Watercourses.png"
                     alt="Cours d'eau"
                     width={600}
                     height={400}
@@ -255,7 +255,7 @@ export default function EtudeDesNappes() {
                   className="rounded-lg overflow-hidden shadow-lg"
                 >
                   <Image
-                    src="/team.jpg"
+                    src="/Monitoring&Analysis.png"
                     alt="Surveillance et analyse"
                     width={600}
                     height={400}

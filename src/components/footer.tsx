@@ -20,7 +20,7 @@ export default function Footer() {
 
 function Content() {
   return (
-    <div className="bg-gradient-to-br from-secondary to-primary py-8 px-10 md:px-12 h-full w-full flex flex-col justify-between text-white">
+    <div className="footer py-8 px-10 md:px-12 h-full w-full flex flex-col justify-between text-white">
       <Section1 />
     </div>
   )

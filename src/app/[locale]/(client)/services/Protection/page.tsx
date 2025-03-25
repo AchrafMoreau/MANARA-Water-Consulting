@@ -85,28 +85,28 @@ export default function Protection() {
               {
                 title: t('solutions_list.drainage.title'),
                 description: t('solutions_list.drainage.description'),
-                image: "/team.jpg",
+                image: "/Planning.png",
                 features: t.raw('solutions_list.drainage.features'),
                 delay: 0.1
               },
               {
                 title: t('solutions_list.protection_works.title'),
                 description: t('solutions_list.protection_works.description'),
-                image: "/team.jpg",
+                image: "/Protection.png",
                 features: t.raw('solutions_list.protection_works.features'),
                 delay: 0.3
               },
               {
                 title: t('solutions_list.risk_mapping.title'),
                 description: t('solutions_list.risk_mapping.description'),
-                image: "/team.jpg",
+                image: "/RiskMapping.png",
                 features: t.raw('solutions_list.risk_mapping.features'),
                 delay: 0.5
               },
               {
                 title: t('solutions_list.early_warning.title'),
                 description: t('solutions_list.early_warning.description'),
-                image: "/team.jpg",
+                image: "/Systems.png",
                 features: t.raw('solutions_list.early_warning.features'),
                 delay: 0.7
               },
@@ -180,7 +180,7 @@ export default function Protection() {
               <div className="md:w-1/3">
                 <div className="rounded-lg overflow-hidden">
                   <Image
-                    src="/team.jpg"
+                    src="/CoastalCity.png"
                     alt="Projet de protection contre les inondations"
                     width={300}
                     height={200}
@@ -230,7 +230,7 @@ export default function Protection() {
               <div className="md:w-1/3">
                 <div className="rounded-lg overflow-hidden">
                   <Image
-                    src="/team.jpg"
+                    src="/Metropolis.png"
                     alt="Système de drainage urbain durable"
                     width={300}
                     height={200}

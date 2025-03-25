@@ -199,7 +199,7 @@ export default function Reetulisation() {
             >
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/team.jpg"
+                  src="/Agricultural.png"
                   alt="Irrigation avec des eaux usées traitées"
                   width={500}
                   height={300}
@@ -217,7 +217,7 @@ export default function Reetulisation() {
             >
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/team.jpg"
+                  src="/Industrial.png"
                   alt="Applications industrielles des eaux usées traitées"
                   width={600}
                   height={300}

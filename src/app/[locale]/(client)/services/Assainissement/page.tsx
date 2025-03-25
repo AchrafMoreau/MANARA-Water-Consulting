@@ -12,12 +12,7 @@ import { useTranslations } from "next-intl"
 export default function ServicesPage() {
   const containerRef = useRef(null)
   const t = useTranslations('Assainissement');
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  })
   const headerRef = useRef(null)
-  const isHeaderInView = useInView(headerRef, { once: true })
 
   const serviceRefs = [useRef(null), useRef(null), useRef(null)]
   const [servicesInView, setServicesInView] = useState([false, false, false])
@@ -58,10 +53,6 @@ export default function ServicesPage() {
       observers.forEach((observer) => observer.disconnect())
     }
   }, [handleIntersection, serviceRefs])
-
-  const parallaxY1 = useTransform(scrollYProgress, [0, 1], [0, -100])
-  const parallaxY2 = useTransform(scrollYProgress, [0, 1], [0, -200])
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [1, 1, 0.8, 0])
 
   return (
     <ServiceLayout>
@@ -104,7 +95,7 @@ export default function ServicesPage() {
               </div>
               <div className="order-1 md:order-2 relative ">
                 <Image
-                    src="/team.jpg"
+                    src="/Assessment.png"
                     alt="Needs Assessment"
                     width={500}
                     className="rounded-xl"
@@ -123,7 +114,7 @@ export default function ServicesPage() {
             >
               <div className="relative ">
                 <Image
-                    src="/team.jpg"
+                    src="/Network.png"
                     alt="Needs Assessment"
                     width={500}
                     className="rounded-xl"
@@ -192,7 +183,7 @@ export default function ServicesPage() {
               <div className="order-1 md:order-2 relative">
 
                 <Image
-                    src="/team.jpg"
+                    src="/Treatment.png"
                     alt="Needs Assessment"
                     width={500}
                     className="rounded-xl"
