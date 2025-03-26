@@ -2,16 +2,24 @@
 
 import { Link } from "@/i18n/navigation"
 import { motion } from "framer-motion"
-import { Droplet, Mail, MapPin, Phone, ArrowUpRight } from "lucide-react"
+import { CloudRainIcon, DropletIcon, ArrowUpRight, ArrowUpLeft, LeafIcon, MapIcon, WavesIcon } from "lucide-react"
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion"
 import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faMapLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 export default function AnimatedFooter() {
   const t = useTranslations();
+  const local = useLocale()
+  const navItems = [
+    { link:"/services/RessourceEau", title:t("ressourceEau"), description:t("ressourceEauDesc"), icon:<DropletIcon className="h-4 w-4" />, color:"bg-blue-800" },
+    { link:"/services/InfrastructuresHydrauliques", title:t("infrastructuresHydrauliques"), description:t("infrastructuresHydrauliquesDesc"), icon:<WavesIcon className="h-4 w-4" />, color:"bg-blue-700" },
+    { link:"/services/FormationsSIG", title:t("trainings"), description:t("trainingsDesc"), icon:<MapIcon className="h-4 w-4" />, color:"bg-slate-100", textColor:"text-slate-800" },
+    { link:"/services/Environnement", title:t("environnement"), description:t("environnementDesc"), icon:<LeafIcon className="h-4 w-4" /> , color:"bg-green-700"},
+    { link:"/services/ChangementsClimatiques", title:t("changementsClimatiques"), description:t("changementsClimatiquesDesc"), icon:<CloudRainIcon className="h-4 w-4" />, color:"bg-green-800" },
+  ]
   return (
     <footer className="text-secondary-foreground overflow-hidden">
       <div className="container mx-auto px-4 py-16">
@@ -53,77 +61,39 @@ export default function AnimatedFooter() {
           </FadeIn>
 
           <StaggerContainer className="space-y-4 col-span-2 hidden md:block ">
-            <div className="grid grid-cols-2 gap-3">
-            <h3 className="text-xl col-span-2 font-semibold mb-6 border-b w-fit">{t("services")}</h3>
-              <div className="space-y-4">
+              <h3 className="text-xl col-span-2 font-semibold mb-6 border-b w-fit">{t("services")}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
                 <StaggerItem>
                   <Link
                     href="/services"
                     className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
                   >
                     <span>{t("overview")}</span>
-                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {local != 'ar' ? (
+                      <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    ) : (
+                      <ArrowUpLeft className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    )}
                   </Link>
                 </StaggerItem>
-                <StaggerItem>
-                  <Link
-                    href="/services/FormationsSIG"
-                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
-                  >
-                    <span>
-                      {t('trainings')}
+                {navItems.map((item, index) => (
+                  <StaggerItem key={index}>
+                    <Link
+                      href={item.link}
+                      className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
+                    >
+                      <span>
+                        {item.title}
                       </span>
-                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </StaggerItem>
-                <StaggerItem>
-                  <Link
-                    href="/services/EtudedesNappes"
-                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
-                  >
-                    <span>
-                      {t('aquifersStudy')}
-                    </span>
-                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </StaggerItem>
+                      {local != 'ar' ? (
+                        <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      ) : (
+                        <ArrowUpLeft className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      )}
+                    </Link>
+                  </StaggerItem>
+                ))}
               </div>
-              <div className="space-y-4">
-                <StaggerItem>
-                  <Link
-                    href="/services/Protection"
-                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
-                  >
-                    <span>
-                      {t('floodProtection')}
-                    </span>
-                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </StaggerItem>
-                <StaggerItem>
-                  <Link
-                    href="/services/Assainissement"
-                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
-                  >
-                    <span>
-                      {t('sanitation')}
-                    </span>
-                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </StaggerItem>
-                <StaggerItem>
-                  <Link
-                    href="/services/Reetulisation"
-                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
-                  >
-                    <span>
-                      {t('waterReuse')}
-                    </span>
-                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </StaggerItem>
-              </div>
-            </div>
           </StaggerContainer>
 
 

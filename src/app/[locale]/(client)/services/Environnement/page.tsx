@@ -10,11 +10,10 @@ import { Card } from "@/components/ui/focuse-card"
 import { MagicCard } from "@/components/magicui/magic-card"
 import { useTheme } from "next-themes"
 import { useEffect } from "react"
-import Lenis from "lenis"
 import { useTranslations } from "next-intl"
 
 export default function Protection() {
-  const t = useTranslations('Protection');
+  const t = useTranslations('Environnement');
 
   const { theme } = useTheme();
   return (
@@ -83,31 +82,31 @@ export default function Protection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-10 md:mx-20">
             {[
               {
-                title: t('solutions_list.drainage.title'),
-                description: t('solutions_list.drainage.description'),
+                title: t('solutions_list.eia.title'),
+                description: t('solutions_list.eia.description'),
                 image: "/Planning.png",
-                features: t.raw('solutions_list.drainage.features'),
+                features: t.raw('solutions_list.eia.features'),
                 delay: 0.1
               },
               {
-                title: t('solutions_list.protection_works.title'),
-                description: t('solutions_list.protection_works.description'),
+                title: t('solutions_list.audits.title'),
+                description: t('solutions_list.audits.description'),
                 image: "/Protection.png",
-                features: t.raw('solutions_list.protection_works.features'),
+                features: t.raw('solutions_list.audits.features'),
                 delay: 0.3
               },
               {
-                title: t('solutions_list.risk_mapping.title'),
-                description: t('solutions_list.risk_mapping.description'),
+                title: t('solutions_list.monitoring.title'),
+                description: t('solutions_list.monitoring.description'),
                 image: "/RiskMapping.png",
-                features: t.raw('solutions_list.risk_mapping.features'),
+                features: t.raw('solutions_list.monitoring.features'),
                 delay: 0.5
               },
               {
-                title: t('solutions_list.early_warning.title'),
-                description: t('solutions_list.early_warning.description'),
+                title: t('solutions_list.reporting.title'),
+                description: t('solutions_list.reporting.description'),
                 image: "/Systems.png",
-                features: t.raw('solutions_list.early_warning.features'),
+                features: t.raw('solutions_list.reporting.features'),
                 delay: 0.7
               },
             ].map((solution, index) => (
@@ -166,7 +165,7 @@ export default function Protection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <Title title={t('case_studies.title')} axAuto={true} titleClass="mx-auto" borderClass="mb-5"/>
+          <Title title={t('case_studies.case_studies_title')} axAuto={true} titleClass="mx-auto" borderClass="mb-5"/>
           
           
           <motion.div 

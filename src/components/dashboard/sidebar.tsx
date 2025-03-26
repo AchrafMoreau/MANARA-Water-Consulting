@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import {  Home, Inbox  } from 'lucide-react'
+import {  FileText, FolderKanban, Home, Inbox  } from 'lucide-react'
 import Image from "next/image"
 
 import {
@@ -30,12 +30,12 @@ const items = [
   {
     title: "projects",
     url: "/dashboard/projects",
-    icon: Inbox,
+    icon: FolderKanban,
   },
   {
     title: "offers",
     url: "/dashboard/offers",
-    icon: Inbox,
+    icon: FileText,
   },
 ]
 

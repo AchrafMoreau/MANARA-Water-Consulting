@@ -1,130 +1,81 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import prisma from "@/server/db"
+import { currentUser } from '@clerk/nextjs/server'
+import { FileText, FolderKanban } from "lucide-react"
+import { getTranslations } from "next-intl/server"
 
-export default function DashboardPage() {
 
+const getTotalProjects = async () => {
+  return await prisma.project.count()
+} 
+const getTotalOffers = async () => {
+  return await prisma.offer.count()
+}
+
+export default async function DashboardPage() {
+  const totalProjects = await getTotalProjects()
+  const t = await getTranslations("dashboard")
+  const totalOffers = await getTotalOffers()
+  const user = await currentUser()
+
+
+  if (!user) {
+    return <div>{t('not_signed_in')}</div>;
+  }
+
+  const currentDate = new Date();
+  const formattedDate = new Intl.DateTimeFormat(
+    'en-US', 
+    {
+      weekday: t.raw('date_format.weekday'),
+      year: t.raw('date_format.year'),
+      month: t.raw('date_format.month'),
+      day: t.raw('date_format.day')
+    }
+  ).format(currentDate);
+
+  const getGreeting = () => {
+    const hour = currentDate.getHours();
+    if (hour < 12) return t('greeting.morning');
+    if (hour < 18) return t('greeting.afternoon');
+    return t('greeting.evening');
+  };
 
   return (
     <div>
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-10">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">
+            {getGreeting()}, <span className="uppercase">{user?.username}</span>
+          </h1>
+          <p className="text-muted-foreground">{formattedDate}</p>
+        </div>
+      </div>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="h-4 w-4 text-muted-foreground"
-            >
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
+            <CardTitle className="text-sm font-medium">
+              {t('cards.projects.title')}
+            </CardTitle>
+            <FolderKanban className="w-5 h-5"/>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">$45,231.89</div>
-            <p className="text-xs text-muted-foreground">+20.1% from last month</p>
+            <div className="text-2xl font-bold">{totalProjects}</div>
           </CardContent>
         </Card>
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Subscriptions</CardTitle>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="h-4 w-4 text-muted-foreground"
-            >
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
+            <CardTitle className="text-sm font-medium">
+              {t('cards.offers.title')}
+            </CardTitle>
+            <FileText className="h-5 w-5" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">+2,350</div>
-            <p className="text-xs text-muted-foreground">+180.1% from last month</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Sales</CardTitle>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="h-4 w-4 text-muted-foreground"
-            >
-              <rect width="20" height="14" x="2" y="5" rx="2" />
-              <path d="M2 10h20" />
-            </svg>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">+12,234</div>
-            <p className="text-xs text-muted-foreground">+19% from last month</p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Active Now</CardTitle>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="h-4 w-4 text-muted-foreground"
-            >
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-            </svg>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">+573</div>
-            <p className="text-xs text-muted-foreground">+201 since last hour</p>
-          </CardContent>
-        </Card>
-      </div>
-      <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-7">
-        <Card className="col-span-4">
-          <CardHeader>
-            <CardTitle>Overview</CardTitle>
-          </CardHeader>
-          <CardContent className="h-[200px] bg-muted/50 rounded-md flex items-center justify-center">
-            <p className="text-muted-foreground">Chart will be displayed here</p>
-          </CardContent>
-        </Card>
-        <Card className="col-span-3">
-          <CardHeader>
-            <CardTitle>Recent Sales</CardTitle>
-            <CardDescription>You made 265 sales this month.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-8">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="flex items-center">
-                  <div className="mr-4 h-9 w-9 rounded-full bg-primary/10" />
-                  <div className="space-y-1">
-                    <p className="text-sm font-medium leading-none">Customer {i}</p>
-                    <p className="text-sm text-muted-foreground">customer{i}@example.com</p>
-                  </div>
-                  <div className="ml-auto font-medium">${(Math.random() * 1000).toFixed(2)}</div>
-                </div>
-              ))}
-            </div>
+            <div className="text-2xl font-bold">{totalOffers}</div>
           </CardContent>
         </Card>
       </div>
     </div>
-  )
+  );
 }
 

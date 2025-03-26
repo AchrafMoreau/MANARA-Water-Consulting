@@ -2,70 +2,71 @@
 import { motion } from "framer-motion"
 import { Link } from "@/i18n/navigation"
 import ServiceLayout from "@/components/service-layout"
-import { ReactNode, useEffect } from "react"
-import { DropletIcon, MapIcon, WavesIcon, UmbrellaIcon, DropletsIcon as DropIcon, GlassWaterIcon as WaterIcon } from 'lucide-react'
+import { ReactNode, useEffect, useState } from "react"
+import { DropletIcon, MapIcon, WavesIcon, UmbrellaIcon, DropletsIcon as DropIcon, GlassWaterIcon as WaterIcon, Leaf, LeafIcon, CloudRainIcon } from 'lucide-react'
 import { Title } from "@/components/title"
-import Lenis from "lenis"
 import { useTranslations } from "next-intl"
+import { text } from "stream/consumers"
 
 export default function ServicesOverview() {
-  const t = useTranslations('solutions')
+  const t = useTranslations()
+  const navItems = [
+    { link:"/services/RessourceEau", title:t("ressourceEau"), description:t("ressourceEauDesc"), icon:<DropletIcon className="h-10 w-10" />, color: "bg-blue-800", },
+    { link:"/services/InfrastructuresHydrauliques", title:t("infrastructuresHydrauliques"), description:t("infrastructuresHydrauliquesDesc"), icon:<WavesIcon className="h-10 w-10" />, color: "bg-blue-700" },
+    { link:"/services/FormationsSIG", title:t("trainings"), description:t("trainingsDesc"), icon:<MapIcon className="h-10 w-10" />, color: "bg-slate-100", textColor: "text-slate-800" },
+    { link:"/services/Environnement", title:t("environnement"), description:t("environnementDesc"), icon:<LeafIcon className="h-10 w-10" />, color: "bg-green-700" },
+    { link:"/services/ChangementsClimatiques", title:t("changementsClimatiques"), description:t("changementsClimatiquesDesc"), icon:<CloudRainIcon className="h-10 w-10" />,color: "bg-green-600" },
+  ]
   return (
     <ServiceLayout>
-      <div className="container mx-auto px-4 py-20">
-        <motion.div 
+      <div className="container mx-auto px-10 md:px-15 py-20 mt-20">
+        {/* <motion.div 
           className="max-w-3xl mx-auto text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <Title title={t('solutions_title')} axAuto={true} titleClass="mx-auto"/>
+          <Title title={t('solutions.solutions_title')} axAuto={true} titleClass="mx-auto"/>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            {t('solutions_description')}
+            {t('solutions.solutions_description')}
           </p>
-        </motion.div>
+        </motion.div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceCard 
-            title={t('services.sig_training.title')}
-            description={t('services.sig_training.description')}
-            icon={<MapIcon className="h-10 w-10" />}
-            href="/services/FormationsSIG"
-            delay={0.1}
-          />
-          
-          <ServiceCard 
-            title={t('services.water_study.title')}
-            description={t('services.water_study.description')}
-            icon={<WavesIcon className="h-10 w-10" />}
-            href="/services/EtudedesNappes"
-            delay={0.2}
-          />
-          
-          <ServiceCard 
-            title={t('services.wastewater_reuse.title')}
-            description={t('services.wastewater_reuse.description')}
-            icon={<DropletIcon className="h-10 w-10" />}
-            href="/services/Reetulisation"
-            delay={0.3}
-          />
-          
-            <ServiceCard 
-              title={t('services.sanitation.title')}
-              description={t('services.sanitation.description')}
-              icon={<DropIcon className="h-10 w-10" />}
-              href="/services/Assainissement"
-              delay={0.5}
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {navItems.map((item, index) => (
+            <ServiceCard
+              key={index}
+              title={item.title}
+              description={item.description}
+              link={item.link}
+              icon={item.icon}
+              delay={index * 0.1}
             />
-          <ServiceCard 
-            title={t('services.flood_protection.title')}
-            description={t('services.flood_protection.description')}
-            icon={<UmbrellaIcon className="h-10 w-10" />}
-            href="/services/Protection"
-            delay={0.4}
-          />
-          
+          ))}
+        </div> */}
+        <motion.div 
+          className="mx-auto text-center mb-20 "
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Title title={t('solutions.solutions_title')} axAuto={true} titleClass="mx-auto"/>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            {t('solutions.solutions_description')}
+          </p>
+          <div className="grid grid-cols-1 mt-10 md:grid-cols-5 shadow-xl overflow-hidden rounded-lg">
+            {navItems.map((service, index) => (
+              <ServiceCardTwo key={index}
+                title = {service.title}
+                description={service.description}
+                icon={service.icon}
+                link={service.link}
+                color={service.color}
+                textColor={service.textColor}
+              />
+            ))}
         </div>
+        </motion.div>
         <motion.div
           className="mt-24 relative overflow-hidden"
           initial={{ opacity: 0, y: 40 }}
@@ -77,19 +78,19 @@ export default function ServicesOverview() {
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-2/3 mb-8 md:mb-0 md:mr-10">
                   <div className="inline-block px-4 py-1 rounded-full bg-blue-500/20 backdrop-blur-sm border border-blue-400/20 text-blue-100 text-sm font-medium mb-4">
-                    {t('methodology')}
+                    {t('solutions.methodology')}
                   </div>
 
                   <h3 className="text-3xl font-bold mb-6 text-white tracking-tight">
-                    {t('integrated_approach.title')}
+                    {t('solutions.integrated_approach.title')}
                   </h3>
 
                   <p className="text-blue-100/90 leading-relaxed mb-6">
-                    {t('integrated_approach.description')}
+                    {t('solutions.integrated_approach.description')}
                   </p>
 
                   <div className="flex flex-wrap gap-4 mt-6">
-                    {t.raw('tags').map((tag: string, index:number) => (
+                    {t.raw('solutions.tags').map((tag: string, index:number) => (
                       <span
                         key={index + String(tag)}
                         className="px-3 py-1 rounded-full bg-blue-700/50 text-blue-100 text-sm border border-blue-600/50"
@@ -137,12 +138,12 @@ export function ServiceCard({
   title,
   description,
   icon,
-  href,
+  link,
   delay = 0,
   className = "",
   isCallToAction = false,
 }: ServiceCardProps) {
-  const t = useTranslations('solutions')
+  const t = useTranslations()
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -151,7 +152,7 @@ export function ServiceCard({
       viewport={{ once: true, margin: "-100px" }}
       className="group relative"
     >
-      <Link href={href} className="block h-full">
+      <Link href={link} className="block h-full">
         <div
           className={`
             relative h-full p-10 rounded-lg overflow-hidden
@@ -237,6 +238,74 @@ export function ServiceCard({
     </motion.div>
   )
 }
+
+
+interface ServiceCardProps {
+  title: string
+  description: string
+  icon: ReactNode
+  link: string
+  color: string
+  textColor?: string
+  delay?: number
+  className?: string
+  isCallToAction?: boolean
+}
+
+export function ServiceCardTwo({
+  title,
+  description,
+  icon,
+  link,
+  color,
+  textColor="text-white",
+  delay = 0,
+  className = "",
+}: ServiceCardProps) {
+  const [isHovered, setIsHovered] = useState(false)
+  return (
+    <Link href={link} className="block h-full w-full">
+      <motion.div
+        className={`relative h-full ${color} ${textColor} border-r last:border-r-0 border-opacity-20 border-slate-300`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4 }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="p-6 flex flex-col items-center text-center h-full">
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: isHovered ? -5 : 0 }}
+            transition={{ duration: 0.3 }}
+            className="mb-5 p-3 rounded-full bg-white/10"
+          >
+            {icon}
+          </motion.div>
+
+          <h3 className="text-xl font-semibold mb-4">{title}</h3>
+
+          <motion.div
+            initial={{ opacity: 0.9 }}
+            animate={{ opacity: isHovered ? 1 : 0.9 }}
+            className="text-sm leading-relaxed"
+          >
+            {description}
+          </motion.div>
+        </div>
+
+        <motion.div
+          className="absolute inset-0 bg-black/5"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isHovered ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+        />
+      </motion.div>
+    </Link>
+  )
+}
+
+
 
 
 

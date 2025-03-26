@@ -15,17 +15,17 @@
     "contactUs": "Contact",
     "ourSolutions": "Nos Solutions",
     "trainings": "Formations SIG & Renforcement des Capacités",
-    "aquifersStudy": "Étude des Nappes & Cours d'Eau",
-    "waterReuse": "Réutilisation des Eaux Usées",
-    "sanitation": "Services d'Assainissement",
-    "floodProtection": "Protection contre les Inondations",
+    "ressourceEau": "Ressource En Eau",
+    "infrastructuresHydrauliques": "Infrastructures Hydrauliques",
+    "changementsClimatiques": "Changements Climatiques",
+    "environnement": "Environnement",
     "companyName": "Manara Water Consulting",
     "tagline": "Expertise & Innovation Pour Relever Les Défis Liés Au Développement Durable 💧🌍",
     "trainingsDesc": "Nous offrons des formations professionnelles en SIG et sur les pratiques durables et la gestion des ressources en eau pour les cadres et personnels techniques. Nos formations sont personnalisées pour répondre aux besoins de chaque volet.",
-    "aquifersStudyDesc": "Nos capacités de coordination des services hydriques sont essentielles pour des projets allant des développements urbains et des infrastructures de transport aux grandes industries et aux projets commerciaux. En proposant des solutions hydriques innovantes et durables, nous contribuons à des communautés plus intelligentes, plus vertes et mieux connectées.",
-    "waterReuseDesc": "Nous proposons des stratégies de gestion des déchets pour réduire l'empreinte carbone et promouvoir le recyclage des eaux usées.",
-    "floodProtectionDesc": "Concevons des infrastructures innovantes pour atténuer les effets des inondations, telles que les systèmes de drainage et les digues.",
-    "sanitationDesc": "Études approfondies des besoins locaux en matière d'assainissement et y répondre de manière ciblée. Concevoir des systèmes d'assainissement adaptés aux contextes locaux, visant à améliorer l'hygiène et la santé publique & Offres de smart solutions pour l’optimisation du traitement des eaux usées en conformité aux normes environnementales.",
+    "ressourceEauDesc": "Etudes et Expertises hydrogéologiques, Assistance technique des forages d'eau (exécution, ausculation, évaluation de la productivité), Etudes de la planification, Gestion Intégrée des Ressources en Eau, Plans Locaux de l'Eau",
+    "infrastructuresHydrauliquesDesc": "Etudes et Assistance Technique des projets en Alimentation en Eau Potable, Assainissement liquide, Protection contre les inondations, Captages d'Eau Pluviales",
+    "environnementDesc": "Etudes et expertises en évaluations environnementales, Études d'Impact sur l'Environnement, Audits environnementaux, veille réglementaire, Rapports d'État de l'Environnement des projets et des investissements",
+    "changementsClimatiquesDesc": "Planification territoriale climatique, expertise en Adaptation au Changement Climatique",
     "hero":{
         "discoverSolution": "Découvrez Notre Solution",
         "needExpertise": "Besoin d’une Expertise ?",
@@ -100,7 +100,7 @@
     },
     "about":{
         "title": "Qui Nous Sommes",
-        "description": "Manara Water Consulting est un bureau d’expertise spécialisé dans la gestion durable de l’eau. Avec plus de 15 ans d’expérience, nous accompagnons nos partenaires dans l’optimisation des ressources hydriques et la protection environnementale.",
+        "description": "Manara Water Consulting est un bureau d’expertise spécialisé dans la gestion durable de l’eau. nous accompagnons nos partenaires dans l’optimisation des ressources hydriques et la protection environnementale.",
         "team": {
             "title": "Notre Équipe",
             "description": "Notre équipe est composée d'experts chevronnés issus de divers domaines des ressources en eau, géophysique, hydraulique urbaine, assainissement et du développement durable."
@@ -110,26 +110,26 @@
         "title": "Notre Mission & Vision",
         "mission": {
             "title": "🌍 Notre Mission",
-            "description": "Construire un avenir où l’eau est préservée, optimisée et accessible à tous. Nous aspirons à un monde où les ressources en eau sont gérées de manière durable, en intégrant des solutions innovantes, écologiques et efficaces pour répondre aux défis climatiques et environnementaux."
+            "description": "est de bâtir un avenir où l'eau est préservée, optimisée et accessible à tous, en proposant des solutions innovantes et durables face aux défis des changements climatiques. En tant que partenaire de confiance, notre BET de conseil en ingénierie sectorielle et en études stratégiques s'engage à accompagner nos clients vers l'excellence opérationnelle, en mettant à leur disposition une approche personnalisée, basée sur l'écoute, la collaboration et des solutions adaptées à leurs besoins spécifiques."
         },
         "vision": {
             "title": "💡 Notre Vision",
-            "description": "Construire un avenir où l’eau est préservée, optimisée et accessible à tous. Nous aspirons à un monde où les ressources en eau sont gérées de manière durable, en intégrant des solutions innovantes, écologiques et efficaces pour répondre aux défis climatiques et environnementaux."
+            "description": "Nous aspirons à un monde où l'eau est gérée de manière responsable et innovante."
         }
     },
     "core_values": {
         "title": "Nos Valeurs Fondamentales",
         "integrity": {
             "title": "Intégrité",
-            "description": "Nous agissons avec honnêteté, respect et responsabilité dans toutes nos initiatives."
+            "description": "Nous bâtissons la confiance en agissant avec honnêteté, respect et responsabilité dans toutes nos initiatives."
         },
         "innovation": {
             "title": "Innovation",
-            "description": "Nous encourageons et adoptons des approches créatives et innovatrices. Le développement de l'intelligence collective est favorisé et les attitudes orientées « solutions » encouragées."
+            "description": "L'innovation est au cœur de notre démarche. Nous favorisons les approches créatives et l'intelligence collective."
         },
         "collaboration_performance": {
-            "title": "Collaboration & Performance",
-            "description": "Nous croyons au pouvoir de la collaboration pour réaliser des progrès significatifs vers un avenir durable. Nous favorisons un climat propice à l'efficacité, à la performance et au bien-être avec bienveillance."
+            "title": "Collaboration et Excellence",
+            "description": "Nous sommes convaincus que la collaboration est une clé essentielle pour accomplir des avancées durables et significatives. Nous créons un environnement axé sur l'efficacité, la performance et le bien-être, tout en cultivant la bienveillance."
         }
     },
     "Projects": {
@@ -173,8 +173,8 @@
         "description": "Découvrez quelques-unes de nos réalisations récentes dans le domaine de la gestion de l'eau."
     },
     "solutions": {
-        "solutions_title": "Nos Solutions pour une Gestion Durable de l'Eau",
-        "solutions_description": "Notre expertise couvre un large éventail de services liés à l'eau, conçus pour répondre aux défis environnementaux actuels et futurs.",
+        "solutions_title": "Notre Champs d'expertise",
+        "solutions_description": "Manara Water Consulting : l'expérience et l'expertise au service d'une gestion durable de vos ressources en eau",
         "see_more" : "En savoir plus",
         "services": {
             "sig_training": {
@@ -330,217 +330,227 @@
             "message": "Bonjour, je suis intéressé par vos services d'étude des nappes phréatiques et des cours d'eau. Pourriez-vous me fournir Plus de détails sur vos méthodes et tarifs ? Merci."
         }
     },
-    "Reetulisation":{
+    "InfrastructuresHydrauliques": {
         "benefits_section": {
-            "title": "Avantages de la Réutilisation des Eaux Usées",
-            "categories": {
-                "environmental": {
-                    "title": "Environnementaux",
-                    "benefits": [
-                        "Réduction de la pression sur les ressources en eau",
-                        "Diminution des rejets polluants dans les milieux naturels",
-                        "Préservation des écosystèmes aquatiques",
-                        "Réduction de l'empreinte carbone"
-                    ]
-                },
-                "economic": {
-                    "title": "Économiques",
-                    "benefits": [
-                        "Économies significatives sur la consommation d'eau",
-                        "Réduction des coûts de traitement des rejets",
-                        "Valorisation d'une ressource inexploitée",
-                        "Conformité aux normes environnementales"
-                    ]
-                },
-                "social": {
-                    "title": "Sociaux",
-                    "benefits": [
-                        "Renforcement de l'indépendance hydrique",
-                        "Amélioration de l'image de marque",
-                        "Engagement concret pour le développement durable",
-                        "Adaptation aux changements climatiques"
-                    ]
-                }
+        "title": "Avantages des Infrastructures Hydrauliques",
+        "categories": {
+            "environmental": {
+            "title": "Environnementaux",
+            "benefits": [
+                "Amélioration de la gestion des ressources en eau",
+                "Réduction des risques de pollution des nappes phréatiques",
+                "Protection des écosystèmes contre les inondations",
+                "Optimisation du cycle de l'eau urbain"
+            ]
+            },
+            "economic": {
+            "title": "Économiques",
+            "benefits": [
+                "Optimisation des coûts d'exploitation des réseaux",
+                "Augmentation de la durée de vie des installations",
+                "Valorisation des investissements hydrauliques",
+                "Réduction des dépenses liées aux dommages des inondations"
+            ]
+            },
+            "social": {
+            "title": "Sociaux",
+            "benefits": [
+                "Amélioration de l'accès à l'eau potable",
+                "Protection des populations contre les risques hydriques",
+                "Amélioration du cadre de vie urbain",
+                "Adaptation aux changements climatiques"
+            ]
             }
+        }
         },
         "process_section": {
-            "title": "Notre Processus de Traitement",
-            "steps": {
-                "collection": {
-                    "title": "Collecte",
-                    "description": "Récupération et stockage des eaux usées"
-                },
-                "pre_treatment": {
-                    "title": "Pré-traitement",
-                    "description": "Élimination des solides et impuretés grossières"
-                },
-                "treatment": {
-                    "title": "Traitement",
-                    "description": "Processus biologiques et chimiques adaptés"
-                },
-                "control": {
-                    "title": "Contrôle",
-                    "description": "Vérification de la qualité selon l'usage prévu"
-                },
-                "distribution": {
-                    "title": "Distribution",
-                    "description": "Acheminement vers les points d'utilisation"
-                }
+        "title": "Notre Approche Technique",
+        "steps": {
+            "study": {
+            "title": "Études préliminaires",
+            "description": "Diagnostic et conception des solutions adaptées"
+            },
+            "design": {
+            "title": "Dimensionnement",
+            "description": "Calculs hydrauliques et choix des matériels"
+            },
+            "implementation": {
+            "title": "Réalisation",
+            "description": "Assistance technique durant les travaux"
+            },
+            "control": {
+            "title": "Contrôle qualité",
+            "description": "Vérification des performances des installations"
+            },
+            "maintenance": {
+            "title": "Maintenance",
+            "description": "Plans de pérennisation des infrastructures"
             }
+        }
         },
         "applications_section": {
-            "title": "Applications de la Réutilisation des Eaux Usées",
-            "agriculture": {
-                "title": "Irrigation Agricole et Espaces Verts",
-                "description": "L'eau traitée peut être utilisée pour l'irrigation des cultures non alimentaires, des espaces verts, des terrains de golf et des parcs, réduisant considérablement la consommation d'eau potable pour ces usages.",
-                "extra_info": "Nos systèmes de traitement garantissent une qualité d'eau adaptée aux besoins spécifiques des végétaux tout en assurant la sécurité sanitaire."
-            },
-            "industrialApplications": {
-                "title": "Applications Industrielles",
-                "description": "L'eau recyclée peut être utilisée pour divers procédés industriels : refroidissement, nettoyage, et processus ne nécessitant pas d'eau potable, permettant de réduire significativement les coûts opérationnels.",
-                "extra_info": "Nos solutions sur mesure s'adaptent aux exigences spécifiques de chaque industrie et type de procédé, optimisant l'utilisation de cette ressource précieuse."
-            }
+        "title": "Domaines d'Intervention",
+        "water_supply": {
+            "title": "Alimentation en Eau Potable",
+            "description": "Conception et optimisation des réseaux AEP, traitement des eaux, stockage et distribution pour garantir un accès durable à l'eau potable.",
+            "extra_info": "Nos solutions intègrent les dernières technologies pour une gestion efficiente des réseaux et une qualité d'eau optimale."
+        },
+        "sanitation": {
+            "title": "Assainissement Liquide",
+            "description": "Systèmes de collecte, traitement et valorisation des eaux usées adaptés aux contextes urbains et ruraux.",
+            "extra_info": "Nous proposons des solutions durables allant des stations d'épuration aux systèmes décentralisés."
+        },
+        "flood_protection": {
+            "title": "Protection contre les Inondations",
+            "description": "Aménagements hydrauliques et systèmes de gestion des eaux pluviales pour réduire les risques d'inondation.",
+            "extra_info": "Nos approches combinent solutions structurelles et gestion intégrée des bassins versants."
+        },
+        "stormwater": {
+            "title": "Captages d'Eau Pluviale",
+            "description": "Systèmes de récupération et valorisation des eaux de pluie pour divers usages (irrigation, recharge de nappes, etc.).",
+            "extra_info": "Nous développons des solutions sur mesure pour maximiser l'utilisation de cette ressource sous-exploitée."
+        }
         },
         "cta": {
-            "title": "Réduisez Votre Consommation d'Eau",
-            "description": "Contactez-nous pour étudier les possibilités de réutilisation des eaux usées dans votre organisation et contribuer à un avenir plus durable.",
-            "button": "Étudier une Solution Sur-Mesure",
-            "message": "Bonjour, je suis intéressé par vos services de réutilisation des eaux usées. Pourriez-vous me fournir plus de détails sur vos méthodes et tarifs ? Merci."
+        "title": "Besoin d'Expertise en Infrastructures Hydrauliques ?",
+        "description": "Contactez-nous pour des solutions techniques innovantes en matière d'eau potable, assainissement et protection contre les inondations.",
+        "button": "Demander une Étude",
+        "message": "Bonjour, je suis intéressé par vos services en infrastructures hydrauliques. Pourriez-vous me fournir plus de détails sur vos méthodes et tarifs pour un projet d'alimentation en eau potable/assainissement/protection contre les inondations ? Merci."
         }
     },
-    "Assainissement":{
+    "ChangementsClimatiques": {
         "services": {
-            "needs_assessment": {
-                "title": "Évaluation des Besoins",
-                "description": "Nous répondons précisément aux besoins locaux de gestion de l'eau grâce à une analyse complète et des solutions adaptées.",
-                "features": [
-                    "Analyse approfondie des systèmes d'eau locaux",
-                    "Identification des opportunités d'amélioration",
-                    "Rapports d'évaluation personnalisés"
-                ]
-            },
-            "network_design": {
-                "title": "Conception du Réseau",
-                "description": "Conception de systèmes d'assainissement pour la santé publique et l'hygiène locales, garantissant une gestion de l'eau efficace et durable.",
-                "features": [
-                    "Planification complète du système",
-                    "Intégration aux infrastructures existantes",
-                    "Solutions pérennes"
-                ]
-            },
-            "treatment_optimization": {
-                "title": "Optimisation du Traitement",
-                "description": "Optimisation avancée du traitement des eaux usées, conforme aux normes environnementales et axée sur la durabilité.",
-                "features": [
-                    "Solutions de traitement intelligentes",
-                    "Conformité environnementale",
-                    "Amélioration de l'efficacité"
-                ]
-            }
-        },
-        "cta": {
-            "title": "Prêt à transformer votre gestion de l'eau?",
-            "description": "Notre équipe d'experts est prête à vous aider à mettre en œuvre des solutions durables et efficaces.",
-            "button": "Travaillons ensemble",
-            "message": "Bonjour ! Je suis intéressé par vos services de gestion de l'eau. Pouvons-nous en discuter ?"
-        }
-    },
-    "Protection":{
-        "our_approach": "Notre Approche",
-        "approach": {
-            "prevention": {
-                "title": "Prévention",
-                "description": "Identification des zones à risque et mise en place de mesures préventives pour réduire l'exposition aux inondations."
-            },
-            "protection": {
-                "title": "Protection",
-                "description": "Conception et mise en œuvre d'infrastructures de protection efficaces et respectueuses de l'environnement."
-            },
-            "preparation": {
-                "title": "Préparation",
-                "description": "Développement de systèmes d'alerte précoce et de plans d'intervention pour minimiser les impacts des inondations."
-            }
-        },
-        "solutions": "Nos Solutions de Protection",
-        "Features": "Caractéristiques",
-        "solutions_list": {
-            "drainage": {
-                "title": "Systèmes de Drainage Urbain Durable",
-                "description": "Nos systèmes de drainage urbain durable (SUDS) intègrent des solutions basées sur la nature pour gérer efficacement les eaux pluviales tout en améliorant la biodiversité et la qualité de vie urbaine.",
-                "features": [
-                    "Jardins de pluie et noues paysagères",
-                    "Pavés perméables et surfaces poreuses",
-                    "Bassins de rétention et zones humides artificielles",
-                    "Toitures végétalisées"
-                ]
-            },
-            "protection_works": {
-                "title": "Ouvrages de Protection",
-                "description": "Nous concevons et réalisons des infrastructures de protection contre les inondations adaptées aux contextes locaux, en intégrant des considérations environnementales et paysagères.",
-                "features": [
-                    "Digues et barrières anti-inondation",
-                    "Bassins d'écrêtement des crues",
-                    "Canaux de dérivation",
-                    "Murs de protection intégrés au paysage"
-                ]
-            },
-            "risk_mapping": {
-                "title": "Cartographie des Risques et Planification",
-                "description": "Nos services d'analyse et de cartographie permettent d'identifier les zones à risque et de développer des stratégies d'aménagement du territoire intégrant la gestion des inondations.",
-                "features": [
-                    "Modélisation hydraulique avancée",
-                    "Cartographie des zones inondables",
-                    "Plans de prévention des risques",
-                    "Stratégies d'adaptation au changement climatique"
-                ]
-            },
-            "early_warning": {
-                "title": "Systèmes d'Alerte Précoce",
-                "description": "Nous développons des systèmes de surveillance et d'alerte intégrant les technologies les plus récentes pour anticiper les risques d'inondation et permettre une réaction rapide.",
-                "features": [
-                    "Réseaux de capteurs intelligents",
-                    "Prévision hydrométéorologique",
-                    "Plateformes d'alerte multi-canaux",
-                    "Applications mobiles de notification"
-                ]
-            }
-        },
-        "case_studies":{
-            "case_studies_title": "Études de Cas",
-            "protection_system_title": "Système de Protection Intégré - Ville Côtière",
-            "protection_system_description": "Mise en place d'un système complet de protection contre les inondations côtières, combinant infrastructures de défense, restauration d'écosystèmes naturels et système d'alerte précoce.",
-            "protection_system_challenges": "Défis:",
-            "protection_system_results": "Résultats:",
-            "challenges": [
-                "• Augmentation du niveau de la mer",
-                "• Érosion côtière accélérée",
-                "• Zone urbaine dense"
-            ],
-            "results": [
-                "• Réduction de 85% des dommages",
-                "• Restauration écologique réussie",
-                "• Temps d'alerte triplé"
-            ],
-            "urban_renewal_title": "Renouvellement Urbain Résilient - Métropole",
-            "urban_renewal_description": "Réaménagement d'un quartier urbain avec intégration de solutions de drainage durable, transformation d'espaces imperméables en zones perméables et création d'espaces multifonctionnels de gestion des eaux pluviales.",
-            "urban_renewal_challenges": "Défis:",
-            "urban_renewal_results": "Résultats:",
-            "urban_renewal_challenges_list": [
-                "• Réseau d'assainissement saturé",
-                "• Inondations pluviales fréquentes",
-                "• Forte densité urbaine"
-            ],
-            "urban_renewal_results_list": [
-                "• 60% de réduction du ruissellement",
-                "• Création d'espaces verts valorisés",
-                "• Amélioration de la qualité de l'eau"
+        "needs_assessment": {
+            "title": "Diagnostic Territorial Climatique",
+            "description": "Nous évaluons précisément les vulnérabilités climatiques des territoires grâce à une analyse complète et des solutions d'adaptation sur mesure.",
+            "features": [
+            "Analyse approfondie des risques climatiques",
+            "Identification des enjeux prioritaires",
+            "Rapports de vulnérabilité personnalisés"
             ]
         },
+        "network_design": {
+            "title": "Planification d'Adaptation",
+            "description": "Élaboration de stratégies territoriales pour renforcer la résilience climatique, garantissant une transition écologique efficace et durable.",
+            "features": [
+            "Planification intégrée des solutions",
+            "Articulation avec les politiques locales",
+            "Stratégies pérennes d'adaptation"
+            ]
+        },
+        "treatment_optimization": {
+            "title": "Optimisation des Mesures",
+            "description": "Déploiement de solutions d'adaptation innovantes, conformes aux normes environnementales et axées sur la résilience climatique.",
+            "features": [
+            "Solutions basées sur la nature",
+            "Conformité aux cadres réglementaires",
+            "Amélioration continue des dispositifs"
+            ]
+        }
+        },
         "cta": {
-            "title": "Protégez Votre Communauté Contre les Inondations",
-            "description": "Contactez nos experts pour évaluer les risques d'inondation dans votre région et développer des solutions adaptées à vos besoins spécifiques.",
-            "button": "Demander une Évaluation des Risques",
-            "message": "Bonjour, j'aimerais demander une évaluation des risques d'inondation pour ma communauté. Pouvez-vous m'aider ?"
+        "title": "Prêt à renforcer votre résilience climatique ?",
+        "description": "Notre équipe d'experts est prête à vous accompagner dans votre stratégie d'adaptation aux changements climatiques.",
+        "button": "Travaillons ensemble",
+        "message": "Bonjour ! Je suis intéressé par vos services d'adaptation aux changements climatiques. Pouvons-nous en discuter ?"
+        }
+    },
+    "Environnement": {
+        "our_approach": "Notre Méthodologie",
+        "approach": {
+        "prevention": {
+            "title": "Évaluation",
+            "description": "Identification des enjeux environnementaux et analyse des impacts potentiels des projets sur les écosystèmes."
+        },
+        "protection": {
+            "title": "Conformité",
+            "description": "Vérification du respect des réglementations environnementales et proposition de mesures correctives si nécessaire."
+        },
+        "preparation": {
+            "title": "Suivi",
+            "description": "Mise en place de systèmes de surveillance environnementale et de plans de gestion adaptatifs."
+        }
+        },
+        "solutions": "Nos Prestations Environnementales",
+        "Features": "Caractéristiques",
+        "solutions_list": {
+        "eia": {
+            "title": "Études d'Impact Environnemental",
+            "description": "Nos Évaluations Environnementales Stratégiques (EES) et Études d'Impact (EIE) fournissent une analyse complète des effets des projets sur l'environnement, avec des mesures d'atténuation adaptées.",
+            "features": [
+            "Analyse des impacts sur les milieux naturels",
+            "Évaluation des risques écologiques",
+            "Consultation des parties prenantes",
+            "Plans de gestion environnementale"
+            ]
+        },
+        "audits": {
+            "title": "Audits Environnementaux",
+            "description": "Nous réalisons des diagnostics approfondis des performances environnementales des organisations et sites industriels, conformément aux normes internationales.",
+            "features": [
+            "Audits de conformité réglementaire",
+            "Analyse des risques environnementaux",
+            "Évaluation des systèmes de management",
+            "Recommandations d'amélioration"
+            ]
+        },
+        "monitoring": {
+            "title": "Suivi et Veille Environnementale",
+            "description": "Nos services de surveillance continue permettent d'assurer le respect des engagements environnementaux et d'anticiper les évolutions réglementaires.",
+            "features": [
+            "Suivi des indicateurs environnementaux",
+            "Veille réglementaire actualisée",
+            "Rapports périodiques de performance",
+            "Alertes sur les changements législatifs"
+            ]
+        },
+        "reporting": {
+            "title": "Reporting Environnemental",
+            "description": "Nous élaborons des rapports complets sur l'état de l'environnement pour éclairer la prise de décision et répondre aux exigences de transparence.",
+            "features": [
+            "Rapports d'état initial",
+            "Bilans environnementaux réguliers",
+            "Documents pour autorisations administratives",
+            "Communication RSE"
+            ]
+        }
+        },
+        "case_studies": {
+        "case_studies_title": "Réalisations Exemplaires",
+        "protection_system_title": "Évaluation Stratégique - Complexe Industriel",
+        "protection_system_description": "Réalisation d'une évaluation environnementale stratégique pour un grand complexe industriel, intégrant analyse des impacts cumulés et plan de compensation écologique.",
+        "protection_system_challenges": "Défis:",
+        "protection_system_results": "Résultats:",
+        "challenges": [
+            "• Site sensible écologiquement",
+            "• Exigences réglementaires strictes",
+            "• Multiplicité des enjeux locaux"
+        ],
+        "results": [
+            "• Autorisation obtenue dans les délais",
+            "• Réduction de 40% des impacts prévus",
+            "• Programme de compensation validé"
+        ],
+        "urban_renewal_title": "Audit Environnemental - Projet d'Aménagement",
+        "urban_renewal_description": "Audit complet d'un projet d'aménagement urbain avec identification des risques environnementaux et proposition d'un plan d'actions correctives.",
+        "urban_renewal_challenges": "Défis:",
+        "urban_renewal_results": "Résultats:",
+        "urban_renewal_challenges_list": [
+            "• Sols potentiellement pollués",
+            "• Protection d'espèces protégées",
+            "• Conflits d'usage du territoire"
+        ],
+        "urban_renewal_results_list": [
+            "• Dépollution préventive réalisée",
+            "• Mesures de protection validées",
+            "• Acceptation locale du projet"
+        ]
+        },
+        "cta": {
+        "title": "Besoin d'Expertise Environnementale ?",
+        "description": "Contactez nos spécialistes pour évaluer les impacts environnementaux de vos projets et garantir leur conformité réglementaire.",
+        "button": "Demander une Étude Environnementale",
+        "message": "Bonjour, je souhaiterais obtenir des informations sur vos services d'évaluation environnementale pour un projet en cours. Pourriez-vous me conseiller ?"
         }
     },
     "chat": {
@@ -873,7 +883,146 @@
                         "description": "Une erreur s'est produite lors de la suppression de l'offre. Veuillez réessayer."
                     }
                 }
+            },
+            "form": {
+            "edit_offer": "Modifier l'offre",
+            "add_offer": "Ajouter une offre",
+            "edit_offer_description": "Modifiez les détails de votre offre d'emploi",
+            "add_offer_description": "Créez une nouvelle offre d'emploi",
+            "edit_offer_form": {
+                "title": "Modifier l'offre",
+                "description": "Modifiez les détails de l'offre ci-dessous"
+            },
+            "add_offer_form": {
+                "title": "Nouvelle offre",
+                "description": "Remplissez les détails de l'offre ci-dessous"
+            },
+            "form": {
+                "title": {
+                "label": "Titre du poste",
+                "placeholder": "Ex: Développeur Frontend Senior"
+                },
+                "department": {
+                "label": "Département",
+                "placeholder": "Ex: Développement, Marketing"
+                },
+                "description": {
+                "label": "Description",
+                "placeholder": "Décrivez le poste, les responsabilités, les exigences..."
+                },
+                "location": {
+                "label": "Localisation",
+                "placeholder": "Ex: Paris, Télétravail"
+                },
+                "employment_type": {
+                "label": "Type d'emploi",
+                "placeholder": "Sélectionnez un type"
+                },
+                "indeed_url": {
+                "label": "Lien Indeed (optionnel)",
+                "placeholder": "https://indeed.com/...",
+                "description": "Lien vers l'annonce sur Indeed si elle existe"
+                },
+                "urgent": {
+                "label": "Offre urgente",
+                "description": "Cochez cette case si c'est un recrutement urgent"
+                },
+                "cancel": "Annuler",
+                "saving": "Enregistrement...",
+                "update": "Mettre à jour",
+                "save": "Enregistrer"
+            },
+            "type": {
+                "full_time": "Temps plein",
+                "part_time": "Temps partiel",
+                "contract": "Contrat",
+                "internship": "Stage",
+                "temporary": "Temporaire",
+                "volunteer": "Bénévolat",
+                "per_diem": "Journalier",
+                "other": "Autre"
+            },
+            "toast": {
+                "success": {
+                "offer_updated": {
+                    "title": "Offre mise à jour",
+                    "description": "Votre offre a été mise à jour avec succès"
+                },
+                "offer_created": {
+                    "title": "Offre créée",
+                    "description": "Votre nouvelle offre a été créée avec succès"
+                }
+                },
+                "error": {
+                "offer_updated": {
+                    "title": "Erreur de mise à jour",
+                    "description": "Une erreur est survenue lors de la mise à jour de l'offre"
+                },
+                "offer_created": {
+                    "title": "Erreur de création",
+                    "description": "Une erreur est survenue lors de la création de l'offre"
+                }
+                }
             }
+            },
+            "detail": {
+                "back_button": "Retour aux offres",
+                "page_title": "Détails de l'offre",
+                "page_description": "Consultez les détails et gérez cette annonce d'emploi",
+                "details_card": {
+                "title": "Détails de l'offre",
+                "description": "Informations complètes sur cette offre d'emploi",
+                "description_section": "Description",
+                "department": "Département",
+                "location": "Localisation",
+                "employment_type": "Type de contrat",
+                "status": "Statut",
+                "status_urgent": "Urgent",
+                "status_normal": "Normal",
+                "indeed_url": "Lien Indeed"
+                },
+                "actions_card": {
+                "title": "Actions",
+                "edit_button": "Modifier l'offre"
+                },
+                "metadata_card": {
+                "title": "Métadonnées",
+                "created": "Créée le",
+                "updated": "Dernière mise à jour"
+                },
+                "employment_types": {
+                "full_time": "Temps plein",
+                "part_time": "Temps partiel",
+                "contract": "Contrat",
+                "internship": "Stage",
+                "temporary": "Temporaire",
+                "volunteer": "Bénévolat",
+                "per_diem": "Journalier",
+                "other": "Autre"
+                }
+            }
+        },
+        "not_signed_in": "Non connecté",
+        "greeting": {
+        "morning": "Bonjour",
+        "afternoon": "Bon après-midi",
+        "evening": "Bonsoir"
+        },
+        "date_format": {
+        "weekday": "long",
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+        },
+        "cards": {
+        "projects": {
+            "title": "Projets Totaux",
+            "icon": "FolderKanban"
+        },
+        "offers": {
+            "title": "Offres Totales",
+            "icon": "FileText"
+        }
         }
     }
 }

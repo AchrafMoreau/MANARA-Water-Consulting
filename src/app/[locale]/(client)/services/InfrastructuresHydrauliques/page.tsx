@@ -10,8 +10,7 @@ import Lenis from "lenis"
 import { useTranslations } from "next-intl"
 
 export default function Reetulisation() {
-
-  const t = useTranslations('Reetulisation')
+  const t = useTranslations('InfrastructuresHydrauliques')
   return (
     <ServiceLayout>
       <div className="container mx-auto px-4 py-20">
@@ -97,20 +96,20 @@ export default function Reetulisation() {
             <div className="flex flex-col md:flex-row items-start justify-between mb-8 relative z-10">
               {[
                 { 
-                  title: t('process_section.steps.collection.title'), 
-                  description: t('process_section.steps.collection.description'),
+                  title: t('process_section.steps.study.title'), 
+                  description: t('process_section.steps.study.description'),
                   icon: <Drop className="h-8 w-8" />,
                   delay: 0.1
                 },
                 { 
-                  title: t('process_section.steps.pre_treatment.title'), 
-                  description: t('process_section.steps.pre_treatment.description'),
+                  title: t('process_section.steps.design.title'), 
+                  description: t('process_section.steps.design.description'),
                   icon: <Filter className="h-8 w-8" />,
                   delay: 0.3
                 },
                 { 
-                  title: t('process_section.steps.treatment.title'), 
-                  description: t('process_section.steps.treatment.description'),
+                  title: t('process_section.steps.implementation.title'), 
+                  description: t('process_section.steps.implementation.description'),
                   icon: <Recycle className="h-8 w-8" />,
                   delay: 0.5
                 },
@@ -121,8 +120,8 @@ export default function Reetulisation() {
                   delay: 0.7
                 },
                 { 
-                  title: t('process_section.steps.distribution.title'), 
-                  description: t('process_section.steps.distribution.description'),
+                  title: t('process_section.steps.maintenance.title'), 
+                  description: t('process_section.steps.maintenance.description'),
                   icon: <ArrowRightIcon className="h-8 w-8" />,
                   delay: 0.9
                 },
@@ -173,10 +172,10 @@ export default function Reetulisation() {
               className="order-2 md:order-1"
             >
               <h4 className="text-xl font-bold text-earth mb-4">
-                {t('applications_section.agriculture.title')}
+                {t('applications_section.water_supply.title')}
               </h4>
               <p className="dark:text-gray-400 text-gray-600 mb-4">
-                {t('applications_section.agriculture.description')}
+                {t('applications_section.water_supply.description')}
               </p>
               <motion.div 
                 className="h-1 w-20 bg-earth mb-4"
@@ -186,7 +185,7 @@ export default function Reetulisation() {
                 viewport={{ once: true }}
               />
               <p className="text-gray-600 dark:text-gray-400">
-                {t('applications_section.agriculture.extra_info')}
+                {t('applications_section.water_supply.extra_info')}
               </p>
             </motion.div>
             
@@ -234,10 +233,10 @@ export default function Reetulisation() {
               className="order-3 md:order-4"
             >
               <h4 className="text-xl font-bold text-primary mb-4">
-                {t('applications_section.industrialApplications.title')}
+                {t('applications_section.sanitation.title')}
               </h4>
               <p className="text-gray-600 mb-4 dark:text-gray-400">
-                {t('applications_section.industrialApplications.description')}
+                {t('applications_section.sanitation.description')}
               </p>
               <motion.div 
                 className="h-1 w-20 bg-primary mb-4"
@@ -247,7 +246,7 @@ export default function Reetulisation() {
                 viewport={{ once: true }}
               />
               <p className="text-gray-600 dark:text-gray-400">
-                {t('applications_section.industrialApplications.extra_info')}
+                {t('applications_section.sanitation.extra_info')}
               </p>
             </motion.div>
           </div>

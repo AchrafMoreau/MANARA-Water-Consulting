@@ -23,14 +23,6 @@ export default function Topbar() {
             <div className="relative flex-1 md:grow-0 md:basis-1/3">
                 <SidebarTrigger />
             </div>
-            <div className="relative flex-1 md:grow-0 md:basis-1/3">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Search..."
-                className="w-full rounded-lg bg-background pl-8 md:w-[240px]"
-              />
-            </div>
             <div className="flex-1 md:flex md:justify-end">
               <div className="flex items-center gap-4">
                 <LanguageSelector />

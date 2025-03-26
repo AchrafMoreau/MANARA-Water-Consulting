@@ -7,6 +7,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@/components/theme-provider';
 import { routing } from '@/i18n/routing';
 import { Metadata } from 'next';
+import { useTheme } from 'next-themes';
 
 
 export const metadata: Metadata = {

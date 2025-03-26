@@ -15,17 +15,17 @@
     "contactUs": "Contact Us",
     "ourSolutions": "Our Solutions",
     "trainings": "GIS Trainings & Capacity Building",
-    "aquifersStudy": "Aquifers & Watercourses Study",
-    "waterReuse": "Wastewater Reuse",
-    "sanitation": "Sanitation Services",
-    "floodProtection": "Flood Protection",
+    "ressourceEau": "Water Resources",
+    "infrastructuresHydrauliques": "Hydraulic Infrastructures",
+    "changementsClimatiques": "Climate Change",
+    "environnement": "Environment",
     "companyName": "Manara Water Consulting",
     "tagline": "Expertise & Innovation to Address Sustainable Development Challenges 💧🌍",
     "trainingsDesc": "We offer professional training in GIS, sustainable practices, and water resource management for executives and technical staff. Our training programs are customized to meet the needs of each sector.",
-    "aquifersStudyDesc": "Our Water Services Coordination capabilities are integral to projects ranging from urban developments and transport infrastructure to large-scale industrial and commercial ventures. By delivering innovative and future-ready water solutions, we contribute to smarter, greener, and more connected communities.",
-    "waterReuseDesc": "We offer waste management strategies to reduce the carbon footprint and promote wastewater recycling.",
-    "floodProtectionDesc": "We design innovative infrastructure to mitigate the effects of flooding, such as drainage systems and levees.",
-    "sanitationDesc": "In-depth studies of local sanitation needs and targeted responses. Designing sanitation systems adapted to local contexts, aiming to improve hygiene and public health & offering smart solutions for optimizing wastewater treatment in compliance with environmental standards.",
+    "ressourceEauDesc": "Hydrogeological studies and expertise, Technical assistance for water drilling (execution, inspection, productivity evaluation), Planning studies, Integrated Water Resources Management, Local Water Plans",
+    "infrastructuresHydrauliquesDesc": "Studies and Technical Assistance for projects in Drinking Water Supply, Liquid Sanitation, Flood Protection, Rainwater Harvesting",
+    "environnementDesc": "Environmental assessment studies and expertise, Environmental Impact Studies, Environmental Audits, regulatory monitoring, State of the Environment Reports for projects and investments",
+    "changementsClimatiquesDesc": "Climate territorial planning, expertise in Climate Change Adaptation",
     "hero":{
         "discoverSolution": "Discover Our Solution",
         "needExpertise": "Need Expertise?",
@@ -100,7 +100,7 @@
     },
     "about":{
         "title": "Who We Are",
-        "description": "Manara Water Consulting is a specialized consultancy firm in sustainable water management. With over 15 years of experience, we support our partners in optimizing water resources and environmental protection.",
+        "description": "Manara Water Consulting is an expert firm specializing in sustainable water management. We support our partners in optimizing water resources and environmental protection.",
         "team": {
             "title": "Our Team",
             "description": "Our team consists of experienced experts from various fields, including water resources, geophysics, urban hydraulics, sanitation, and sustainable development."
@@ -110,26 +110,26 @@
         "title": "Our Mission & Vision",
         "mission": {
             "title": "🌍 Our Mission",
-            "description": "Building a future where water is preserved, optimized, and accessible to all. We aspire to a world where water resources are managed sustainably, integrating innovative, ecological, and efficient solutions to address climate and environmental challenges."
+            "description": "is to build a future where water is preserved, optimized and accessible to all, by proposing innovative and sustainable solutions to climate change challenges. As a trusted partner, our engineering consulting firm specializing in sectoral engineering and strategic studies is committed to guiding our clients towards operational excellence, providing them with a personalized approach based on listening, collaboration and solutions tailored to their specific needs."
         },
         "vision": {
             "title": "💡 Our Vision",
-            "description": "Building a future where water is preserved, optimized, and accessible to all. We aspire to a world where water resources are managed sustainably, integrating innovative, ecological, and efficient solutions to address climate and environmental challenges."
+            "description": "We aspire to a world where water is managed responsibly and innovatively."
         }
     },
     "core_values": {
         "title": "Our Core Values",
         "integrity": {
             "title": "Integrity",
-            "description": "We act with honesty, respect, and responsibility in all our initiatives."
+            "description": "We build trust by acting with honesty, respect and responsibility in all our initiatives."
         },
         "innovation": {
             "title": "Innovation",
-            "description": "We encourage and adopt creative and innovative approaches. We promote the development of collective intelligence and encourage solution-oriented attitudes."
+            "description": "Innovation is at the heart of our approach. We foster creative approaches and collective intelligence."
         },
         "collaboration_performance": {
-            "title": "Collaboration & Performance",
-            "description": "We believe in the power of collaboration to make significant progress toward a sustainable future. We foster a climate that supports efficiency, performance, and well-being with kindness."
+            "title": "Collaboration and Excellence",
+            "description": "We believe collaboration is an essential key to achieving sustainable and meaningful progress. We create an environment focused on efficiency, performance and well-being, while cultivating kindness."
         }
     },
     "Projects": {
@@ -173,8 +173,8 @@
         "description": "Discover some of our recent achievements in water management."
     },
     "solutions":{
-        "solutions_title": "Our Solutions for Sustainable Water Management",
-        "solutions_description": "Our expertise covers a wide range of water-related services designed to address current and future environmental challenges.",
+        "solutions_title": "Our fields of expertise",
+        "solutions_description": "Manara Water Consulting: experience and expertise for sustainable management of your water resources",
         "see_more" : "See More",
         "services": {
             "sig_training": {
@@ -330,217 +330,227 @@
             "message": "Hello, I'm interested in your groundwater and watercourse survey services. Could you provide me with more details on your methods and pricing? Thank you."
         }
     },
-    "Reetulisation": {
+    "InfrastructuresHydrauliques": {
         "benefits_section": {
-            "title": "Benefits of Wastewater Reuse",
-            "categories": {
-                "environmental": {
-                    "title": "Environmental",
-                    "benefits": [
-                        "Reduces pressure on water resources",
-                        "Decreases pollutant discharges into natural environments",
-                        "Preserves aquatic ecosystems",
-                        "Reduces carbon footprint"
-                    ]
-                },
-                "economic": {
-                    "title": "Economic",
-                    "benefits": [
-                        "Significant savings on water consumption",
-                        "Reduces wastewater treatment costs",
-                        "Utilization of an untapped resource",
-                        "Compliance with environmental standards"
-                    ]
-                },
-                "social": {
-                "title": "Social",
-                "benefits": [
-                        "Strengthens water independence",
-                        "Improves brand image",
-                        "Concrete commitment to sustainable development",
-                        "Adaptation to climate change"
-                    ]
-                }
+        "title": "Benefits of Hydraulic Infrastructures",
+        "categories": {
+            "environmental": {
+            "title": "Environmental",
+            "benefits": [
+                "Improved water resources management",
+                "Reduced risk of groundwater pollution",
+                "Flood protection for ecosystems",
+                "Optimization of urban water cycle"
+            ]
+            },
+            "economic": {
+            "title": "Economic",
+            "benefits": [
+                "Optimized network operating costs",
+                "Extended infrastructure lifespan",
+                "Enhanced value of hydraulic investments",
+                "Reduced flood damage costs"
+            ]
+            },
+            "social": {
+            "title": "Social",
+            "benefits": [
+                "Improved access to drinking water",
+                "Protection against water-related risks",
+                "Enhanced urban living environment",
+                "Climate change adaptation"
+            ]
             }
+        }
         },
         "process_section": {
-            "title": "Our Treatment Process",
-            "steps": {
-                "collection": {
-                    "title": "Collection",
-                    "description": "Recovery and storage of wastewater"
-                },
-                "pre_treatment": {
-                    "title": "Pre-treatment",
-                    "description": "Removal of solids and coarse impurities"
-                },
-                "treatment": {
-                    "title": "Treatment",
-                    "description": "Biological and chemical processes adapted"
-                },
-                "control": {
-                    "title": "Control",
-                    "description": "Quality verification according to intended use"
-                },
-                "distribution": {
-                    "title": "Distribution",
-                    "description": "Delivery to points of use"
-                }
+        "title": "Our Technical Approach",
+        "steps": {
+            "study": {
+            "title": "Preliminary studies",
+            "description": "Diagnosis and design of suitable solutions"
+            },
+            "design": {
+            "title": "Design",
+            "description": "Hydraulic calculations and equipment selection"
+            },
+            "implementation": {
+            "title": "Implementation",
+            "description": "Technical assistance during construction"
+            },
+            "control": {
+            "title": "Quality control",
+            "description": "Performance verification of installations"
+            },
+            "maintenance": {
+            "title": "Maintenance",
+            "description": "Infrastructure sustainability plans"
             }
+        }
         },
         "applications_section": {
-            "title": "Applications of Wastewater Reuse",
-            "agriculture": {
-                "title": "Agricultural Irrigation and Green Spaces",
-                "description": "Treated water can be used for irrigating non-food crops, green spaces, golf courses, and parks, significantly reducing potable water consumption for these uses.",
-                "extra_info": "Our treatment systems ensure water quality adapted to the specific needs of plants while ensuring sanitary safety."
-            },
-            "industrialApplications": {
-                "title": "Industrial Applications",
-                "description": "Recycled water can be used for various industrial processes: cooling, cleaning, and processes that do not require drinking water, significantly reducing operational costs.",
-                "extra_info": "Our customized solutions adapt to the specific requirements of each industry and process type, optimizing the use of this valuable resource."
-            }
+        "title": "Areas of Intervention",
+        "water_supply": {
+            "title": "Drinking Water Supply",
+            "description": "Design and optimization of drinking water networks, water treatment, storage and distribution to ensure sustainable access to drinking water.",
+            "extra_info": "Our solutions incorporate the latest technologies for efficient network management and optimal water quality."
+        },
+        "sanitation": {
+            "title": "Liquid Sanitation",
+            "description": "Wastewater collection, treatment and recovery systems adapted to urban and rural contexts.",
+            "extra_info": "We offer sustainable solutions ranging from treatment plants to decentralized systems."
+        },
+        "flood_protection": {
+            "title": "Flood Protection",
+            "description": "Hydraulic developments and stormwater management systems to reduce flood risks.",
+            "extra_info": "Our approaches combine structural solutions and integrated watershed management."
+        },
+        "stormwater": {
+            "title": "Rainwater Harvesting",
+            "description": "Rainwater collection and recovery systems for various uses (irrigation, groundwater recharge, etc.).",
+            "extra_info": "We develop customized solutions to maximize the use of this underutilized resource."
+        }
         },
         "cta": {
-            "title": "Reduce Your Water Consumption",
-            "description": "Contact us to explore wastewater reuse possibilities in your organization and contribute to a more sustainable future.",
-            "button": "Explore a Custom Solution",
-            "message": "Hello, I'm interested in your wastewater reuse services. Could you provide me with more details on your methods and pricing? Thank you."
+        "title": "Need Hydraulic Infrastructure Expertise?",
+        "description": "Contact us for innovative technical solutions regarding drinking water, sanitation and flood protection.",
+        "button": "Request a Study",
+        "message": "Hello, I'm interested in your hydraulic infrastructure services. Could you provide me with more details about your methods and pricing for a drinking water supply/sanitation/flood protection project? Thank you."
         }
     },
-    "Assainissement":{
+    "ChangementsClimatiques": {
         "services": {
-            "needs_assessment": {
-                "title": "Needs Assessment",
-                "description": "We precisely respond to local water management needs with comprehensive analysis and tailored solutions.",
-                "features": [
-                    "In-depth analysis of local water systems",
-                    "Identification of improvement opportunities",
-                    "Customized assessment reports"
-                ]
-            },
-            "network_design": {
-                "title": "Network Design",
-                "description": "Design of sanitation systems for local public health and hygiene, ensuring efficient and sustainable water management.",
-                "features": [
-                    "Comprehensive system planning",
-                    "Integration with existing infrastructure",
-                    "Future-proof solutions"
-                ]
-            },
-            "treatment_optimization": {
-                "title": "Treatment Optimization",
-                "description": "Advanced optimization of wastewater treatment, compliant with environmental standards and focused on sustainability.",
-                "features": [
-                    "Smart treatment solutions",
-                    "Environmental compliance",
-                    "Efficiency improvements"
-                ]
-            }
-        },
-        "cta": {
-            "title": "Ready to transform your water management?",
-            "description": "Our team of experts is ready to help you implement sustainable and efficient water solutions.",
-            "button": "Let's collaborate",
-            "message": "Hello! I’m interested in your water management services. Can we discuss more?"
-        }
-    },
-    "Protection":{
-        "our_approach": "Our Approach",
-        "approach": {
-            "prevention": {
-                "title": "Prevention",
-                "description": "Identification of risk areas and implementation of preventive measures to reduce flood exposure."
-            },
-            "protection": {
-                "title": "Protection",
-                "description": "Design and implementation of effective and environmentally friendly protective infrastructures."
-            },
-            "preparation": {
-                "title": "Preparation",
-                "description": "Development of early warning systems and intervention plans to minimize flood impacts."
-            }
-        },
-        "solutions": "Our Protection Solutions",
-        "Features": "Features",
-        "solutions_list": {
-            "drainage": {
-                "title": "Sustainable Urban Drainage Systems",
-                "description": "Our sustainable urban drainage systems (SUDS) integrate nature-based solutions to efficiently manage stormwater while enhancing biodiversity and urban quality of life.",
-                "features": [
-                    "Rain gardens and landscaped swales",
-                    "Permeable pavements and porous surfaces",
-                    "Retention basins and artificial wetlands",
-                    "Green roofs"
-                ]
-            },
-            "protection_works": {
-                "title": "Protection Works",
-                "description": "We design and build flood protection infrastructures adapted to local contexts, integrating environmental and landscape considerations.",
-                "features": [
-                    "Dikes and flood barriers",
-                    "Flood storage basins",
-                    "Diversion channels",
-                    "Integrated landscape protection walls"
-                ]
-            },
-            "risk_mapping": {
-                "title": "Risk Mapping and Planning",
-                "description": "Our analysis and mapping services help identify risk areas and develop land-use planning strategies that integrate flood management.",
-                "features": [
-                    "Advanced hydraulic modeling",
-                    "Flood-prone area mapping",
-                    "Risk prevention plans",
-                    "Climate change adaptation strategies"
-                ]
-            },
-            "early_warning": {
-                "title": "Early Warning Systems",
-                "description": "We develop monitoring and alert systems that incorporate the latest technologies to anticipate flood risks and enable a rapid response.",
-                "features": [
-                    "Smart sensor networks",
-                    "Hydrometeorological forecasting",
-                    "Multi-channel alert platforms",
-                    "Mobile notification applications"
-                ]
-            }
-        },
-        "case_studies":{
-            "title": "Case Studies",
-            "protection_system_title": "Integrated Protection System - Coastal City",
-            "protection_system_description": "Implementation of a comprehensive coastal flood protection system, combining defense infrastructure, restoration of natural ecosystems, and an early warning system.",
-            "protection_system_challenges": "Challenges:",
-            "protection_system_results": "Results:",
-            "challenges": [
-                "• Rising sea levels",
-                "• Accelerated coastal erosion",
-                "• Dense urban area"
-            ],
-            "results": [
-                "• 85% reduction in damage",
-                "• Successful ecological restoration",
-                "• Tripled alert time"
-            ],
-            "urban_renewal_title": "Resilient Urban Renewal - Metropolis",
-            "urban_renewal_description": "Urban neighborhood redevelopment with integration of sustainable drainage solutions, transformation of impervious surfaces into permeable zones, and creation of multifunctional stormwater management spaces.",
-            "urban_renewal_challenges": "Challenges:",
-            "urban_renewal_results": "Results:",
-            "urban_renewal_challenges_list": [
-                "• Overloaded sanitation network",
-                "• Frequent stormwater flooding",
-                "• High urban density"
-            ],
-            "urban_renewal_results_list": [
-                "• 60% reduction in runoff",
-                "• Creation of valued green spaces",
-                "• Improved water quality"
+        "needs_assessment": {
+            "title": "Climate Territory Diagnosis",
+            "description": "We precisely assess territories' climate vulnerabilities through comprehensive analysis and customized adaptation solutions.",
+            "features": [
+            "In-depth climate risk analysis",
+            "Identification of priority issues",
+            "Customized vulnerability reports"
             ]
         },
+        "network_design": {
+            "title": "Adaptation Planning",
+            "description": "Development of territorial strategies to strengthen climate resilience, ensuring effective and sustainable ecological transition.",
+            "features": [
+            "Integrated solution planning",
+            "Alignment with local policies",
+            "Sustainable adaptation strategies"
+            ]
+        },
+        "treatment_optimization": {
+            "title": "Measures Optimization",
+            "description": "Deployment of innovative adaptation solutions, compliant with environmental standards and focused on climate resilience.",
+            "features": [
+            "Nature-based solutions",
+            "Regulatory framework compliance",
+            "Continuous improvement of systems"
+            ]
+        }
+        },
         "cta": {
-            "title": "Protect Your Community Against Floods",
-            "description": "Contact our experts to assess flood risks in your area and develop solutions tailored to your specific needs.",
-            "button": "Request a Risk Assessment",
-            "message": "Hello, I would like to request a flood risk assessment for my community. Can you help?"
+        "title": "Ready to strengthen your climate resilience?",
+        "description": "Our team of experts is ready to support you in your climate change adaptation strategy.",
+        "button": "Let's work together",
+        "message": "Hello! I'm interested in your climate change adaptation services. Can we discuss this?"
+        }
+    },
+    "Environnement": {
+        "our_approach": "Our Methodology",
+        "approach": {
+        "prevention": {
+            "title": "Assessment",
+            "description": "Identification of environmental issues and analysis of potential project impacts on ecosystems."
+        },
+        "protection": {
+            "title": "Compliance",
+            "description": "Verification of compliance with environmental regulations and proposal of corrective measures if necessary."
+        },
+        "preparation": {
+            "title": "Monitoring",
+            "description": "Implementation of environmental monitoring systems and adaptive management plans."
+        }
+        },
+        "solutions": "Our Environmental Services",
+        "Features": "Features",
+        "solutions_list": {
+        "eia": {
+            "title": "Environmental Impact Studies",
+            "description": "Our Strategic Environmental Assessments (SEA) and Impact Studies (EIA) provide comprehensive analysis of project effects on the environment, with appropriate mitigation measures.",
+            "features": [
+            "Analysis of impacts on natural environments",
+            "Ecological risk assessment",
+            "Stakeholder consultation",
+            "Environmental management plans"
+            ]
+        },
+        "audits": {
+            "title": "Environmental Audits",
+            "description": "We conduct in-depth diagnostics of organizations' and industrial sites' environmental performance, in accordance with international standards.",
+            "features": [
+            "Regulatory compliance audits",
+            "Environmental risk analysis",
+            "Management systems evaluation",
+            "Improvement recommendations"
+            ]
+        },
+        "monitoring": {
+            "title": "Monitoring and Environmental Watch",
+            "description": "Our continuous monitoring services ensure compliance with environmental commitments and anticipate regulatory developments.",
+            "features": [
+            "Environmental indicators monitoring",
+            "Updated regulatory watch",
+            "Periodic performance reports",
+            "Legislative change alerts"
+            ]
+        },
+        "reporting": {
+            "title": "Environmental Reporting",
+            "description": "We develop comprehensive reports on the state of the environment to inform decision-making and meet transparency requirements.",
+            "features": [
+            "Initial status reports",
+            "Regular environmental assessments",
+            "Documents for administrative authorizations",
+            "CSR communication"
+            ]
+        }
+        },
+        "case_studies": {
+        "case_studies_title": "Exemplary Achievements",
+        "protection_system_title": "Strategic Assessment - Industrial Complex",
+        "protection_system_description": "Conduct of a strategic environmental assessment for a large industrial complex, including cumulative impact analysis and ecological compensation plan.",
+        "protection_system_challenges": "Challenges:",
+        "protection_system_results": "Results:",
+        "challenges": [
+            "• Ecologically sensitive site",
+            "• Strict regulatory requirements",
+            "• Multiple local issues"
+        ],
+        "results": [
+            "• Authorization obtained on time",
+            "• 40% reduction in expected impacts",
+            "• Approved compensation program"
+        ],
+        "urban_renewal_title": "Environmental Audit - Development Project",
+        "urban_renewal_description": "Complete audit of an urban development project with identification of environmental risks and proposal of corrective action plan.",
+        "urban_renewal_challenges": "Challenges:",
+        "urban_renewal_results": "Results:",
+        "urban_renewal_challenges_list": [
+            "• Potentially polluted soils",
+            "• Protection of endangered species",
+            "• Land use conflicts"
+        ],
+        "urban_renewal_results_list": [
+            "• Preventive decontamination carried out",
+            "• Approved protection measures",
+            "• Local project acceptance"
+        ]
+        },
+        "cta": {
+        "title": "Need Environmental Expertise?",
+        "description": "Contact our specialists to assess the environmental impacts of your projects and ensure regulatory compliance.",
+        "button": "Request an Environmental Study",
+        "message": "Hello, I would like to get information about your environmental assessment services for an ongoing project. Could you advise me?"
         }
     },
     "chat": {
@@ -873,7 +883,146 @@
                         "description": "An error occurred while deleting the offer. Please try again."
                     }
                 }
+            },
+            "form": {
+                "edit_offer": "Edit Offer",
+                "add_offer": "Add Offer",
+                "edit_offer_description": "Edit the details of your job offer",
+                "add_offer_description": "Create a new job offer",
+                "edit_offer_form": {
+                "title": "Edit Offer",
+                "description": "Modify the offer details below"
+                },
+                "add_offer_form": {
+                "title": "New Offer",
+                "description": "Fill in the offer details below"
+                },
+                "form": {
+                "title": {
+                    "label": "Job Title",
+                    "placeholder": "Ex: Senior Frontend Developer"
+                },
+                "department": {
+                    "label": "Department",
+                    "placeholder": "Ex: Development, Marketing"
+                },
+                "description": {
+                    "label": "Description",
+                    "placeholder": "Describe the position, responsibilities, requirements..."
+                },
+                "location": {
+                    "label": "Location",
+                    "placeholder": "Ex: New York, Remote"
+                },
+                "employment_type": {
+                    "label": "Employment Type",
+                    "placeholder": "Select a type"
+                },
+                "indeed_url": {
+                    "label": "Indeed Link (optional)",
+                    "placeholder": "https://indeed.com/...",
+                    "description": "Link to the Indeed posting if available"
+                },
+                "urgent": {
+                    "label": "Urgent Offer",
+                    "description": "Check this box if it's an urgent recruitment"
+                },
+                "cancel": "Cancel",
+                "saving": "Saving...",
+                "update": "Update",
+                "save": "Save"
+                },
+                "type": {
+                "full_time": "Full-time",
+                "part_time": "Part-time",
+                "contract": "Contract",
+                "internship": "Internship",
+                "temporary": "Temporary",
+                "volunteer": "Volunteer",
+                "per_diem": "Per Diem",
+                "other": "Other"
+                },
+                "toast": {
+                "success": {
+                    "offer_updated": {
+                    "title": "Offer Updated",
+                    "description": "Your offer has been successfully updated"
+                    },
+                    "offer_created": {
+                    "title": "Offer Created",
+                    "description": "Your new offer has been successfully created"
+                    }
+                },
+                "error": {
+                    "offer_updated": {
+                    "title": "Update Error",
+                    "description": "An error occurred while updating the offer"
+                    },
+                    "offer_created": {
+                    "title": "Creation Error",
+                    "description": "An error occurred while creating the offer"
+                    }
+                }
+                }
+            },
+            "detail": {
+                "back_button": "Back to offers",
+                "page_title": "Offer Details",
+                "page_description": "View offer details and manage this job posting",
+                "details_card": {
+                "title": "Offer Details",
+                "description": "Complete information about this job offer",
+                "description_section": "Description",
+                "department": "Department",
+                "location": "Location",
+                "employment_type": "Employment Type",
+                "status": "Status",
+                "status_urgent": "Urgent",
+                "status_normal": "Normal",
+                "indeed_url": "Indeed Link"
+                },
+                "actions_card": {
+                "title": "Actions",
+                "edit_button": "Edit Offer"
+                },
+                "metadata_card": {
+                "title": "Metadata",
+                "created": "Created",
+                "updated": "Last Updated"
+                },
+                "employment_types": {
+                "full_time": "Full-time",
+                "part_time": "Part-time",
+                "contract": "Contract",
+                "internship": "Internship",
+                "temporary": "Temporary",
+                "volunteer": "Volunteer",
+                "per_diem": "Per Diem",
+                "other": "Other"
+                }
             }
+        },
+        "not_signed_in": "Not signed in",
+        "greeting": {
+        "morning": "Good morning",
+        "afternoon": "Good afternoon",
+        "evening": "Good evening"
+        },
+        "date_format": {
+        "weekday": "long",
+        "year": "numeric",
+        "month": "long",
+        "day": "numeric"
+        },
+        "cards": {
+        "projects": {
+            "title": "Total Projects",
+            "icon": "FolderKanban"
+        },
+        "offers": {
+            "title": "Total Offers",
+            "icon": "FileText"
+        }
         }
     }
 }

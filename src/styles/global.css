@@ -337,3 +337,6 @@
 .cl-userButtonPopoverFooter{
   display: none !important;
 }
+.cl-footer{
+  display: none !important;
+}

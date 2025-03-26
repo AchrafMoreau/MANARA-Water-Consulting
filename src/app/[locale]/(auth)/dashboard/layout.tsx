@@ -13,14 +13,6 @@ interface DashboardLayoutProps {
 }
 
 export default function RootLayout({ children }: DashboardLayoutProps) {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false)
-  const pathname = usePathname()
-
-  React.useEffect(() => {
-    // Close mobile sidebar when route changes
-    setIsSidebarOpen(false)
-  }, [pathname])
-
   return (
     <SidebarProvider>
       <AppSidebar />

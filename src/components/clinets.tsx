@@ -10,17 +10,18 @@ import { useTranslations } from "next-intl";
 export default function OurClients() {
     const t = useTranslations()
     const firstRow = [
-        {id: 1, src: "/abhbc.png", alt: "abhbc"},
+        {id: 1, src: "/cgem.png", alt: "CGEM"},
         {id: 2, src: "/centrelec.png", alt: "centrelec"},
-        {id: 3, src: "/bh_guir.png", alt: "guir"},
-        {id: 4, src: "/bh_oum_erbia.png", alt: "oum-erbia"},
+        {id: 3, src: "/chambre_francaise.png", alt: "Chambre Francaise"},
+        {id: 4, src: "/direction_dt.png", alt: "DIRECTION REGIONALE DE L’AGRICULTURE DE DRAA TAFILALT"},
         {id: 5, src: "/bhl.png", alt: "bhl"},
         {id: 6, src: "/bh_go.png", alt: "bassin hydroulique de go"},
         {id: 7, src: "/bh_ml.png", alt: "bassin hydroulique de ml"},
-        {id: 8, src: "/onep.png", alt: "onep"},
+        {id: 8, src: "/learning_it.png", alt: "Learning It Consulting"},
         {id: 9, src: "/rak.png", alt: "rak"},
         {id: 10, src: "/anzar.png", alt: "anzar conseil"},
         {id: 11, src: "/met.png", alt: "DIRECTION PROVINCIALE DE L'EQUIPEMENT DU TRANSPORT DE LA LOGISTIQUE LAAYOUNE"},
+        {id: 12, src: "/n2h.png", alt: "N2H ISTITMAR"},
     ]
     return(
     <div className="mx-10 md:mx-20 justify-center items-center flex flex-col my-20">

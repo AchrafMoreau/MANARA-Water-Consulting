@@ -1,4 +1,3 @@
-// app/dashboard/projects/[id]/edit/page.tsx
 import { notFound } from 'next/navigation';
 import { ProjectForm } from '@/components/dashboard/projects/project-form';
 import { updateProject, getAllCategories, getProjectById  } from '@/lib/actions/project-action';

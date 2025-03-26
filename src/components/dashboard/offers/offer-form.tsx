@@ -16,6 +16,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useTranslations } from "next-intl"
+import { Toaster } from "@/components/ui/sonner"
 
 // Define the employment types based on the schema
 const employmentTypes = [
@@ -46,7 +47,7 @@ const offerFormSchema = z.object({
     "PER_DIEM",
     "OTHER",
   ]),
-  IndeedUrl: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
+  IndeedUrl: z.string().url({ message: "Please enter a valid URL." }).or(z.literal("")),
 })
 
 type OfferFormValues = z.infer<typeof offerFormSchema>
@@ -67,10 +68,11 @@ interface OfferFormProps {
     updatedAt: Date
   }
   isEditing?: boolean
+  onSubmit: (data: OfferFormValues, id?:string) => Promise<void>
 }
 
-export default function OfferForm({ offer, isEditing = false }: OfferFormProps) {
-  const t = useTranslations("dashboard.offers")
+export default function OfferForm({ offer, onSubmit, isEditing = false }: OfferFormProps) {
+  const t = useTranslations("dashboard.offers.form")
   const router = useRouter()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -92,24 +94,12 @@ export default function OfferForm({ offer, isEditing = false }: OfferFormProps) 
   })
 
   // Handle form submission
-  const onSubmit = async (data: OfferFormValues) => {
+  const handleSubmit  = async (data: OfferFormValues) => {
     setIsSubmitting(true)
     try {
-      // Create the API endpoint based on whether we're editing or creating
-      const endpoint = isEditing ? `/api/offers/${offer?.id}` : "/api/offers"
-      const method = isEditing ? "PATCH" : "POST"
-
-      const response = await fetch(endpoint, {
-        method,
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-
-      if (!response.ok) {
-        throw new Error("Failed to save offer")
-      }
+      setIsSubmitting(true)
+      console.log(data)
+      await onSubmit(data , offer?.id)
 
       toast.success(isEditing ? t("toast.success.offer_updated.title") : t("toast.success.offer_created.title"), {
         description: isEditing
@@ -120,10 +110,10 @@ export default function OfferForm({ offer, isEditing = false }: OfferFormProps) 
         position: "top-center",
       })
 
-      // Redirect back to the offers list
       router.push("/dashboard/offers")
       router.refresh()
     } catch (error) {
+      console.log(error)
       toast.error(isEditing ? t("toast.error.offer_updated.title") : t("toast.error.offer_created.title"), {
         description: isEditing
           ? t("toast.error.offer_updated.description")
@@ -137,14 +127,17 @@ export default function OfferForm({ offer, isEditing = false }: OfferFormProps) 
     }
   }
 
+  console.log(isSubmitting)
+
   return (
     <div className="flex flex-col gap-4">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">{isEditing ? t("edit_offer") : t("add_offer")}</h1>
+        <h1 className="text-3xl font-bold">{isEditing ? t("edit_offer") : t("add_offer")}</h1>
         <p className="text-muted-foreground">{isEditing ? t("edit_offer_description") : t("add_offer_description")}</p>
       </div>
 
       <Card>
+        <Toaster richColors={true} />
         <CardHeader>
           <CardTitle>{isEditing ? t("edit_offer_form.title") : t("add_offer_form.title")}</CardTitle>
           <CardDescription>
@@ -152,7 +145,7 @@ export default function OfferForm({ offer, isEditing = false }: OfferFormProps) 
           </CardDescription>
         </CardHeader>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <FormField
@@ -197,7 +190,6 @@ export default function OfferForm({ offer, isEditing = false }: OfferFormProps) 
                   </FormItem>
                 )}
               />
-
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <FormField
                   control={form.control}
@@ -258,9 +250,9 @@ export default function OfferForm({ offer, isEditing = false }: OfferFormProps) 
                 control={form.control}
                 name="urgent"
                 render={({ field }) => (
-                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
+                  <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 ">
                     <FormControl>
-                      <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                      <Checkbox className="text-white" checked={field.value} onCheckedChange={field.onChange} />
                     </FormControl>
                     <div className="space-y-1 leading-none">
                       <FormLabel>{t("form.urgent.label")}</FormLabel>
@@ -274,7 +266,7 @@ export default function OfferForm({ offer, isEditing = false }: OfferFormProps) 
               <Button type="button" variant="outline" onClick={() => router.push("/dashboard/offers")}>
                 {t("form.cancel")}
               </Button>
-              <Button type="submit" disabled={isSubmitting}>
+              <Button type="submit" className="text-white" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />

@@ -10,9 +10,7 @@ import Lenis from "lenis"
 import { useTranslations } from "next-intl"
 
 export default function ServicesPage() {
-  const containerRef = useRef(null)
-  const t = useTranslations('Assainissement');
-  const headerRef = useRef(null)
+  const t = useTranslations('ChangementsClimatiques');
 
   const serviceRefs = [useRef(null), useRef(null), useRef(null)]
   const [servicesInView, setServicesInView] = useState([false, false, false])

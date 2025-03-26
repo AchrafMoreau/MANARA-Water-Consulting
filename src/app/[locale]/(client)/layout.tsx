@@ -34,8 +34,5 @@ export default async function RootLayout({
       <MagicChatBubble />
       <Footer />
     </>
-
-
-  
   );
 }

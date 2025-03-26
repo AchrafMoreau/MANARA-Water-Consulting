@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { CalendarIcon, ImagePlus, Loader2, X } from "lucide-react"
+import { CalendarIcon, ImagePlus, Loader2, Save, X } from "lucide-react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { FileUpload, MultiFileUpload } from "@/components/ui/file-upload"
@@ -77,7 +77,7 @@ const defaultValues: Partial<ProjectFormValues> = {
 
 interface ProjectFormProps {
   project?: ProjectFormValues
-  onSubmitAction: (id?: string, formData: FormData) => Promise<void>;
+  onSubmit: (id?: string, formData: FormData) => Promise<void>;
   onCancelUrl: string
   categories: CategoryType[]
 }
@@ -110,7 +110,7 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
 
     try {
         if(project){
-            await onSubmit(project.id, data)
+            await onSubmit(project?.id, data)
             router.push(onCancelUrl)
             toast.success(
               t('form.toast.success.edit.title'), {
@@ -409,17 +409,21 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
           </CardContent>
 
           <CardFooter className="flex justify-between border-t p-6">
-            <Button type="button" variant="outline" onClick={handleCancel} disabled={isSubmitting}>
+            <Button type="button" variant="outline" onClick={() => router.push("/dashboard/projects")}>
               {t('form.buttons.cancel')}
             </Button>
 
             <Button type="submit" className="text-white" disabled={isSubmitting}>
-
-              {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              {project ? 
-                t('form.buttons.submit.edit') :
-                t('form.buttons.submit.create')
-              }
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  </>
+                ) : (
+                  <>
+                    <Save className="mr-2 h-4 w-4" />
+                    {project ? t("form.buttons.submit.edit") : t("form.buttons.submit.create")}
+                  </>
+                )}
             </Button>
           </CardFooter>
         </form>

@@ -1,5 +1,5 @@
 import OfferForm from "@/components/dashboard/offers/offer-form";
-import { GetOfferById } from "@/lib/actions/offer-action";
+import { GetOfferById, UpdateOffer } from "@/lib/actions/offer-action";
 import { notFound } from "next/navigation";
 
 export default async function EditOfferPage({ params }: { params: { id: string } }) {
@@ -9,5 +9,9 @@ export default async function EditOfferPage({ params }: { params: { id: string }
     notFound()
   }
 
-  return <OfferForm offer={offer} isEditing={true} />
+  return <OfferForm 
+            onSubmit={UpdateOffer}
+            offer={offer} 
+            isEditing={true} 
+          />
 }

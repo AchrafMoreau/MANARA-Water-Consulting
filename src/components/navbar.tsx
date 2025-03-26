@@ -1,6 +1,6 @@
 "use client"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Check, Globe } from "lucide-react"
+import { Check, CloudRainIcon, DotIcon, DropletIcon, Globe, LayoutDashboard, LeafIcon, MapIcon, WavesIcon } from "lucide-react"
 import { SignedIn, UserButton } from "@clerk/nextjs"
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useTransition } from 'react';
@@ -34,9 +34,17 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const pathname = usePathname()
-  const t = useTranslations()
+  const router = useRouter()
   const locale = useLocale()
+  const t = useTranslations()
 
+  const navItems = [
+    { link:"/services/RessourceEau", title:t("ressourceEau"), description:t("ressourceEauDesc"), icon:<DropletIcon className="h-4 w-4" />, color:"bg-blue-800" },
+    { link:"/services/InfrastructuresHydrauliques", title:t("infrastructuresHydrauliques"), description:t("infrastructuresHydrauliquesDesc"), icon:<WavesIcon className="h-4 w-4" />, color:"bg-blue-700" },
+    { link:"/services/FormationsSIG", title:t("trainings"), description:t("trainingsDesc"), icon:<MapIcon className="h-4 w-4" />, color:"bg-slate-100", textColor:"text-slate-800" },
+    { link:"/services/Environnement", title:t("environnement"), description:t("environnementDesc"), icon:<LeafIcon className="h-4 w-4" /> , color:"bg-green-700"},
+    { link:"/services/ChangementsClimatiques", title:t("changementsClimatiques"), description:t("changementsClimatiquesDesc"), icon:<CloudRainIcon className="h-4 w-4" />, color:"bg-green-800" },
+  ]
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
@@ -96,21 +104,11 @@ const Navbar = () => {
                       </Link>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/services/FormationsSIG" title={t("trainings")}>
-                    {t("trainingsDesc")}
-                  </ListItem>
-                  <ListItem href="/services/EtudedesNappes" title={t("aquifersStudy")}>
-                    {t("aquifersStudyDesc")}
-                  </ListItem>
-                  <ListItem href="/services/Reetulisation" title={t("waterReuse")}>
-                    {t("waterReuseDesc")}
-                  </ListItem>
-                  <ListItem href="/services/Protection" title={t("floodProtection")}>
-                    {t("floodProtectionDesc")}
-                  </ListItem>
-                  <ListItem href="/services/Assainissement" title={t("sanitation")}>
-                    {t("sanitationDesc")}
-                  </ListItem>
+                  {navItems.map((item, index) => (
+                    <ListItem key={index} href={item.link} title={item.title} icon={item.icon} color={item.color} textColor={item.textColor}>
+                      {item.description}
+                    </ListItem>
+                  ))} 
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -147,15 +145,19 @@ const Navbar = () => {
       </div>
 
       <div className="flex items-center gap-2">
-        <SignedIn>
-          <Link href="/dashboard">
-            <RainbowButton className="m-0 py-0 px-5 bg-primary dark:text-primary text-secondary">
-              {t("dashboard.dashboard")}
-            </RainbowButton>
-          </Link>
-        </SignedIn>
         <LanguageSelector />
         <ModeToggle />
+        <SignedIn>
+          <UserButton>
+            <UserButton.MenuItems>
+              <UserButton.Link
+                label={t('dashboard.dashboard')}
+                labelIcon={<LayoutDashboard className="w-4 h-4" />}
+                href="/dashboard"
+              />
+            </UserButton.MenuItems>
+          </UserButton>
+        </SignedIn>
 
         {/* Mobile Menu Button - Only visible on mobile */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -185,51 +187,18 @@ const Navbar = () => {
                   >
                     {t("overview")}
                   </Link>
-                  <Link
-                    href="/services/FormationsSIG"
-                    className={`text-muted-foreground hover:text-foreground transition-colors"
-                      ${pathname === "/services/FormationsSIG" ? "text-secondary font-bold" : ""}
-                    `}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("trainings")}
-                  </Link>
-                  <Link
-                    href="/services/EtudedesNappes"
-                    className={`text-muted-foreground hover:text-foreground transition-colors"
-                      ${pathname === "/services/EtudedesNappes" ? "text-secondary font-bold" : ""}
-                    `}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("aquifersStudy")}
-                  </Link>
-                  <Link
-                    href="/services/Reetulisation"
-                    className={`text-muted-foreground hover:text-foreground transition-colors"
-                      ${pathname === "/services/Reetulisation" ? "text-secondary font-bold" : ""}
-                    `}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("waterReuse")}
-                  </Link>
-                  <Link
-                    href="/services/Assainissement"
-                    className={`text-muted-foreground hover:text-foreground transition-colors"
-                      ${pathname === "/services/Assainissement" ? "text-secondary font-bold" : ""}
-                    `}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("sanitation")}
-                  </Link>
-                  <Link
-                    href="/services/Protection"
-                    className={`text-muted-foreground hover:text-foreground transition-colors"
-                      ${pathname === "/services/Protection" ? "text-secondary font-bold" : ""}
-                    `}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {t("floodProtection")}
-                  </Link>
+                  {navItems.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.link}
+                      className={`text-muted-foreground hover:text-foreground transition-colors"
+                        ${pathname === item.link ? "text-secondary font-bold" : ""}
+                      `}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
                 </div>
               </div>
 
@@ -280,7 +249,7 @@ const Navbar = () => {
 }
 
 const ListItem = forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRef<"a">>(
-  ({ className, title, children, ...props }, ref) => {
+  ({ className, title, icon, color, textColor="text-white", children, ...props }, ref) => {
     return (
       <li>
         <NavigationMenuLink asChild>
@@ -292,7 +261,12 @@ const ListItem = forwardRef<React.ElementRef<"a">, React.ComponentPropsWithoutRe
             )}
             {...props}
           >
-            <div className="text-sm font-medium leading-none">{title}</div>
+            <div className="text-sm font-medium leading-none flex gap-2 items-center rtl:flex-row-reverse">
+              <div className={`${color} ${textColor} p-1 rounded-lg`}>
+                {icon}
+              </div>
+              {title}
+            </div>
             <p className="line-clamp-2 text-sm leading-snug text-muted-foreground overflow-hidden ">{children}</p>
           </Link>
         </NavigationMenuLink>

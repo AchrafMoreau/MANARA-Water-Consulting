@@ -1,4 +1,5 @@
 import OffersTable from "@/components/dashboard/offers/offer-table"
+import { CreateOffer } from "@/lib/actions/offer-action"
 import prisma from "@/server/db"
 
 
@@ -15,6 +16,6 @@ async function getOffers(){
 export default async function ProjectsPage() {
     const offers = await getOffers()
   return (
-    <OffersTable offers={offers} />
+    <OffersTable offers={offers}/>
   )
 }

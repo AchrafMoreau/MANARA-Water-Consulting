@@ -67,41 +67,42 @@ export default function ServiceLayout({ children }: ServiceLayoutProps) {
 }
 
 function getPageTitle(pathname: string) {
-  const t = useTranslations("servicesLayout");
+  const t = useTranslations();
   switch (pathname) {
     case "/services":
-      return t("title");
+      return t("servicesLayout.title");
     case "/services/FormationsSIG":
-      return t("FormationsSIG.title");
-    case "/services/EtudedesNappes":
-      return t("EtudedesNappes.title");
-    case "/services/Reetulisation":
-      return t("Reetulisation.title");
-    case "/services/Protection":
-      return t("Protection.title");
-    case "/services/Assainissement":
-      return t("Assainissement.title");
+      return t("trainings");
+    case "/services/RessourceEau":
+      return t("ressourceEau");
+    case "/services/InfrastructuresHydrauliques":
+      return t("infrastructuresHydrauliques");
+    case "/services/Environnement":
+      return t("environnement");
+    case "/services/ChangementsClimatiques":
+      return t("changementsClimatiques");
     default:
-      return t("title");
+      return t("servicesLayout.title");
   }
 }
 
 function getPageDescription(pathname: string) {
-  const t = useTranslations("servicesLayout");
+  const t = useTranslations();
   switch (pathname) {
     case "/services":
-      return t("description");
+      return t("servicesLayout.description");
     case "/services/FormationsSIG":
-      return t("FormationsSIG.description");
-    case "/services/EtudedesNappes":
-      return t("EtudedesNappes.description");
-    case "/services/Reetulisation":
-      return t("Reetulisation.description");
-    case "/services/Protection":
-      return t("Protection.description");
-    case "/services/Assainissement":
-      return t("Assainissement.description");
+      return t("trainingsDesc");
+    case "/services/RessourceEau":
+      return t("ressourceEauDesc");
+    case "/services/InfrastructuresHydrauliques":
+      return t("infrastructuresHydrauliquesDesc");
+    case "/services/Environnement":
+      return t("environnementDesc");
+    case "/services/ChangementsClimatiques":
+      return t("changementsClimatiquesDesc");
     default:
-      return t("description");
+      return t("servicesLayout.description");
   }
 }
+

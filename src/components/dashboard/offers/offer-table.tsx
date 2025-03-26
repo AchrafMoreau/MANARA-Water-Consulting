@@ -92,10 +92,8 @@ export default function OffersTable({ offers }: { offers: offersType[] }) {
     setCurrentPage(1)
   }, [searchQuery, sortField, sortDirection])
 
-  // Handle sorting
   const handleSort = (field: SortField) => {
     if (sortField === field) {
-      // Toggle direction or clear sort
       if (sortDirection === "asc") {
         setSortDirection("desc")
       } else if (sortDirection === "desc") {
@@ -103,13 +101,11 @@ export default function OffersTable({ offers }: { offers: offersType[] }) {
         setSortDirection(null)
       }
     } else {
-      // Set new sort field with ascending direction
       setSortField(field)
       setSortDirection("asc")
     }
   }
 
-  // Get sort icon
   const getSortIcon = (field: SortField) => {
     if (sortField !== field) return <ArrowUpDown className="h-3 w-3" />
     if (sortDirection === "asc") return <SortAsc className="h-3 w-3" />
@@ -139,7 +135,6 @@ export default function OffersTable({ offers }: { offers: offersType[] }) {
     }
   }
 
-  // Handle bulk delete
   const handleBulkDelete = async() => {
     if (selectedOffers.length === 0) return
     setIsLoading(true)

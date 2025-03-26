@@ -54,8 +54,6 @@ export async function updateProject(id: string, formData: ProjectFormValues) {
   const validatedData = projectSchema.parse(formData)
 
   try {
-    console.log(`Updating project ${id}:`, validatedData)
-
     await prisma.project.update({
       where: {
         id: id
