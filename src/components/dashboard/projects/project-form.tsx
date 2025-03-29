@@ -141,10 +141,6 @@ export function ProjectForm({ project, onSubmit, onCancelUrl, categories }: Proj
     }
   }
 
-  // Handle cancel button click
-  const handleCancel = () => {
-    router.push(onCancelUrl)
-  }
 
   return (
     <Card className="w-full">

@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useDropzone } from "react-dropzone"
-import { X, Upload, ImageIcon, Loader2 } from "lucide-react"
+import { X, Upload, ImageIcon, Loader2, FileText, FileIcon, type File  } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -268,6 +268,149 @@ export function MultiFileUpload({
       <p className="text-xs text-muted-foreground">
         {`${values.length} of ${maxFiles} files • Supports images up to ${maxSize}MB`}
       </p>
+    </div>
+  )
+}
+
+
+
+
+
+export function ResumeUpload({
+  value,
+  onChange,
+  onUpload,
+  className,
+  disabled = false,
+  maxSize = 5, // 5MB default
+  accept = {
+    "application/pdf": [".pdf"],
+    "application/msword": [".doc"],
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"],
+  },
+}: FileUploadProps) {
+  const [isUploading, setIsUploading] = React.useState(false)
+  const [error, setError] = React.useState<string | null>(null)
+
+  const onDrop = React.useCallback(
+    async (acceptedFiles: File[]) => {
+      if (!onUpload) return
+
+      const file = acceptedFiles[0]
+      if (!file) return
+
+      setIsUploading(true)
+      setError(null)
+
+      try {
+        const url = await onUpload(file)
+        onChange(url)
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to upload file")
+        console.error("Upload error:", err)
+      } finally {
+        setIsUploading(false)
+      }
+    },
+    [onChange, onUpload],
+  )
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    disabled: disabled || isUploading || !onUpload,
+    maxSize: maxSize * 1024 * 1024,
+    accept,
+    multiple: false,
+  })
+
+  const removeFile = () => {
+    onChange("")
+    setError(null)
+  }
+
+  // Function to get the appropriate icon based on file extension
+  const getFileIcon = (filename: string) => {
+    const extension = filename.split(".").pop()?.toLowerCase()
+
+    switch (extension) {
+      case "pdf":
+        return <FileText className="h-8 w-8 text-red-500" />
+      case "doc":
+      case "docx":
+        return <FileText className="h-8 w-8 text-blue-500" />
+      default:
+        return <FileIcon className="h-8 w-8 text-gray-500" />
+    }
+  }
+
+  return (
+    <div className="space-y-2">
+      {value ? (
+        <div className="relative rounded-md border bg-background p-3">
+          <div className="flex items-center flex-wrap gap-3">
+            <div className="flex h-16 w-16 items-center justify-center rounded-md border bg-muted/20">
+              {getFileIcon(value)}
+            </div>
+            <div className="flex-1 space-y-1">
+              <div className=" text-sm font-medium">{value.split("/").pop()}</div>
+              <p className="text-xs text-muted-foreground">{new Date().toLocaleDateString()}</p>
+            </div>
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8"
+              onClick={removeFile}
+              disabled={disabled || isUploading}
+            >
+              <X className="h-4 w-4" />
+              <span className="sr-only">Remove file</span>
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <div
+          {...getRootProps()}
+          className={cn(
+            "flex cursor-pointer flex-col items-center justify-center rounded-md border border-dashed p-4 transition-colors",
+            isDragActive
+              ? "border-primary/50 bg-primary/5"
+              : "border-muted-foreground/25 hover:border-primary/50 hover:bg-primary/5",
+            disabled && "cursor-default opacity-60",
+            className,
+          )}
+        >
+          <input {...getInputProps()} />
+
+          <div className="flex flex-col items-center justify-center gap-1 text-center">
+            {isUploading ? (
+              <Loader2 className="h-10 w-10 animate-spin text-muted-foreground" />
+            ) : (
+              <div className="rounded-full bg-background p-2 text-muted-foreground shadow-sm">
+                <Upload className="h-6 w-6" />
+              </div>
+            )}
+
+            <div className="text-sm font-medium">
+              {isUploading ? (
+                "Uploading..."
+              ) : isDragActive ? (
+                "Drop the file here"
+              ) : (
+                <>
+                  Drag & drop or <span className="text-primary">browse</span>
+                </>
+              )}
+            </div>
+
+            <p className="text-xs text-muted-foreground">
+              {`Supports PDF, DOC, DOCX, and other document formats up to ${maxSize}MB`}
+            </p>
+          </div>
+        </div>
+      )}
+
+      {error && <p className="text-xs text-destructive">{error}</p>}
     </div>
   )
 }

@@ -11,6 +11,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import LenisProvider from "@/providers/leins-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 
 
@@ -29,6 +30,7 @@ export default async function RootLayout({
   return (
     <>
       <Navbar />
+      <Toaster richColors={true} />
       <LenisProvider />
         {children}
       <MagicChatBubble />

@@ -2,9 +2,6 @@ import { MapContainer, Marker, Popup, TileLayer, Tooltip } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 import "leaflet-defaulticon-compatibility"
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
-import L from "leaflet"
-import { useEffect, useState } from "react";
-import { useLocale } from "next-intl";
 
 
 const POSITION = {

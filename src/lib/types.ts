@@ -58,4 +58,16 @@ type offersType = {
   employmentType: EmploymentType
   IndeedUrl: string
 }
-export type { ProjetType, CategoryType, offersType } 
+
+type ApplicationType = {
+  id: string
+  firstName: string
+  lastName: string
+  email: string
+  phone: string
+  coverLetter: string
+  resume: string
+  createdAt: Date
+  updatedAt: Date
+}
+export type { ProjetType, CategoryType, offersType, ApplicationType } 

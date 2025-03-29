@@ -1,6 +1,7 @@
 "use server"
 import prisma from "@/server/db"
 import { z } from "zod";
+import { ApplicationType } from "../types";
 
 const offerFormSchema = z.object({
   title: z.string().min(2, { message: "Title must be at least 2 characters." }),
@@ -94,5 +95,16 @@ export async function bulkDeleteOffers(ids: string[]){
   }catch(error){
     console.error(`Error Deleting project ${ids.join(',')}:`, error)
     throw new Error("Failed to Deleting project. Please try again.")
+  }
+}
+
+export async function applicationDeploy(application: ApplicationType){
+  try{
+    await prisma.application.create({
+      data: application
+    })
+  }catch(error){
+    console.error("Error creating application:", error)
+    throw new Error("Failed to create application. Please try again.")
   }
 }

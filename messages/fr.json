@@ -15,7 +15,7 @@
     "contactUs": "Contact",
     "ourSolutions": "Nos Solutions",
     "trainings": "Formations SIG & Renforcement des Capacités",
-    "ressourceEau": "Ressource En Eau",
+    "ressourceEau": "Ressource En Eau - Géophysique et tomographie électrique",
     "infrastructuresHydrauliques": "Infrastructures Hydrauliques",
     "changementsClimatiques": "Changements Climatiques",
     "environnement": "Environnement",
@@ -608,6 +608,63 @@
             "growth": {
                 "title": "Opportunités d'Évolution",
                 "description": "Développez votre carrière grâce à un apprentissage continu, du mentorat et des opportunités d'évolution."
+            }
+        },
+        "application": {
+            "title": "Postulez Maintenant",
+            "description": "Faites le premier pas vers une carrière percutante dans la gestion des ressources en eau."
+        },
+        "form": {
+            "header": "Formulaire de candidature",
+            "subheader": "Remplissez le formulaire ci-dessous pour postuler à un poste dans notre entreprise.",
+            "toast": {
+                "success": {
+                    "title": "Candidature soumise",
+                    "description": "Votre candidature a été soumise avec succès. Nous vous contacterons bientôt."
+                },
+                "error": {
+                    "title": "Erreur de soumission",
+                    "description": "Une erreur s'est produite lors de la soumission de votre candidature. Veuillez réessayer."
+                }
+            },
+            "fields": {
+                "firstName": "Prénom",
+                "lastName": "Nom",
+                "email": "Email",
+                "phone": "Téléphone",
+                "position": "Poste",
+                "resume": "CV",
+                "coverLetter": "Lettre de motivation"
+            },
+            "placeholders": {
+                "firstName": "Entrez votre prénom",
+                "lastName": "Entrez votre nom",
+                "email": "Entrez votre adresse email",
+                "phone": "Entrez votre numéro de téléphone",
+                "position": "Sélectionnez un poste",
+                "coverLetter": "Dites-nous pourquoi vous êtes intéressé par ce poste"
+            },
+            "descriptions": {
+                "resume": "Le CV doit être au format PDF ou Word",
+                "coverLetter": "Optionnel mais recommandé"
+            },
+            "positions": {
+                "water-engineer": "Ingénieur en ressources hydriques",
+                "project-manager": "Chef de projet",
+                "environmental-scientist": "Scientifique environnemental",
+                "data-analyst": "Analyste de données"
+            },
+            "validation":{
+                "firstName": "Le prénom doit contenir au moins 2 caractères",
+                "lastName": "Le nom doit contenir au moins 2 caractères",
+                "email": "Veuillez entrer une adresse email valide",
+                "phone": "Veuillez entrer un numéro de téléphone valide",
+                "position": "Veuillez sélectionner un poste",
+                "resume": "Veuillez télécharger un CV"
+            },
+            "submit": {
+                "text": "Soumettre la candidature",
+                "submitting": "Envoi en cours..."
             }
         }
     },

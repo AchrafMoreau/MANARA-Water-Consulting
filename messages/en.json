@@ -15,7 +15,7 @@
     "contactUs": "Contact Us",
     "ourSolutions": "Our Solutions",
     "trainings": "GIS Trainings & Capacity Building",
-    "ressourceEau": "Water Resources",
+    "ressourceEau": "Water Resources - geophysics and electrical tomography",
     "infrastructuresHydrauliques": "Hydraulic Infrastructures",
     "changementsClimatiques": "Climate Change",
     "environnement": "Environment",
@@ -608,6 +608,63 @@
             "growth": {
                 "title": "Growth Opportunities",
                 "description": "Develop your career with continuous learning, mentorship, and advancement opportunities."
+            }
+        },
+        "application": {
+            "title": "Apply Now",
+            "description": "Take the first step toward an impactful career in water resource management."
+        },
+        "form": {
+            "header": "Application Form",
+            "subheader": "Fill out the form below to apply for a position in our company.",
+            "toast": {
+            "success": {
+                "title": "Application Submitted",
+                "description": "Your application has been successfully submitted. We'll contact you soon."
+            },
+            "error": {
+                "title": "Submission Error",
+                "description": "An error occurred while submitting your application. Please try again."
+            }
+            },
+            "fields": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phone": "Phone",
+            "position": "Position",
+            "resume": "Resume",
+            "coverLetter": "Cover Letter"
+            },
+            "placeholders": {
+            "firstName": "Enter your first name",
+            "lastName": "Enter your last name",
+            "email": "Enter your email address",
+            "phone": "Enter your phone number",
+            "position": "Select a position",
+            "coverLetter": "Tell us why you're interested in this position"
+            },
+            "descriptions": {
+            "resume": "Resume must be in PDF or Word format",
+            "coverLetter": "Optional but recommended"
+            },
+            "positions": {
+            "water-engineer": "Water Resource Engineer",
+            "project-manager": "Project Manager",
+            "environmental-scientist": "Environmental Scientist",
+            "data-analyst": "Data Analyst"
+            },
+            "validation": {
+            "firstName": "First name must be at least 2 characters",
+            "lastName": "Last name must be at least 2 characters",
+            "email": "Please enter a valid email address",
+            "phone": "Please enter a valid phone number",
+            "position": "Please select a position",
+            "resume": "Please upload a resume"
+            },
+            "submit": {
+            "text": "Submit Application",
+            "submitting": "Submitting..."
             }
         }
     },

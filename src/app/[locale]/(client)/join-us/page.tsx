@@ -18,7 +18,7 @@ export default function Page(){
       .then(({jobs}) => {
         setJobs(jobs)
       })
-  })
+  },[])
 
 
     return(
@@ -118,7 +118,7 @@ export default function Page(){
         </section>
 
       {/* Open Positions Section */}
-      { jobs  && <section
+      <section
         className="relative py-24 md:py-32  overflow-hidden"
       >
         <div className="container mx-auto px-4">
@@ -137,38 +137,30 @@ export default function Page(){
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <JobListings jobs={jobs} />
+            <JobListings jobs={jobs} />
             </motion.div>
           </div>
         </div>
-      </section>}
+      </section>
 
       {/* Application Form Section */}
-      {/* <section
-        className="relative py-24 md:py-32  overflow-hidden"
+      <section
+        className="relative pb-12 md:pb-16  overflow-hidden"
       >
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl mx-auto"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                Apply Now
-              </h2>
-              <p className="text-xl text-primary-foreground/80">
-                Take the first step towards an impactful career in water resource management.
-              </p>
-            </div>
+          <FadeIn className="text-center max-w-3xl mx-auto mb-16">
+            <Title title={t('application.title')} axAuto={true} titleClass="mx-auto text-center"/>
+            <p className="text-muted-foreground text-lg">
+              {t('application.description')}
+            </p>
+          </FadeIn>
 
-            <ApplicationForm />
-          </motion.div>
+          <div className="max-w-3xl mx-auto">
+            <ApplicationForm jobs={jobs}/>
+          </div>
         </div>
-      </section> */}
+      </section>
     </>
     )
 }

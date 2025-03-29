@@ -71,3 +71,15 @@ enum EmploymentType {
   OTHER
 }
 
+model Application{
+  id      String      @id @default(uuid())
+  firstName String
+  lastName String
+  email    String
+  phone    String
+  coverLetter String
+  resume   String
+  position String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}

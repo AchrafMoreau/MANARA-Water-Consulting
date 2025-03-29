@@ -12,6 +12,7 @@ import { MagicCard } from "./magicui/magic-card"
 import { useTheme } from "next-themes"
 import { InteractiveHoverButton } from "./magicui/interactive-hover-button"
 import { useTranslations } from "next-intl"
+import { Skeleton } from "./ui/skeleton"
 
 interface Job {
     id : string
@@ -108,13 +109,15 @@ function JobCard({ job }: { job: Job }) {
           </AnimatePresence>
         </CardContent>
 
-        <CardFooter className="p-6 pt-0 flex justify-end">
+        {job.IndeedUrl && (
+          <CardFooter className="p-6 pt-0 flex justify-end">
             <a href={job.IndeedUrl} target="_blank" rel="noreferrer">
-                <InteractiveHoverButton className="hover:text-white rounded-lg">
-                    {t('apply_now')}
-                </InteractiveHoverButton>
+              <InteractiveHoverButton className="hover:text-white rounded-lg">
+                {t('apply_now')}
+              </InteractiveHoverButton>
             </a>
-        </CardFooter>
+          </CardFooter>
+        )}
         </MagicCard>
       </Card>
     </motion.div>
@@ -125,7 +128,7 @@ export default function JobListings({ jobs }: { jobs: Job[] }) {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6">
-      {jobs.map((job, index) => (
+      {jobs ? jobs.map((job, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0, y: 30 }}
@@ -135,7 +138,7 @@ export default function JobListings({ jobs }: { jobs: Job[] }) {
         >
           <JobCard job={job} />
         </motion.div>
-      ))}
+      )) : <JobCardSkeleton />}
     </div>
   )
 }
@@ -158,4 +161,49 @@ const typeOfEmployment = (type : string) => {
         default:
             return 'other'
     }
+}
+
+
+const JobCardSkeleton = () => {
+  return [1,2,3].map((elm, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+    >
+      <Card className='overflow-hidden border border-primary'>
+        <CardContent className="p-6">
+          <div className="flex justify-between items-start">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Skeleton className="w-[400px] h-10" />
+                <Skeleton className="w-[100px] h-10" />
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:gap-4 text-sm text-muted-foreground">
+                <div className="flex items-center gap-2">
+                  <Skeleton className="w-[20px] h-5"/>
+                  <Skeleton className="w-[100px] h-5"/>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Skeleton className="w-[20px] h-5"/>
+                  <Skeleton className="w-[100px] h-5"/>
+                </div>
+              </div>
+            </div>
+
+            <Button variant="ghost" size="icon"  className="text-primary">
+              <Skeleton className="w-[30px] h-[30px]"/>
+            </Button>
+          </div>
+        </CardContent>
+        <CardFooter className="p-6 pt-0 flex justify-end">
+            <Skeleton className="hover:text-white rounded-lg w-[60px] h-5" />
+        </CardFooter>
+      </Card>
+    </motion.div>
+  ))
+
 }

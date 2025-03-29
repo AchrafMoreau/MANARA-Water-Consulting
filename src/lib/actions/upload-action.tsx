@@ -51,3 +51,35 @@ export async function uploadFileFromClient(file: File) {
   }
 }
 
+
+export async function uploadResumeFromClient(file: File) {
+  try {
+    try {
+      if (!file) {
+        return NextResponse.json(
+          { success: false, error: "No file provided" },
+          { status: 400 }
+        );
+      }
+
+      const filename = `${uuidv4()}-${file.name.replace(/[^a-zA-Z0-9.-]/g, "_")}`;
+
+      const blob = await put(filename, file, {
+        access: "public",
+        addRandomSuffix: false,
+      });
+
+      return blob.url
+    } catch (error) {
+      console.error("Error uploading file:", error);
+      return NextResponse.json(
+        { success: false, error: "Failed to upload file" },
+        { status: 500 }
+      );
+    }
+  } catch (error) {
+    console.error("Error uploading file:", error)
+    throw new Error("Failed to upload file")
+  }
+}
+

@@ -33,7 +33,7 @@ export default function ServiceLayout({ children }: ServiceLayoutProps) {
           >
             <div className="container px-4 mx-auto text-center">
               <motion.h1
-                className="text-4xl font-bold text-white mb-4 md:text-6xl lg:text-7xl mx-auto"
+                className="text-4xl font-bold text-white mb-4 md:text-6xl lg:text-7xl mx-auto capitalize"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.8 }}

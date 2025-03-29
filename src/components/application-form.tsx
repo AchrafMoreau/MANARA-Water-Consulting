@@ -1,87 +1,241 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { Send } from "lucide-react"
+import { useState } from "react"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { toast } from "sonner"
+import { MagicCard } from "./magicui/magic-card"
+import { useTheme } from "next-themes"
+import { useTranslations } from "next-intl"
+import { ResumeUpload } from "./ui/file-upload"
+import { uploadResumeFromClient } from "@/lib/actions/upload-action"
+import { applicationDeploy } from "@/lib/actions/offer-action"
+import { offersType } from "@/lib/types"
 
-export default function ApplicationForm() {
+const formSchema = z.object({
+  firstName: z.string().min(2, { message: "joinUs.form.validation.firstName" }),
+  lastName: z.string().min(2, { message: "joinUs.form.validation.lastName" }),
+  email: z.string().email({ message: "joinUs.form.validation.email" }),
+  phone: z.string().min(10, { message: "joinUs.form.validation.phone" }),
+  position: z.string({ message: "joinUs.form.validation.position" }),
+  resume: z.string().min(1, { message: "joinUs.form.validation.resume",}),
+  coverLetter: z.string().optional(),
+})
+
+type FormValues = z.infer<typeof formSchema>
+
+export default function ApplicationForm({ jobs }: offersType[]) {
+  const { theme } = useTheme()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const t = useTranslations("joinUs.form")
+
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      position: "",
+      coverLetter: "",
+    },
+  })
+
+  const handleFileUpload = async (file: File) => {
+    try {
+      return await uploadResumeFromClient(file)
+    } catch (error) {
+      console.error("Error uploading file:", error)
+      throw new Error("Failed to upload file")
+    }
+  }
+
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true)
+    try {
+      await applicationDeploy(data)
+      toast.success(
+        t('toast.success.title'), {
+          description: t('toast.success.description'),
+          className: "bg-earth text-white",
+          classNames:{toast: "bg-primary"},
+          position: "top-center",
+      })
+    } catch (error) {
+      console.error("Error submitting form:", error)
+      toast.error(
+        t('toast.error.title'), {
+          description: t('toast.error.description'),
+          className: "bg-earth text-white",
+          classNames:{toast: "bg-primary"},
+          position: "top-center",
+      })
+    } finally {
+      setIsSubmitting(false)
+      form.reset()
+    }
+  }
   return (
-    <Card className="border-0 bg-primary/5 backdrop-blur-lg overflow-hidden">
-      <CardContent className="p-8">
-        <form className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium mb-2 text-primary/80">Full Name</label>
-              <Input
-                placeholder="Enter your full name"
-                className="bg-primary/10 border-primary/20 text-white placeholder:text-primary/40 focus:border-primary/60"
+    <Card className=" mx-auto">
+      <MagicCard gradientColor={theme == "dark" ? "#262626" : "#D9D9D955"}>
+        <CardHeader>
+          <CardTitle>{t('header')}</CardTitle>
+          <CardDescription>
+            {t('subheader')}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>
+                      {t('fields.firstName')}
+                    </FormLabel>
+                    <FormControl>
+                      <Input placeholder={t('placeholders.firstName')} {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>
+                      {t('fields.lastName')}
+                    </FormLabel>
+                    <FormControl>
+                      <Input placeholder={t('placeholders.lastName')} {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
             </div>
-            <div>
-              <label className="block text-sm font-medium mb-2 text-primary/80">Email Address</label>
-              <Input
-                type="email"
-                placeholder="your.email@example.com"
-                className="bg-primary/10 border-primary/20 text-white placeholder:text-primary/40 focus:border-primary/60"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2 text-primary/80">Phone Number</label>
-              <Input
-                placeholder="+966 XX XXX XXXX"
-                className="bg-primary/10 border-primary/20 text-white placeholder:text-primary/40 focus:border-primary/60"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2 text-primary/80">Position</label>
-              <Select>
-                <SelectTrigger className="bg-primary/10 border-primary/20 text-white focus:border-primary/60">
-                  <SelectValue placeholder="Select a position" />
-                </SelectTrigger>
-                <SelectContent className="bg-background border-primary/20 text-white">
-                  <SelectItem value="water-engineer">Water Resource Engineer</SelectItem>
-                  <SelectItem value="environmental-consultant">Environmental Consultant</SelectItem>
-                  <SelectItem value="project-manager">Project Manager</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2 text-primary/80">Cover Letter</label>
-            <Textarea
-              placeholder="Tell us why you're interested in joining Manara Water Consulting..."
-              rows={5}
-              className="bg-primary/10 border-primary/20 text-white placeholder:text-primary/40 focus:border-primary/60"
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    {t('fields.email')}
+                  </FormLabel>
+                  <FormControl>
+                    <Input type="email" placeholder={t('placeholders.email')} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2 text-primary/80">Resume/CV</label>
-            <div className="flex items-center justify-center w-full">
-              <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-primary/20 border-dashed rounded-lg cursor-pointer bg-primary/10 hover:bg-primary/15 transition-colors duration-300">
-                <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                  <p className="mb-2 text-sm text-primary/70">Drag and drop your file here</p>
-                  <p className="text-xs text-primary/50">PDF or DOC files up to 5MB</p>
-                </div>
-                <input type="file" className="hidden" />
-              </label>
-            </div>
-          </div>
-          <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-            <Button
-              className="w-full py-6 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white border-0"
-              size="lg"
-            >
-              <Send className="h-5 w-5 mr-2" />
-              Submit Application
+
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    {t('fields.phone')}
+                  </FormLabel>
+                  <FormControl>
+                    <Input type="text" placeholder={t('placeholders.phone')} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="position"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    {t('fields.position')}
+                  </FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder={t('placeholders.position')} />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      {Array.isArray(jobs) && jobs.length > 0 && jobs.map((job: offersType) => (
+                        <SelectItem key={job.id} value={job.department}>
+                          {job.title}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="resume"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    {t('fields.resume')}
+                  </FormLabel>
+                  <FormControl>
+                    <ResumeUpload value={field.value} onChange={field.onChange} onUpload={handleFileUpload} maxSize={10} />
+                  </FormControl>
+                  <FormDescription>
+                    {t('descriptions.resume')}
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="coverLetter"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>
+                    {t('fields.coverLetter')}
+                  </FormLabel>
+                  <FormControl>
+                    <Textarea
+                      placeholder={t('placeholders.coverLetter')}
+                      className="min-h-[120px]"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    {t('descriptions.coverLetter')}
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <Button type="submit" className="w-full text-white" disabled={isSubmitting}>
+              {isSubmitting ? t('submit.submitting') : t('submit.text')}
             </Button>
-          </motion.div>
-        </form>
-      </CardContent>
+          </form>
+        </Form>
+        </CardContent>
+      </MagicCard>
     </Card>
   )
 }

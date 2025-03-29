@@ -22,6 +22,12 @@ export default function OurClients() {
         {id: 10, src: "/anzar.png", alt: "anzar conseil"},
         {id: 11, src: "/met.png", alt: "DIRECTION PROVINCIALE DE L'EQUIPEMENT DU TRANSPORT DE LA LOGISTIQUE LAAYOUNE"},
         {id: 12, src: "/n2h.png", alt: "N2H ISTITMAR"},
+        {id: 13, src: "/resing.png", alt: "RESING"},
+        {id: 14, src: "/miftah.png", alt: "MIFTAH"},
+        {id: 15, src: "/eleaf.png", alt: "E-LEAF"},
+        {id: 16, src: "/leauMinistre.png", alt: "Ministre de l'Eau"},
+        {id: 17, src: "/handassat.png", alt: "Handassat El Ghad"},
+        {id: 18, src: "/butec.png", alt: "BUTEC"},
     ]
     return(
     <div className="mx-10 md:mx-20 justify-center items-center flex flex-col my-20">
