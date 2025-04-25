@@ -64,6 +64,9 @@ export default async function RootLayout({
       afterSignOutUrl={afterSignOutUrl}
     >
       <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+        <head>
+          <meta name="google-site-verification" content="8OeuP4P7jyuQgJw3notCYQxP0SRvsQpaXcL9anLhSjI" />
+        </head>
         <body>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <ThemeProvider
