@@ -76,7 +76,7 @@ export const Card = React.memo(
           <div className="p-6 flex-grow flex flex-col">
             <h3 className="text-xl font-semibold mb-2  bg-clip-text text-transparent bg-gradient-to-b from-primary via-primary/80 to-earth dark:from-secondary dark:via-secondary/80 dark:to-earthLight">{card.title}</h3>
             <p className="text-muted-foreground mb-4 flex-grow line-clamp-2">{card.description}</p>
-            <InteractiveHoverButton className="text-zinc-700 dark:text-white ">
+            <InteractiveHoverButton className="text-zinc-700 self-end dark:text-white  w-fit">
               {t('see_project')}
             </InteractiveHoverButton>
           </div>

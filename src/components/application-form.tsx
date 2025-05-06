@@ -24,14 +24,13 @@ const formSchema = z.object({
   lastName: z.string().min(2, { message: "joinUs.form.validation.lastName" }),
   email: z.string().email({ message: "joinUs.form.validation.email" }),
   phone: z.string().min(10, { message: "joinUs.form.validation.phone" }),
-  position: z.string({ message: "joinUs.form.validation.position" }),
   resume: z.string().min(1, { message: "joinUs.form.validation.resume",}),
   coverLetter: z.string().optional(),
 })
 
 type FormValues = z.infer<typeof formSchema>
 
-export default function ApplicationForm({ jobs }: offersType[]) {
+export default function ApplicationForm() {
   const { theme } = useTheme()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const t = useTranslations("joinUs.form")
@@ -43,7 +42,6 @@ export default function ApplicationForm({ jobs }: offersType[]) {
       lastName: "",
       email: "",
       phone: "",
-      position: "",
       coverLetter: "",
     },
   })
@@ -155,33 +153,6 @@ export default function ApplicationForm({ jobs }: offersType[]) {
                   <FormControl>
                     <Input type="text" placeholder={t('placeholders.phone')} {...field} />
                   </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="position"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>
-                    {t('fields.position')}
-                  </FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder={t('placeholders.position')} />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      {Array.isArray(jobs) && jobs.length > 0 && jobs.map((job: offersType) => (
-                        <SelectItem key={job.id} value={job.department}>
-                          {job.title}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
                   <FormMessage />
                 </FormItem>
               )}

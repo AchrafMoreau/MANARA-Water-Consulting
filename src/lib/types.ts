@@ -67,7 +67,16 @@ type ApplicationType = {
   phone: string
   coverLetter: string
   resume: string
+  status: ApplicationStatusType
   createdAt: Date
   updatedAt: Date
 }
+
+enum ApplicationStatusType {
+  ACCEPTED = "ACCEPTED",
+  PENDING = "PENDING",
+  REVIEWED = "REVIEWED",
+  REJECTED = "REJECTED",
+}
+
 export type { ProjetType, CategoryType, offersType, ApplicationType } 

@@ -46,9 +46,9 @@ export default function TeamCard({ member }: TeamCardProps) {
                 <p className="text-sm opacity-90 relative z-10 mb-2">{member.position}</p>
             </div>
             <div className="netwok ">
-                <Link href={member.linkedin} passHref>
-                    <FontAwesomeIcon icon={faLinkedin} className="text-2xl"/>
-                </Link>
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 transition-colors duration-300">  
+                  <FontAwesomeIcon icon={faLinkedin} className="text-2xl"/>
+                </a>
             </div>
 
         </div>

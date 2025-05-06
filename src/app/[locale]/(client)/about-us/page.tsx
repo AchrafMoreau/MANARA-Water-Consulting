@@ -26,51 +26,35 @@ export default function AboutUs(){
     const team = [
         {
             id: 1,
-            name: "Achraf Moreau",
-            position: "Web Developer",
-            image: "/sir.jpg",
-            linkedin: "https://www.linkedin.com/in/achraf-moreau-8684811a1/",
-            bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita eligendi quo illo quibusdam veniam similique nemo accusamus laboriosam molestias in quod."
+            name: "ASMA BEN MOUSSA",
+            position: t('team.members.asma.position'),
+            image: "/mam.jpg",
+            linkedin: "https://www.linkedin.com/in/asma-ben-moussa-3024585b/",
+            bio: t('team.members.asma.description')
         },
         {
             id: 2,
-            name: "Anass Absa",
-            position: "Hydraulic Engineer",
+            name: "MOHAMED EL MOKHTAR",
+            position: t('team.members.mohamed.position'),
             image: "/sir.jpg",
             linkedin: "https://www.linkedin.com/in/achraf-moreau-8684811a1/",
-            bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita eligendi quo illo quibusdam veniam similique nemo accusamus laboriosam molestias in quod."
+            bio: t('team.members.mohamed.description')
         },
         {
             id: 3,
-            name: "Jamila Idk",
-            position: "Hydraulic Engineer",
+            name: "ACHRAF MOREAU",
+            position: t('team.members.achraf.position'),
             linkedin: "https://www.linkedin.com/in/achraf-moreau-8684811a1/",
-            image: "/mam.jpg",
-            bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita eligendi quo illo quibusdam veniam similique nemo accusamus laboriosam molestias in quod."
+            image: "/sir.jpg",
+            bio: t('team.members.achraf.description')
         },
         {
             id: 4,
-            name: "Achraf Moreau",
-            position: "Web Developer",
+            name: "YOUSSEF OUSTOUS",
+            position: t('team.members.youssef.position'),
             linkedin: "https://www.linkedin.com/in/achraf-moreau-8684811a1/",
             image: "/sir.jpg",
-            bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita eligendi quo illo quibusdam veniam similique nemo accusamus laboriosam molestias in quod."
-        },
-        {
-            id: 5,
-            name: "Anass Absa",
-            position: "Hydraulic Engineer",
-            image: "/sir.jpg",
-            linkedin: "https://www.linkedin.com/in/achraf-moreau-8684811a1/",
-            bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita eligendi quo illo quibusdam veniam similique nemo accusamus laboriosam molestias in quod."
-        },
-        {
-            id: 6,
-            name: "Jamila Idk",
-            position: "Hydraulic Engineer",
-            linkedin: "https://www.linkedin.com/in/achraf-moreau-8684811a1/",
-            image: "/mam.jpg",
-            bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus expedita eligendi quo illo quibusdam veniam similique nemo accusamus laboriosam molestias in quod."
+            bio: t('team.members.youssef.description')
         },
     ]
     return (

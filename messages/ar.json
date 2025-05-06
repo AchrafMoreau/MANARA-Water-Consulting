@@ -694,7 +694,8 @@
             "items": {
                 "home": "الرئيسية",
                 "projects": "المشاريع",
-                "offers": "العروض"
+                "offers": "العروض",
+                "applications": "طلبات التوظيف"
             }
         },
         "projects": {
@@ -1080,6 +1081,84 @@
             "title": "إجمالي العروض",
             "icon": "FileText"
         }
+        },
+        "application": {
+            "title": "طلبات التوظيف",
+            "subtitle": "إدارة ومراجعة جميع طلبات التوظيف",
+            "searchPlaceholder": "ابحث في الطلبات...",
+            "clearSearch": "مسح البحث",
+            "selectedCount": "تم اختيار {count}",
+            "bulkDelete": "حذف",
+            "noApplications": "لا توجد طلبات",
+            "tableHeaders": {
+                "selectAll": "تحديد جميع الطلبات",
+                "applicant": "المتقدم",
+                "status": "الحالة",
+                "appliedOn": "تاريخ التقديم",
+                "resume": "السيرة الذاتية",
+                "actions": "إجراءات"
+            },
+            "statusBadges": {
+                "PENDING": "قيد الانتظار",
+                "REVIEWED": "تم المراجعة",
+                "ACCEPTED": "مقبول",
+                "REJECTED": "مرفوض",
+                "UNKNOWN": "غير معروف"
+            },
+            "buttons": {
+                "viewResume": "عرض السيرة الذاتية",
+                "updateStatus": "تحديث الحالة",
+                "delete": "حذف"
+            },
+            "pagination": {
+                "showing": "عرض {from} إلى {to} من أصل {total} طلب",
+                "previous": "السابق",
+                "next": "التالي"
+            },
+            "dialogs": {
+                "pdfViewer": {
+                    "title": "السيرة الذاتية لـ {firstName} {lastName}"
+                },
+                "statusUpdate": {
+                    "title": "تحديث حالة الطلب",
+                    "description": "تغيير حالة طلب {firstName} {lastName}",
+                    "options": {
+                        "PENDING": "قيد الانتظار",
+                        "REVIEWED": "تم المراجعة",
+                        "ACCEPTED": "مقبول",
+                        "REJECTED": "مرفوض"
+                    },
+                    "cancel": "إلغاء",
+                    "submit": "تحديث الحالة"
+                }
+            },
+            "toasts": {
+                "success": {
+                    "bulkDelete": {
+                        "title": "تم حذف الطلبات بنجاح",
+                        "description": "تم حذف {count} طلب"
+                    },
+                    "delete": {
+                        "title": "تم حذف الطلب بنجاح",
+                        "description": "تم إزالة الطلب من النظام"
+                    },
+                    "statusUpdate": {
+                        "title": "تم تحديث الحالة بنجاح",
+                        "description": "تم تغيير حالة الطلب إلى {status}"
+                    }
+                },
+                "error": {
+                    "statusUpdate": {
+                        "title": "خطأ في تحديث الحالة",
+                        "description": "حدث خطأ أثناء تحديث حالة الطلب. يرجى المحاولة مرة أخرى"
+                    },
+                    "bulkDelete": {
+                        "title": "فشل حذف الطلبات",
+                        "description": "فشل حذف {count} طلب"
+                    }
+                }
+            },
+            "dateFormat": "d MMM yyyy"
         }
     }
 }

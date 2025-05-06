@@ -103,7 +103,25 @@
         "description": "Manara Water Consulting is an expert firm specializing in sustainable water management. We support our partners in optimizing water resources and environmental protection.",
         "team": {
             "title": "Our Team",
-            "description": "Our team consists of experienced experts from various fields, including water resources, geophysics, urban hydraulics, sanitation, and sustainable development."
+            "description": "Our team consists of experienced experts from various fields, including water resources, geophysics, urban hydraulics, sanitation, and sustainable development.",
+            "members": {
+                "asma": {
+                    "position": "Founder & Director",
+                    "description": "Dr. Asma Ben Moussa is a recognized expert in water management and sustainable development. She leads the company with a vision of innovation and responsibility."
+                },
+                "mohamed": {
+                    "position": "Doctor & Senior Study Engineer",
+                    "description": "Mohamed is a senior engineer specializing in hydraulic modeling and water resource management. He has extensive experience in the field."
+                },
+                "achraf": {
+                    "position": "Web Developer",
+                    "description": "Achraf is a web developer specializing in creating user-friendly and efficient web applications. He is responsible for the technical development of our digital solutions."
+                },
+                "youssef": {
+                    "position": "Geophysicist",
+                    "description": "Youssef is a geophysicist specializing in groundwater studies and geophysical surveys. He uses advanced techniques to assess water resources."
+                }
+            }
         }
     },
     "mission_vision": {
@@ -694,7 +712,8 @@
             "items": {
                 "home": "Home",
                 "projects": "Projects",
-                "offers": "Offers"
+                "offers": "Offers",
+                "applications": "Applications"
             }
         },
         "projects": {
@@ -1072,14 +1091,92 @@
         "day": "numeric"
         },
         "cards": {
-        "projects": {
-            "title": "Total Projects",
-            "icon": "FolderKanban"
+            "projects": {
+                "title": "Total Projects",
+                "icon": "FolderKanban"
+            },
+            "offers": {
+                "title": "Total Offers",
+                "icon": "FileText"
+            }
         },
-        "offers": {
-            "title": "Total Offers",
-            "icon": "FileText"
-        }
+        "application": {
+            "title": "Applications",
+            "subtitle": "Manage and review all job applications",
+            "searchPlaceholder": "Search applications...",
+            "clearSearch": "Clear search",
+            "selectedCount": "{count} selected",
+            "bulkDelete": "Delete",
+            "noApplications": "No applications found",
+            "tableHeaders": {
+            "selectAll": "Select all applications",
+            "applicant": "Applicant",
+            "status": "Status",
+            "appliedOn": "Applied On",
+            "resume": "Resume",
+            "actions": "Actions"
+            },
+            "statusBadges": {
+            "PENDING": "Pending",
+            "REVIEWED": "Reviewed",
+            "ACCEPTED": "Accepted",
+            "REJECTED": "Rejected",
+            "UNKNOWN": "Unknown"
+            },
+            "buttons": {
+            "viewResume": "View Resume",
+            "updateStatus": "Update Status",
+            "delete": "Delete"
+            },
+            "pagination": {
+            "showing": "Showing {from} to {to} of {total} applications",
+            "previous": "Previous",
+            "next": "Next"
+            },
+            "dialogs": {
+            "pdfViewer": {
+                "title": "{firstName} {lastName} Resume"
+            },
+            "statusUpdate": {
+                "title": "Update Application Status",
+                "description": "Change the status for {firstName} {lastName}",
+                "options": {
+                "PENDING": "Pending",
+                "REVIEWED": "Reviewed",
+                "ACCEPTED": "Accepted",
+                "REJECTED": "Rejected"
+                },
+                "cancel": "Cancel",
+                "submit": "Update Status"
+            }
+            },
+            "toasts": {
+            "success": {
+                "bulkDelete": {
+                "title": "Applications removed successfully",
+                "description": "{count} applications have been removed."
+                },
+                "delete": {
+                "title": "Application deleted successfully",
+                "description": "The application has been removed from the system."
+                },
+                "statusUpdate": {
+                "title": "Status updated successfully",
+                "description": "Application status has been updated to {status}."
+                }
+            },
+            "error": {
+                "statusUpdate": {
+                "title": "Error updating application status",
+                "description": "There was an error updating the application status. Please try again."
+                },
+                "bulkDelete": {
+                "title": "Applications removed Faild",
+                "description": "{count} applications faild to be removed."
+                }
+            }
+            },
+            "dateFormat": "MMM d, yyyy"
         }
     }
 }

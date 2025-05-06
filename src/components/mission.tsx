@@ -30,7 +30,7 @@ function Mission() {
                         imageSrc="/logo.png"
                         className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-earth to-secondary"
                     >
-                        Manara Water Consulting,
+                        Manara Water Consulting
                     </LinkPreview>{" "}
                     {t('intro')} {" "}
                     <LinkPreview

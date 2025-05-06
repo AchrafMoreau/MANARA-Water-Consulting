@@ -38,7 +38,6 @@ export const GetOfferById = async(id: string) => {
 
 export async function CreateOffer(data: OfferFormValues){
   const validatedData = offerFormSchema.parse(data)
-  console.log("Creating offer with data:", validatedData)
   try{
     await prisma.offer.create({
       data: {
@@ -84,7 +83,6 @@ export async function deleteOffer(id: string){
 
 export async function bulkDeleteOffers(ids: string[]){
   try{
-    console.log(`Deleting projects:`, ids)
     await prisma.offer.deleteMany({
       where: {
         id: {

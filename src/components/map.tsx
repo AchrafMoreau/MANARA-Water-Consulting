@@ -5,11 +5,11 @@ import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility
 
 
 const POSITION = {
-  lat: 33.845978, 
-  lng: -6.939560
+  lat: 33.848496, 
+  lng: -6.936806
 }
 export default function MapComponent() {
-  const zoom = 16;
+  const zoom = 10;
 
   return (
         <MapContainer 

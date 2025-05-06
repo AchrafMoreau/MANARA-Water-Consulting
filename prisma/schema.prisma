@@ -79,7 +79,14 @@ model Application{
   phone    String
   coverLetter String
   resume   String
-  position String
+  status   ApplicationStatus @default(PENDING)
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
+}
+
+enum ApplicationStatus {
+  PENDING
+  REVIEWED
+  REJECTED
+  ACCPTED
 }

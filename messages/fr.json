@@ -37,12 +37,12 @@
     "lastProjects" : "Derniers Projets",
     "mission":{
         "title" : "Nous Mission",
-        "intro": "Nous nous engageons à fournir des solutions durables et innovantes pour relever les défis de la gestion de l'eau. Notre mission est d'assurer une utilisation responsable et efficace des ressources en eau en offrant des services spécialisés dans,",
-        "waterManagement": "gestion de l'eau",
-        "conservation": "conservation",
-        "sanitation": "assainissement",
+        "intro": "s'engage à fournir des solutions durables et innovantes pour relever les défis de la gestion de l'eau. Notre mission est d'assurer une utilisation responsable et efficace des ressources en eau en offrant des services spécialisés dans",
+        "waterManagement": "la gestion de l'eau",
+        "conservation": "la conservation",
+        "sanitation": "l'assainissement",
         "and": "et",
-        "urbanResilience": "résilience urbaine.",
+        "urbanResilience": "la résilience urbaine.",
         "expertise": "Grâce à notre expertise en hydraulique, en géophysique et en modélisation avancée, nous accompagnons les communautés, les entreprises et les organisations dans la mise en œuvre de stratégies adaptées aux défis environnementaux actuels. Nous croyons en une approche collaborative et efficace pour garantir un avenir durable, où l'eau reste une ressource accessible, préservée et sécurisée pour tous."
     },
     "footer":{
@@ -103,7 +103,25 @@
         "description": "Manara Water Consulting est un bureau d’expertise spécialisé dans la gestion durable de l’eau. nous accompagnons nos partenaires dans l’optimisation des ressources hydriques et la protection environnementale.",
         "team": {
             "title": "Notre Équipe",
-            "description": "Notre équipe est composée d'experts chevronnés issus de divers domaines des ressources en eau, géophysique, hydraulique urbaine, assainissement et du développement durable."
+            "description": "Notre équipe est composée d'experts chevronnés issus de divers domaines des ressources en eau, géophysique, hydraulique urbaine, assainissement et du développement durable.",
+            "members": {
+                "asma": {
+                    "position": "Fondatrice & Directrice",
+                    "description": "Dr. ing. Asma Ben Moussa experte en gestion des ressources en eau et du développement durable. Directrice Fondatrice du Bureau d’études Manara Water Consulting avec vision d'innovation et de responsabilité."
+                },
+                "mohamed": {
+                    "position": "Docteur & Ingénieur d'Études Senior",
+                    "description": "Dr. mohamed El Mokhtar spécialisé dans la modélisation des ressources en eau et le SIG.  Il possède une vaste expérience dans ce domaine."
+                },
+                "achraf": {
+                    "position": "Développeur Web",
+                    "description": "Achraf est un développeur web spécialisé dans la création d'applications web conviviales et efficaces. Il est responsable du développement technique de nos solutions numériques."
+                },
+                "youssef": {
+                    "position": "Géophysicien",
+                    "description": "Youssef est un hydrogéologue spécialisé aussi en georessources naturelles et en assistance technique des travaux de forages d’eau et des enquêtes de terrain. Il a une expérience significative dans le domaine de l'hydrogéologie."
+                }
+            }
         }
     },
     "mission_vision": {
@@ -693,8 +711,9 @@
             "main_navigation": "NAVIGATION PRINCIPALE",
             "items": {
                 "home": "Home",
-                "projects": "Projets",
-                "offers": "Offres"
+                "projects": "Les Projets",
+                "offers": "Les Offres",
+                "applications": "Les Demande"
             }
         },
         "projects": {
@@ -1080,6 +1099,85 @@
             "title": "Offres Totales",
             "icon": "FileText"
         }
+        },
+        "application": {
+            "title": "Candidatures",
+            "subtitle": "Gérer et examiner toutes les candidatures",
+            "searchPlaceholder": "Rechercher des candidatures...",
+            "clearSearch": "Effacer la recherche",
+            "selectedCount": "{count} sélectionné(s)",
+            "bulkDelete": "Supprimer",
+            "noApplications": "Aucune candidature trouvée",
+            "tableHeaders": {
+                "selectAll": "Sélectionner toutes les candidatures",
+                "applicant": "Candidat",
+                "status": "Statut",
+                "appliedOn": "Date de candidature",
+                "resume": "CV",
+                "actions": "Actions"
+            },
+            "statusBadges": {
+                "PENDING": "En attente",
+                "REVIEWED": "Examiné",
+                "ACCEPTED": "Accepté",
+                "REJECTED": "Rejeté",
+                "UNKNOWN": "Inconnu"
+            },
+            "buttons": {
+                "viewResume": "Voir le CV",
+                "updateStatus": "Mettre à jour le statut",
+                "delete": "Supprimer"
+            },
+            "pagination": {
+                "showing": "Affichage de {from} à {to} sur {total} candidatures",
+                "previous": "Précédent",
+                "next": "Suivant"
+            },
+            "dialogs": {
+                "pdfViewer": {
+                    "title": "CV de {firstName} {lastName}"
+                },
+                "statusUpdate": {
+                    "title": "Mettre à jour le statut de la candidature",
+                    "description": "Modifier le statut de {firstName} {lastName}",
+                    "test": "coco cava",
+                    "options": {
+                        "PENDING": "En attente",
+                        "REVIEWED": "Examiné",
+                        "ACCEPTED": "Accepté",
+                        "REJECTED": "Rejeté"
+                    },
+                    "cancel": "Annuler",
+                    "submit": "Mettre à jour le statut"
+                }
+            },
+            "toasts": {
+                "success": {
+                    "bulkDelete": {
+                        "title": "Candidatures supprimées avec succès",
+                        "description": "{count} candidatures ont été supprimées."
+                    },
+                    "delete": {
+                        "title": "Candidature supprimée avec succès",
+                        "description": "La candidature a été supprimée du système."
+                    },
+                    "statusUpdate": {
+                        "title": "Statut mis à jour avec succès",
+                        "description": "Le statut de la candidature a été mis à jour en {status}."
+                    }
+                },
+                "error": {
+                    "statusUpdate": {
+                        "title": "Erreur lors de la mise à jour du statut",
+                        "description": "Une erreur est survenue lors de la mise à jour du statut de la candidature. Veuillez réessayer."
+                    },
+                    "bulkDelete": {
+                        "title": "Échec de la suppression des candidatures",
+                        "description": "{count} candidatures n'ont pas pu être supprimées."
+                    }
+                }
+            },
+            "dateFormat": "d MMM yyyy"
         }
     }
 }

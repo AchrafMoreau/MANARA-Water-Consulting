@@ -157,7 +157,7 @@ export default function Page(){
           </FadeIn>
 
           <div className="max-w-3xl mx-auto">
-            <ApplicationForm jobs={jobs}/>
+            <ApplicationForm />
           </div>
         </div>
       </section>

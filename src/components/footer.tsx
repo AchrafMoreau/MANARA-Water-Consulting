@@ -28,7 +28,7 @@ function Content() {
 
 const Section1 = () => {
   return (
-    <div className="flex flex-wrap translate-y shrink-0 gap-20">
+    <div className="flex flex-wrap translate-y shrink-0 gap-20 justify-center">
       <AnimatedFooter />
     </div>
   )
