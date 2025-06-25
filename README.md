@@ -129,4 +129,4 @@ Interactive map support with:
   - Prettier (optional)
 
 ## 📬 Contact
-Want to collaborate or need help? Reach out to [Achraf Mør`eau](elachraf6@gmail.com).
+Want to collaborate or need help? Reach out to [Achraf Mør`eau](mailto:elachraf6@gmail.com).
